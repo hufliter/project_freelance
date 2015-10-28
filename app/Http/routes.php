@@ -17,10 +17,15 @@ Route::get('/', function () {
 
 //admin area
 Route::group(['prefix'=>'/admin'], function(){
+
+    //admin index
+    Route::get('/','admin\AuthController@index');
+
     //auth
-    Route::get('/','admin\AuthenticateController@login');
-    Route::post('login','admin\AuthenticateController@auth');
-    Route::get('logout','admin\AuthenticateController@logout');
+    Route::get('login','admin\AuthController@getLogin');
+    Route::post('login','admin\AuthController@postLogin');
+
+    Route::get('logout','admin\AuthController@logout');
     //end auth
 
     //User area

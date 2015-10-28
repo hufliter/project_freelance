@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2015 at 04:38 PM
+-- Generation Time: Oct 28, 2015 at 07:49 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -29,6 +29,7 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `categories` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `status` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -111,6 +112,7 @@ CREATE TABLE IF NOT EXISTS `products` (
   `ingredient` text NOT NULL,
   `product_usage` int(11) NOT NULL,
   `description` text NOT NULL,
+  `status` tinyint(4) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -195,13 +197,23 @@ CREATE TABLE IF NOT EXISTS `usage` (
 CREATE TABLE IF NOT EXISTS `user` (
 `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
+  `firstname` varchar(255) NOT NULL,
+  `lastname` varchar(255) NOT NULL,
   `email` varchar(255) NOT NULL,
   `password` varchar(255) NOT NULL,
   `role` tinyint(4) NOT NULL,
   `is_active` tinyint(4) NOT NULL,
+  `remember_token` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `user`
+--
+
+INSERT INTO `user` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'QrExEndmS4mqt1LRzRgnBY9paSUbHdaARYwbfthuD7RvPPd1ie7zYo9JhoVq', '2015-10-28 11:10:06', '2015-10-28 18:35:51');
 
 --
 -- Indexes for dumped tables
@@ -342,7 +354,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `user`
 --
 ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
