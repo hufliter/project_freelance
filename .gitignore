@@ -3,8 +3,4 @@
 .env.php
 .env
 .idea/
-vendor/
-storage/
-config/
 .gitattributes
-.gitignore
