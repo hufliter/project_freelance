@@ -39,7 +39,6 @@
 
 <body>
     <div class="ch-container">
-        <div class="row">
 
         <div class="row">
             <div class="col-md-12 center login-header">
@@ -50,9 +49,9 @@
 
         <div class="row">
             <div class="well col-md-5 center login-box">
-                @if(Session::has('Message'))
-                <div class="alert alert-info">
-                    {{ Session::get('Message') }}
+                @if(Session::has('message'))
+                <div class="alert alert-danger">
+                    {{ Session::get('message') }}
                 </div>
                 @endif
                 <form class="form-horizontal" action="/admin/login" method="post">
@@ -78,7 +77,7 @@
             </div>
             <!--/span-->
         </div><!--/row-->
-
+    </div>
 <script src="../../bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 
 <!-- library for cookie management -->

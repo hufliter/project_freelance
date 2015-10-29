@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>Control Panel</title>
+    <title>Saigon Industrial Development Control Panel</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="description" content="">
 
@@ -48,8 +48,8 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> <img alt="Charisma Logo" src="img/logo20.png" class="hidden-xs"/>
-                <span>Charisma</span></a>
+            <a class="navbar-brand" href="index.html"> <img alt="Logo" src="img/logo20.png" class="hidden-xs"/>
+                <span>SID Panel</span></a>
 
             <!-- user dropdown starts -->
             <div class="btn-group pull-right">
@@ -90,39 +90,22 @@
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Main</li>
-                        <li><a class="ajax-link" href="index.html"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                        <li><a class="ajax-link" href="/admin"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
                         </li>
-                        <li><a class="ajax-link" href="ui.html"><i class="glyphicon glyphicon-eye-open"></i><span> UI Features</span></a>
+                        <li><a class="ajax-link" href="/admin/category"><i class="glyphicon glyphicon-th-list"></i><span> Category</span></a>
                         </li>
-                        <li><a class="ajax-link" href="form.html"><i
-                                    class="glyphicon glyphicon-edit"></i><span> Forms</span></a></li>
-                        <li><a class="ajax-link" href="chart.html"><i class="glyphicon glyphicon-list-alt"></i><span> Charts</span></a>
+                        <li><a class="ajax-link" href="/admin/products"><i class="glyphicon glyphicon-edit"></i><span> Products</span></a></li>
+                        <li><a class="ajax-link" href="/admin/users"><i class="glyphicon glyphicon-user"></i><span> Users</span></a>
                         </li>
-                        <li><a class="ajax-link" href="typography.html"><i class="glyphicon glyphicon-font"></i><span> Typography</span></a>
+                        <li><a class="ajax-link" href="/admin/intro"><i class="glyphicon glyphicon-road"></i><span> Introduce</span></a>
                         </li>
-                        <li><a class="ajax-link" href="gallery.html"><i class="glyphicon glyphicon-picture"></i><span> Gallery</span></a>
+                        <li><a class="ajax-link" href="/admin/news"><i class="glyphicon glyphicon-star"></i><span> News</span></a>
                         </li>
-                        <li class="nav-header hidden-md">Sample Section</li>
-                        <li><a class="ajax-link" href="table.html"><i
-                                    class="glyphicon glyphicon-align-justify"></i><span> Tables</span></a></li>
-                        <li class="accordion">
-                            <a href="#"><i class="glyphicon glyphicon-plus"></i><span> Accordion Menu</span></a>
-                            <ul class="nav nav-pills nav-stacked">
-                                <li><a href="#">Child Menu 1</a></li>
-                                <li><a href="#">Child Menu 2</a></li>
-                            </ul>
+                        <li><a class="ajax-link" href="/admin/technical"><i class="glyphicon glyphicon-align-justify"></i><span> Technical</span></a></li>
+
+                        <li><a class="ajax-link" href="/admin/contact"><i class="glyphicon glyphicon-calendar"></i><span> Contact</span></a>
                         </li>
-                        <li><a class="ajax-link" href="calendar.html"><i class="glyphicon glyphicon-calendar"></i><span> Calendar</span></a>
-                        </li>
-                        <li><a class="ajax-link" href="grid.html"><i
-                                    class="glyphicon glyphicon-th"></i><span> Grid</span></a></li>
-                        <li><a href="tour.html"><i class="glyphicon glyphicon-globe"></i><span> Tour</span></a></li>
-                        <li><a class="ajax-link" href="icon.html"><i
-                                    class="glyphicon glyphicon-star"></i><span> Icons</span></a></li>
-                        <li><a href="error.html"><i class="glyphicon glyphicon-ban-circle"></i><span> Error Page</span></a>
-                        </li>
-                        <li><a href="login.html"><i class="glyphicon glyphicon-lock"></i><span> Login Page</span></a>
-                        </li>
+
                     </ul>
                     <label id="for-is-ajax" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
                 </div>
@@ -130,15 +113,6 @@
         </div>
         <!--/span-->
         <!-- left menu ends -->
-
-        <noscript>
-            <div class="alert alert-block col-md-12">
-                <h4 class="alert-heading">Warning!</h4>
-
-                <p>You need to have <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">JavaScript</a>
-                    enabled to use this site.</p>
-            </div>
-        </noscript>
 
         <div id="content" class="col-lg-10 col-sm-10">
             <!-- content starts -->
@@ -211,15 +185,14 @@
             </div>
             <div class="box-content row">
                 <div class="col-lg-7 col-md-12">
-                    <h1>Charisma <br>
-                        <small>free, premium quality, responsive, multiple skin admin template.</small>
+                    <h1>Introduce <br>
+                        <small>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum.</small>
                     </h1>
-                    <p>It's a live demo of the template. I have created Charisma to ease the repeat work I have to do on my
-                        projects. Now I re-use Charisma as a base for my admin panel work and I am sharing it with you
-                        :)</p>
+                    <p>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
+                    Lorem issum Lorem issum Lorem issum Lorem issum </p>
 
-                    <p><b>All pages in the menu are functional, take a look at all, please share this with your
-                            followers.</b></p>
+                    <p><b>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
+                    Lorem issum Lorem issum Lorem issum .</b></p>
 
                 </div>
             </div>
@@ -227,285 +200,6 @@
     </div>
 </div>
 
-<div class="row">
-    <div class="box col-md-4">
-        <div class="box-inner homepage-box">
-            <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-th"></i> Tabs</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <ul class="nav nav-tabs" id="myTab">
-                    <li class="active"><a href="#info">Info</a></li>
-                    <li><a href="#custom">Custom</a></li>
-                    <li><a href="#messages">Messages</a></li>
-                </ul>
-
-                <div id="myTabContent" class="tab-content">
-                    <div class="tab-pane active" id="info">
-                        <h3>Charisma
-                            <small>a full featured template</small>
-                        </h3>
-                        <p>It's a full featured, responsive template for your admin panel. It's optimized for tablets
-                            and mobile phones.</p>
-
-                        <p>Check how it looks on different devices:</p>
-                        <a href="http://www.responsinator.com/?url=usman.it%2Fthemes%2Fcharisma"
-                           target="_blank"><strong>Preview on iPhone size.</strong></a>
-                        <br>
-                        <a href="http://www.responsinator.com/?url=usman.it%2Fthemes%2Fcharisma"
-                           target="_blank"><strong>Preview on iPad size.</strong></a>
-                    </div>
-                    <div class="tab-pane" id="custom">
-                        <h3>Custom
-                            <small>small text</small>
-                        </h3>
-                        <p>Sample paragraph.</p>
-
-                        <p>Your custom text.</p>
-                    </div>
-                    <div class="tab-pane" id="messages">
-                        <h3>Messages
-                            <small>small text</small>
-                        </h3>
-                        <p>Sample paragraph.</p>
-
-                        <p>Your custom text.</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!--/span-->
-
-    <!--/span-->
-
-    <div class="box col-md-4">
-        <div class="box-inner homepage-box">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list-alt"></i> Keep in touch</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <h3>Stay updated with my projects and blog posts</h3>
-                <!-- Begin MailChimp Signup Form -->
-                <div class="mc_embed_signup">
-                    <form action="//halalit.us3.list-manage.com/subscribe/post?u=444b176aa3c39f656c66381f6&amp;id=eeb0c04e84" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
-                        <div>
-                            <label>Please enter your email</label>
-                            <input type="email" value="" name="EMAIL" class="email" placeholder="Email address" required>
-
-                            <div class="power_field"><input type="text" name="b_444b176aa3c39f656c66381f6_eeb0c04e84" tabindex="-1" value=""></div>
-                            <div class="clear"><input type="submit" value="Subscribe" name="subscribe" class="button"></div>
-                        </div>
-                    </form>
-                </div>
-
-                <!--End mc_embed_signup-->
-                <br/>
-
-                <p>You may like my other open source work, check my profile on <a href="http://github.com/usmanhalalit"
-                                                                                  target="_blank">GitHub</a>.</p>
-
-            </div>
-        </div>
-    </div>
-    <!--/span-->
-</div><!--/row-->
-
-<div class="row">
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list"></i> Buttons</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content buttons">
-                <p class="btn-group">
-                    <button class="btn btn-default">Left</button>
-                    <button class="btn btn-default">Middle</button>
-                    <button class="btn btn-default">Right</button>
-                </p>
-                <p>
-                    <button class="btn btn-default btn-sm"><i class="glyphicon glyphicon-star"></i> Icon button</button>
-                    <button class="btn btn-primary btn-sm">Small button</button>
-                    <button class="btn btn-danger btn-sm">Small button</button>
-                </p>
-                <p>
-                    <button class="btn btn-warning btn-sm">Small button</button>
-                    <button class="btn btn-success btn-sm">Small button</button>
-                    <button class="btn btn-info btn-sm">Small button</button>
-                </p>
-                <p>
-                    <button class="btn btn-inverse btn-default btn-sm">Small button</button>
-                    <button class="btn btn-primary btn-round btn-lg">Round button</button>
-                    <button class="btn btn-round btn-default btn-lg"><i class="glyphicon glyphicon-ok"></i></button>
-                    <button class="btn btn-primary"><i class="glyphicon glyphicon-edit glyphicon-white"></i></button>
-                </p>
-                <p>
-                    <button class="btn btn-default btn-xs">Mini button</button>
-                    <button class="btn btn-primary btn-xs">Mini button</button>
-                    <button class="btn btn-danger btn-xs">Mini button</button>
-                    <button class="btn btn-warning btn-xs">Mini button</button>
-                </p>
-                <p>
-                    <button class="btn btn-info btn-xs">Mini button</button>
-                    <button class="btn btn-success btn-xs">Mini button</button>
-                    <button class="btn btn-inverse btn-default btn-xs">Mini button</button>
-                </p>
-            </div>
-        </div>
-    </div>
-    <!--/span-->
-
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list"></i> Buttons</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content  buttons">
-                <p>
-                    <button class="btn btn-default btn-lg">Large button</button>
-                    <button class="btn btn-primary btn-lg">Large button</button>
-                </p>
-                <p>
-                    <button class="btn btn-danger btn-lg">Large button</button>
-                    <button class="btn btn-warning btn-lg">Large button</button>
-                </p>
-                <p>
-                    <button class="btn btn-success btn-lg">Large button</button>
-                    <button class="btn btn-info btn-lg">Large button</button>
-                </p>
-                <p>
-                    <button class="btn btn-inverse btn-default btn-lg">Large button</button>
-                </p>
-                <div class="btn-group">
-                    <button class="btn btn-default btn-lg">Large Dropdown</button>
-                    <button class="btn dropdown-toggle btn-default btn-lg" data-toggle="dropdown"><span
-                            class="caret"></span></button>
-                    <ul class="dropdown-menu">
-                        <li><a href="#"><i class="glyphicon glyphicon-star"></i> Action</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-tag"></i> Another action</a></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-download-alt"></i> Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#"><i class="glyphicon glyphicon-tint"></i> Separated link</a></li>
-                    </ul>
-                </div>
-
-            </div>
-        </div>
-    </div>
-    <!--/span-->
-
-    <div class="box col-md-4">
-        <div class="box-inner">
-            <div class="box-header well" data-original-title="">
-                <h2><i class="glyphicon glyphicon-list"></i> Weekly Stat</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content">
-                <ul class="dashboard-list">
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-arrow-up"></i>
-                            <span class="green">92</span>
-                            New Comments
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-arrow-down"></i>
-                            <span class="red">15</span>
-                            New Registrations
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-minus"></i>
-                            <span class="blue">36</span>
-                            New Articles
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-comment"></i>
-                            <span class="yellow">45</span>
-                            User reviews
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-arrow-up"></i>
-                            <span class="green">112</span>
-                            New Comments
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-arrow-down"></i>
-                            <span class="red">31</span>
-                            New Registrations
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-minus"></i>
-                            <span class="blue">93</span>
-                            New Articles
-                        </a>
-                    </li>
-                    <li>
-                        <a href="#">
-                            <i class="glyphicon glyphicon-comment"></i>
-                            <span class="yellow">254</span>
-                            User reviews
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-    <!--/span-->
-</div><!--/row-->
     <!-- content ends -->
     </div><!--/#content.col-md-0-->
 </div><!--/fluid-row-->
