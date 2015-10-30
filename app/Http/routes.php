@@ -29,6 +29,49 @@ Route::group(['prefix'=>'/admin'], function(){
     //end auth
 
     //User area
-    Route::get('user','admin\UserController@index');
+
+    Route::get('users', [
+        'as' => 'users.index', 'uses' => 'admin\UsersController@index'
+    ]);
+
+    Route::get('users/view', [
+        'as' => 'users.view', 'uses' => 'admin\UsersController@getView'
+    ]);
+
+    Route::get('users/edit', [
+        'as' => 'users.edit', 'uses' => 'admin\UsersController@getEdit'
+    ]);
+    Route::post('users/edit',[
+        'as' => 'users.postEdit', 'uses' => 'admin\UsersController@postEdit'
+    ]);
+
+    Route::get('users/delete', [
+        'as' => 'users.delete', 'uses' => 'admin\UsersController@getDelete'
+    ]);
+
     //End user area
+
+    //Introduce area
+    Route::get('intro','admin\IntroduceController@index');
+    //End Introduce
+
+    //Category area
+    Route::get('category','admin\CategoryController@index');
+    //End category area
+
+    //Products area
+    Route::get('products','admin\ProductsController@index');
+    //End products area
+
+    //News area
+    Route::get('news','admin\NewsController@index');
+    //End News area
+
+    //Technical area
+    Route::get('technical','admin\TechnicalController@index');
+    //End Technical area
+
+    //Contact area
+    Route::get('contact','admin\ContactController@index');
+    //End Contact area
 });

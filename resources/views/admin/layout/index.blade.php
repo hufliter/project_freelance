@@ -7,25 +7,25 @@
     <meta name="description" content="">
 
     <!-- The styles -->
-    <link id="bs-css" href="css/bootstrap-cerulean.min.css" rel="stylesheet">
+    <link href="{{asset('css/bootstrap-cerulean.min.css')}}" rel="stylesheet">
 
-    <link href="css/charisma-app.css" rel="stylesheet">
-    <link href='bower_components/fullcalendar/dist/fullcalendar.css' rel='stylesheet'>
-    <link href='bower_components/fullcalendar/dist/fullcalendar.print.css' rel='stylesheet' media='print'>
-    <link href='bower_components/chosen/chosen.min.css' rel='stylesheet'>
-    <link href='bower_components/colorbox/example3/colorbox.css' rel='stylesheet'>
-    <link href='bower_components/responsive-tables/responsive-tables.css' rel='stylesheet'>
-    <link href='bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css' rel='stylesheet'>
-    <link href='css/jquery.noty.css' rel='stylesheet'>
-    <link href='css/noty_theme_default.css' rel='stylesheet'>
-    <link href='css/elfinder.min.css' rel='stylesheet'>
-    <link href='css/elfinder.theme.css' rel='stylesheet'>
-    <link href='css/jquery.iphone.toggle.css' rel='stylesheet'>
-    <link href='css/uploadify.css' rel='stylesheet'>
-    <link href='css/animate.min.css' rel='stylesheet'>
+    <link href="{{asset('css/charisma-app.css')}}" rel="stylesheet">
+    <link href='{{asset('bower_components/fullcalendar/dist/fullcalendar.css')}}' rel='stylesheet'>
+    <link href='{{asset('bower_components/fullcalendar/dist/fullcalendar.print.css')}}' rel='stylesheet' media='print'>
+    <link href='{{asset('bower_components/chosen/chosen.min.css')}}' rel='stylesheet'>
+    <link href='{{asset('bower_components/colorbox/example3/colorbox.css')}}' rel='stylesheet'>
+    <link href='{{asset('bower_components/responsive-tables/responsive-tables.css')}}' rel='stylesheet'>
+    <link href='{{asset('bower_components/bootstrap-tour/build/css/bootstrap-tour.min.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/jquery.noty.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/noty_theme_default.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/elfinder.min.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/elfinder.theme.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/jquery.iphone.toggle.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/uploadify.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/animate.min.css')}}' rel='stylesheet'>
 
     <!-- jQuery -->
-    <script src="bower_components/jquery/jquery.min.js"></script>
+    <script src="{{asset('bower_components/jquery/jquery.min.js')}}"></script>
 
     <!-- The HTML5 shim, for IE6-8 support of HTML5 elements -->
     <!--[if lt IE 9]>
@@ -33,7 +33,7 @@
     <![endif]-->
 
     <!-- The fav icon -->
-    <link rel="shortcut icon" href="img/favicon.ico">
+    <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}">
 
 </head>
 
@@ -48,7 +48,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="index.html"> <img alt="Logo" src="img/logo20.png" class="hidden-xs"/>
+            <a class="navbar-brand" href="{{URL::to('admin/')}}"> <img alt="Logo" src="{{asset('img/logo20.png')}}" class="hidden-xs"/>
                 <span>SID Panel</span></a>
 
             <!-- user dropdown starts -->
@@ -60,13 +60,13 @@
                 <ul class="dropdown-menu">
                     <li><a href="#">Profile</a></li>
                     <li class="divider"></li>
-                    <li><a href="admin/logout">Logout</a></li>
+                    <li><a href="{{ URL::to('admin/logout') }}">Logout</a></li>
                 </ul>
             </div>
             <!-- user dropdown ends -->
 
             <ul class="collapse navbar-collapse nav navbar-nav top-menu">
-                <li><a href="#"><i class="glyphicon glyphicon-globe"></i> Visit Site</a></li>
+                <li><a href="{{ URL::to('/') }}"><i class="glyphicon glyphicon-globe"></i> Visit Site</a></li>
                 <li>
                     <form class="navbar-search pull-left">
                         <input placeholder="Search" class="search-query form-control col-md-10" name="query"
@@ -74,7 +74,6 @@
                     </form>
                 </li>
             </ul>
-
         </div>
     </div>
     <!-- topbar ends -->
@@ -90,20 +89,20 @@
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Main</li>
-                        <li><a class="ajax-link" href="/admin"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin')  }}"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
                         </li>
-                        <li><a class="ajax-link" href="/admin/category"><i class="glyphicon glyphicon-th-list"></i><span> Category</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/category')  }}"><i class="glyphicon glyphicon-th-list"></i><span> Category</span></a>
                         </li>
-                        <li><a class="ajax-link" href="/admin/products"><i class="glyphicon glyphicon-edit"></i><span> Products</span></a></li>
-                        <li><a class="ajax-link" href="/admin/users"><i class="glyphicon glyphicon-user"></i><span> Users</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/products')  }}"><i class="glyphicon glyphicon-edit"></i><span> Products</span></a></li>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/users')  }}"><i class="glyphicon glyphicon-user"></i><span> Users</span></a>
                         </li>
-                        <li><a class="ajax-link" href="/admin/intro"><i class="glyphicon glyphicon-road"></i><span> Introduce</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/intro')  }}"><i class="glyphicon glyphicon-road"></i><span> Introduce</span></a>
                         </li>
-                        <li><a class="ajax-link" href="/admin/news"><i class="glyphicon glyphicon-star"></i><span> News</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/news')  }}"><i class="glyphicon glyphicon-star"></i><span> News</span></a>
                         </li>
-                        <li><a class="ajax-link" href="/admin/technical"><i class="glyphicon glyphicon-align-justify"></i><span> Technical</span></a></li>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/technical')  }}"><i class="glyphicon glyphicon-align-justify"></i><span> Technical</span></a></li>
 
-                        <li><a class="ajax-link" href="/admin/contact"><i class="glyphicon glyphicon-calendar"></i><span> Contact</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/contact')  }}"><i class="glyphicon glyphicon-calendar"></i><span> Contact</span></a>
                         </li>
 
                     </ul>
@@ -117,18 +116,18 @@
         <div id="content" class="col-lg-10 col-sm-10">
             <!-- content starts -->
             <div>
-    <ul class="breadcrumb">
-        <li>
-            <a href="#">Home</a>
-        </li>
-        <li>
-            <a href="#">Dashboard</a>
-        </li>
-    </ul>
+        <ul class="breadcrumb">
+            <li>
+                <a href="#">Home</a>
+            </li>
+            <li>
+                <a href="#">Dashboard</a>
+            </li>
+        </ul>
 </div>
 <div class=" row">
     <div class="col-md-3 col-sm-3 col-xs-6">
-        <a data-toggle="tooltip" title="6 new members." class="well top-block" href="#">
+        <a data-toggle="tooltip" title="6 new members." class="well top-block" href="{{URL::to('admin/users')}}">
             <i class="glyphicon glyphicon-user blue"></i>
 
             <div>Total Members</div>
@@ -169,35 +168,7 @@
 </div>
 
 <div class="row">
-    <div class="box col-md-12">
-        <div class="box-inner">
-            <div class="box-header well">
-                <h2><i class="glyphicon glyphicon-info-sign"></i> Introduction</h2>
-
-                <div class="box-icon">
-                    <a href="#" class="btn btn-setting btn-round btn-default"><i
-                            class="glyphicon glyphicon-cog"></i></a>
-                    <a href="#" class="btn btn-minimize btn-round btn-default"><i
-                            class="glyphicon glyphicon-chevron-up"></i></a>
-                    <a href="#" class="btn btn-close btn-round btn-default"><i
-                            class="glyphicon glyphicon-remove"></i></a>
-                </div>
-            </div>
-            <div class="box-content row">
-                <div class="col-lg-7 col-md-12">
-                    <h1>Introduce <br>
-                        <small>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum.</small>
-                    </h1>
-                    <p>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
-                    Lorem issum Lorem issum Lorem issum Lorem issum </p>
-
-                    <p><b>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
-                    Lorem issum Lorem issum Lorem issum .</b></p>
-
-                </div>
-            </div>
-        </div>
-    </div>
+    @yield('content')
 </div>
 
     <!-- content ends -->
@@ -235,39 +206,38 @@
 </div><!--/.fluid-container-->
 
 <!-- external javascript -->
-
-<script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+<script src="{{asset('bower_components/bootstrap/dist/js/bootstrap.min.js')}}"></script>
 
 <!-- library for cookie management -->
-<script src="js/jquery.cookie.js"></script>
+<script src="{{asset('js/jquery.cookie.js')}}"></script>
 <!-- calender plugin -->
-<script src='bower_components/moment/min/moment.min.js'></script>
-<script src='bower_components/fullcalendar/dist/fullcalendar.min.js'></script>
+<script src='{{asset('bower_components/moment/min/moment.min.js')}}'></script>
+<script src='{{asset('bower_components/fullcalendar/dist/fullcalendar.min.js')}}'></script>
 <!-- data table plugin -->
-<script src='js/jquery.dataTables.min.js'></script>
+<script src='{{asset('js/jquery.dataTables.min.js')}}'></script>
 
 <!-- select or dropdown enhancer -->
-<script src="bower_components/chosen/chosen.jquery.min.js"></script>
+<script src="{{asset('bower_components/chosen/chosen.jquery.min.js')}}"></script>
 <!-- plugin for gallery image view -->
-<script src="bower_components/colorbox/jquery.colorbox-min.js"></script>
+<script src="{{asset('bower_components/colorbox/jquery.colorbox-min.js')}}"></script>
 <!-- notification plugin -->
-<script src="js/jquery.noty.js"></script>
+<script src="{{asset('js/jquery.noty.js')}}"></script>
 <!-- library for making tables responsive -->
-<script src="bower_components/responsive-tables/responsive-tables.js"></script>
+<script src="{{asset('bower_components/responsive-tables/responsive-tables.js')}}"></script>
 <!-- tour plugin -->
-<script src="bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js"></script>
+<script src="{{asset('bower_components/bootstrap-tour/build/js/bootstrap-tour.min.js')}}"></script>
 <!-- star rating plugin -->
-<script src="js/jquery.raty.min.js"></script>
+<script src="{{asset('js/jquery.raty.min.js')}}"></script>
 <!-- for iOS style toggle switch -->
-<script src="js/jquery.iphone.toggle.js"></script>
+<script src="{{asset('js/jquery.iphone.toggle.js')}}"></script>
 <!-- autogrowing textarea plugin -->
-<script src="js/jquery.autogrow-textarea.js"></script>
+<script src="{{asset('js/jquery.autogrow-textarea.js')}}"></script>
 <!-- multiple file upload plugin -->
-<script src="js/jquery.uploadify-3.1.min.js"></script>
+<script src="{{asset('js/jquery.uploadify-3.1.min.js')}}"></script>
 <!-- history.js for cross-browser state change on ajax -->
-<script src="js/jquery.history.js"></script>
+<script src="{{asset('js/jquery.history.js')}}"></script>
 <!-- application script for Charisma demo -->
-<script src="js/charisma.js"></script>
+<script src="{{asset('js/charisma.js')}}"></script>
 
 </body>
 </html>
