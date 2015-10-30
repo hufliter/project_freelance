@@ -21,6 +21,10 @@
 
             {!! Form::model($userData, array('route' => array('users.postEdit', $userData->id), 'method' => 'POST')) !!}
                 <div class="form-group">
+                    {!! Form::hidden('id') !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('Firstname') !!}
                     {!! Form::text('firstname', null,
                         array('required',
@@ -43,14 +47,17 @@
                               'class'=>'form-control',
                               'placeholder'=>'Your Email')) !!}
                 </div>
+
                 <div class="form-group">
                     {!! Form::label('Password') !!}
                     {!! Form::password('password', ['class'=>'form-control','required'=>'required']) !!}
                 </div>
+
                 <div class="form-group">
                     {!! Form::label('Re-Password') !!}
                     {!! Form::password('re-password', ['class'=>'form-control','required'=>'required']) !!}
                 </div>
+
                 <div class="form-group">
                     {!! Form::label('Role') !!}
                     {!! Form::text('role', null,
@@ -66,7 +73,8 @@
                               'class'=>'form-control',
                               'placeholder'=>'Active')) !!}
                 </div>
-            {!! Form::submit('Edit User!', array('class' => 'btn btn-primary')) !!}
+                <a class="btn btn-primary" href="{{route('users.index')}}">Back</a>
+            {!! Form::submit('Edit User!', array('class' => 'btn btn-info')) !!}
 
             {!! Form::close() !!}
 

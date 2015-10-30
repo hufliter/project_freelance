@@ -14,7 +14,17 @@
                 </div>
             </div>
             <div class="box-content">
-            <div class="alert alert-info">Here for flash messages</div>
+                @if($errors->has())
+                    <div class="alert alert-danger">
+                        @foreach($errors->all() as $error)
+                            {{$error}}<br>
+                        @endforeach
+                    </div>
+                @elseif(Session::has('messages'))
+                    <div class="alert alert-success">
+                            {{Session::get('messages')}}<br>
+                    </div>
+                @endif
                 <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
                     <thead>
                     <tr>
