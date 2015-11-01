@@ -126,6 +126,11 @@
         </ul>
 </div>
 <div class=" row">
+    @if(Session::has('message'))
+        <div class="alert alert-success">
+                {{Session::get('message')}}<br>
+        </div>
+    @endif
     <div class="col-md-3 col-sm-3 col-xs-6">
         <a data-toggle="tooltip" title="6 new members." class="well top-block" href="{{URL::to('admin/users')}}">
             <i class="glyphicon glyphicon-user blue"></i>

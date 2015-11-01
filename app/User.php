@@ -51,4 +51,11 @@ class User extends Model implements AuthenticatableContract,
         $result = $q->get();
         return $result;
     }
+    public function getRoleByUserData($userData){
+        $q = DB::table($this->table)
+            ->select('role')
+            ->where('username','=',$userData['username']);
+        $result = $q->get();
+        return $result;
+    }
 }

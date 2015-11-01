@@ -63,7 +63,7 @@ class UsersController extends Controller {
             'id' => 'numeric',
             'firstname' => 'required|min:3|max:50',
             'lastname' => 'required|min:3|max:50',
-            'email' => 'required|email|unique:users',
+            'email' => 'required|email',
             'role' => 'required|numeric',
             'password' => 'required',
             're-password' => 'required|same:password',
@@ -98,8 +98,17 @@ class UsersController extends Controller {
         $id = $req->input('id');
         if( !empty($id) && is_numeric($id) ){
             $userId = $id;
+            $user = new User();
+            $userData = $user->find($userId);
+
+            if( $userData->delete() ){
+                return Redirect::to('/admin/user')->withMessages('Delete User Successful');
+            } else {
+                return Redirect::to('/admin/user')->withErrors('Something went wrong');
+            }
+        } else {
+            return Redirect::to('/admin/user');
         }
-        return view('admin.users.delete',['user_id'=>$userId]);
     }
 }
 ?>

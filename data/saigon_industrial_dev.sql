@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Oct 28, 2015 at 07:49 PM
+-- Generation Time: Nov 01, 2015 at 06:23 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -191,10 +191,10 @@ CREATE TABLE IF NOT EXISTS `usage` (
 -- --------------------------------------------------------
 
 --
--- Table structure for table `user`
+-- Table structure for table `users`
 --
 
-CREATE TABLE IF NOT EXISTS `user` (
+CREATE TABLE IF NOT EXISTS `users` (
 `id` int(11) NOT NULL,
   `username` varchar(255) NOT NULL,
   `firstname` varchar(255) NOT NULL,
@@ -206,14 +206,22 @@ CREATE TABLE IF NOT EXISTS `user` (
   `remember_token` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
 
 --
--- Dumping data for table `user`
+-- Dumping data for table `users`
 --
 
-INSERT INTO `user` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'QrExEndmS4mqt1LRzRgnBY9paSUbHdaARYwbfthuD7RvPPd1ie7zYo9JhoVq', '2015-10-28 11:10:06', '2015-10-28 18:35:51');
+INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
+(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'TnlGHF2Z2BjmJXKjD9rGlZIGpynLlfQ2xlF83H8u9Kav0SEuw6SqWEFpSGp4', '2015-10-28 11:10:06', '2015-10-30 18:26:04'),
+(2, 'tester01', 'Test', 'Man', 'abcd@gmail.com', '$2y$10$cVzz4lMO/ltHToxiivS3e.uQdjZP99hMq7tYZqYyvau2./SK5nWVy', 2, 1, '2kPhfSRDvK43GOvNMq7eOFZPCyNe3skDZJAq1w6YHV8AB6raRSyHPB57xnQT', '2015-10-30 17:21:10', '2015-10-30 18:13:15'),
+(3, 'tester02', 'Test', 'Man', 'abcde@gmail.com', '$2y$10$m/JaifbJkvANvFtN1vElFuKBJXB/OssYe3viEAVKkB49dV4qU2JCa', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
+(4, 'tester03', 'Test', 'Man', 'abcdef@gmail.com', '$2y$10$rxdH1d2d2EU23CEoj3BM7ubmqKCstUHZebBUOcEKXFTSfXC80TmgC', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
+(5, 'tester04', 'Test', 'Man', 'abcefgd@gmail.com', '$2y$10$LBElRu0fHtf3KuL8xWTHlOVBfmcFCYwnW6uEBf4a7Pt5itHykR4EW', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
+(6, 'tester05', 'Test', 'Man', 'abcdefgh@gmail.com', '$2y$10$pXtm7UUptwUy4kp7PeSc9exzrk78FoqEDZMzrRTBQ3KpjU/I4rA8m', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
+(7, 'tester01', 'Test', 'Man', 'abcd@gmail.com', '$2y$10$/ryDSghFicKioMjpUFDv7OyGLbdH//MnFyh3zpOgdAgYTeZjEg4fG', 2, 1, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00'),
+(9, 'tester07', 'Test', 'Man', 'abcdef123@gmail.com', '$2y$10$w291BJmw7v0KByaxQznVPOJLim8x1oUGZES92kad/Ay0eGPNht3ne', 2, 3, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00'),
+(11, 'tester09', 'Test', 'Man', 'abcdefgh123@gmail.com', '$2y$10$9tcdAc/puuAL2dyC0d4esOjHGkvD0EFrKna6y68kx4tRcdFABtHdG', 2, 1, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00');
 
 --
 -- Indexes for dumped tables
@@ -286,9 +294,9 @@ ALTER TABLE `usage`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `user`
+-- Indexes for table `users`
 --
-ALTER TABLE `user`
+ALTER TABLE `users`
  ADD PRIMARY KEY (`id`);
 
 --
@@ -351,10 +359,10 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `usage`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `user`
+-- AUTO_INCREMENT for table `users`
 --
-ALTER TABLE `user`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
+ALTER TABLE `users`
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

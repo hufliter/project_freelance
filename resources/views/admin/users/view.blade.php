@@ -74,7 +74,7 @@
         <span class="box col-md-4">
             <a href="{{route('users.index')}}" class="btn btn-primary btn-sm">Back</a>
             <a href="{{route('users.edit',['id'=>$items->id])}}" class="btn btn-info btn-sm">Edit</a>
-            <a href="{{route('users.delete',['id'=>$items->id])}}" class="btn btn-danger btn-sm">Delete</a>
+            <a href="{{route('users.delete',['id'=>$items->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this user?');">Delete</a>
         </span>
 
     </div>
