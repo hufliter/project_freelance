@@ -34,6 +34,14 @@ Route::group(['prefix'=>'/admin'], function(){
         'as' => 'users.index', 'uses' => 'admin\UsersController@index'
     ]);
 
+    Route::get('users/create', [
+        'as' => 'users.create', 'uses' => 'admin\UsersController@getCreate'
+    ]);
+
+    Route::post('users/postCreate', [
+        'as' => 'users.postCreate' , 'uses' => 'admin\UsersController@postCreate'
+    ]);
+
     Route::get('users/view', [
         'as' => 'users.view', 'uses' => 'admin\UsersController@getView'
     ]);

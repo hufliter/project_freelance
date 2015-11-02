@@ -1,6 +1,11 @@
 @extends('admin.layout.index')
 @section('content')
 <div class="box col-md-12">
+    <div class="row">
+        <div class="col-md-4">
+            <a class="btn btn-primary btn-sm" href="{{route('users.create')}}">Create User</a>
+        </div>
+    </div>
     <div class="box-inner">
     <div class="box-header well" data-original-title="">
         <h2><i class="glyphicon glyphicon-user"></i> Users Table</h2>

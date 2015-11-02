@@ -54,6 +54,11 @@
                     {{ Session::get('message') }}
                 </div>
                 @endif
+                @if(Session::has('error'))
+                    <div class="alert alert-success">
+                        {{ Session::get('error') }}
+                    </div>
+                @endif
                 <form class="form-horizontal" action="/admin/login" method="post">
                     <fieldset>
                         <input type="hidden" name="_token" value="{{ csrf_token() }}">

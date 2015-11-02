@@ -110,5 +110,12 @@ class UsersController extends Controller {
             return Redirect::to('/admin/user');
         }
     }
+    public function getCreate(Request $req) {
+        return view('admin.users.create');
+    }
+
+    public function postCreate(Request $req) {
+
+    }
 }
 ?>

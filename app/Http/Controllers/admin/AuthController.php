@@ -66,6 +66,6 @@ class AuthController extends Controller
     }
     public function logout(Request $req){
         Auth::logout();
-        return Redirect::to('/admin/login');
+        return Redirect::to('/admin/login')->withError('You has been log out');
     }
 }
