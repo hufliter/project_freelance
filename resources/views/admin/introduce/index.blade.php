@@ -1,6 +1,14 @@
 @extends('admin.layout.index')
 
 @section('content')
+<div class="row">
+    <div class="col-md-8">
+        <span>
+            <a href="{{route('intro.create')}}" class="btn btn-primary">Create Introduce</a>
+            <a href="{{route('intro.view')}}" class="btn btn-info">View Detail Introduce</a>
+        </span>
+    </div>
+</div>
 <div class="box-header well">
     <h2><i class="glyphicon glyphicon-info-sign"></i> Introduction</h2>
 

@@ -12,5 +12,12 @@ class IntroduceController extends Controller {
     public function index(Request $req){
         return view('admin.introduce.index');
     }
+    public function getCreate(){
+        return view('admin.introduce.create');
+    }
+    public function postCreate(Request $req){
+        var_dump($req->input());
+        exit();
+    }
 }
 ?>

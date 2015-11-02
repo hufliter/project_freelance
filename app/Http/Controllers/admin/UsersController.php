@@ -87,7 +87,7 @@ class UsersController extends Controller {
             $userData->is_active = $req->input('is_active');
 
             if( $userData->save() ) {
-                return Redirect::to('/admin/users')->withMessages('Update Successful');
+                return Redirect::to('/admin/users')->withMessages('Update User Successful');
             } else {
                 return Redirect::to('/admin/users')->withErrors('Something went wrong');
             }
@@ -110,12 +110,46 @@ class UsersController extends Controller {
             return Redirect::to('/admin/user');
         }
     }
-    public function getCreate(Request $req) {
+    public function getCreate() {
         return view('admin.users.create');
     }
 
     public function postCreate(Request $req) {
+        if( !empty($req->all()) ) {
+            $rules = array(
+                'username' => 'required|unique:users',
+                'firstname' => 'required|min:3|max:50',
+                'lastname' => 'required|min:3|max:50',
+                'email' => 'required|email|unique:users',
+                'role' => 'required|numeric',
+                'password' => 'required',
+                're-password' => 'required|same:password',
+                'is_active' => 'required|numeric'
+            );
+            $validator = Validator::make($req->all(),$rules);
 
+            if( $validator->fails() ){
+                $messages = $validator->messages();
+                return Redirect::route('users.create')->withErrors($validator);
+            } else {
+                $user = new User();
+                $user->username = $req->input('username');
+                $user->firstname = $req->input('firstname');
+                $user->lastname = $req->input('lastname');
+                $user->email = $req->input('email');
+                $user->password = $req->input('password');
+                $user->role = $req->input('role');
+                $user->is_active = $req->input('is_active');
+
+                if( $user->save() ) {
+                    return Redirect::to('/admin/users')->withMessages('Create User Successful');
+                } else {
+                    return Redirect::to('/admin/users')->withErrors('Something went wrong');
+                }
+            }
+        } else {
+            return Redirect::to('/admin/users');
+        }
     }
 }
 ?>

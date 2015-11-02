@@ -60,7 +60,25 @@ Route::group(['prefix'=>'/admin'], function(){
     //End user area
 
     //Introduce area
-    Route::get('intro','admin\IntroduceController@index');
+    Route::get('intro', [
+        'as' => 'intro', 'uses' => 'admin\IntroduceController@index'
+    ]);
+    Route::get('intro/view', [
+        'as' => 'intro.view' , 'uses' => 'admin\IntroduceController@view'
+    ]);
+    Route::get('intro/create', [
+        'as' => 'intro.create' , 'uses' => 'admin\IntroduceController@getCreate'
+    ]);
+    Route::post('intro/postCreate',[
+        'as' => 'intro.postCreate' , 'uses' =>'admin\IntroduceController@postCreate'
+    ]);
+    Route::get('intro/edit', [
+        'as' => 'intro.edit', 'uses' => 'admin\IntroduceController@getEdit'
+    ]);
+    Route::post('intro/postEdit', [
+        'as' => 'intro.postEdit' , 'uses' => 'admin\IntroduceController@postEdit'
+    ]);
+
     //End Introduce
 
     //Category area
