@@ -58,8 +58,7 @@ class AuthController extends Controller
                         }
                     }
                 } else {
-                    Session::flash('error','Something went wrong');
-                    return Redirect::to('/admin/login');
+                    return Redirect::to('/admin/login')->withMessage('Username or Password is invalid');
                 }
             }
         }

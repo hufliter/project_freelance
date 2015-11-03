@@ -8,21 +8,29 @@
         toolbar : "insertfile undo redo | styleselect | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image"
       });
     </script>
-    {!! Form::open(array('route' => array('users.postCreate'), 'method' => 'POST')) !!}
-                    <div class="form-group">
-                        {!! Form::label('Title') !!}
-                        {!! Form::text('title', null,
-                            array('required',
-                                  'class'=>'form-control',
-                                  'placeholder'=>'Title')) !!}
-                    </div>
-                    <div class="form-group">
-                        {!! Form::label('Content') !!}
-                        {!! Form::textarea('content', null,
-                            array('required',
-                                  'class'=>'form-control',
-                                  'placeholder'=>'Content')) !!}
-                    </div>
-                    <button type="submit" class="btn btn-primary">Submit</button>
-                {!! Form::close() !!}
+    {!! Form::open(array('route' => array('intro.postCreate'), 'method' => 'POST')) !!}
+        <div class="form-group">
+            {!! Form::label('Title') !!}
+            {!! Form::text('title', null,
+                array('required',
+                      'class'=>'form-control',
+                      'placeholder'=>'Title')) !!}
+        </div>
+        <div class="form-group">
+            {!! Form::label('Content') !!}
+            {!! Form::textarea('content', null,
+                array( 'class'=>'form-control',
+                      'placeholder'=>'Content')) !!}
+        </div>
+        {{--<div class="form-group">
+            {!! Form::label('Image') !!}
+            {!! Form::file('image') !!}
+        </div>--}}
+
+        <div class="form-group">
+            {!! Form::label('Active') !!}
+            {!! Form::checkbox('is_active')!!}
+        </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+    {!! Form::close() !!}
 @endsection

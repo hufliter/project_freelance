@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 01, 2015 at 06:23 PM
+-- Generation Time: Nov 03, 2015 at 06:41 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -63,9 +63,17 @@ CREATE TABLE IF NOT EXISTS `introduce` (
   `title` varchar(255) NOT NULL,
   `content` longtext NOT NULL,
   `image` varchar(255) NOT NULL,
+  `is_active` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `introduce`
+--
+
+INSERT INTO `introduce` (`id`, `title`, `content`, `image`, `is_active`, `created_at`, `updated_at`) VALUES
+(2, 'efw', 'ZnF3cWZ3', '', 1, '2015-11-03 07:47:36', '2015-11-03 14:47:36');
 
 -- --------------------------------------------------------
 
@@ -206,14 +214,14 @@ CREATE TABLE IF NOT EXISTS `users` (
   `remember_token` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=12 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
 --
 
 INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'TnlGHF2Z2BjmJXKjD9rGlZIGpynLlfQ2xlF83H8u9Kav0SEuw6SqWEFpSGp4', '2015-10-28 11:10:06', '2015-10-30 18:26:04'),
+(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'jalrzkgOvsVUM2RFiU1mmjodZ8FJda7bbBN4x0V9kD6knTI5kPdrAdhY0Qzr', '2015-10-28 11:10:06', '2015-11-03 13:58:03'),
 (2, 'tester01', 'Test', 'Man', 'abcd@gmail.com', '$2y$10$cVzz4lMO/ltHToxiivS3e.uQdjZP99hMq7tYZqYyvau2./SK5nWVy', 2, 1, '2kPhfSRDvK43GOvNMq7eOFZPCyNe3skDZJAq1w6YHV8AB6raRSyHPB57xnQT', '2015-10-30 17:21:10', '2015-10-30 18:13:15'),
 (3, 'tester02', 'Test', 'Man', 'abcde@gmail.com', '$2y$10$m/JaifbJkvANvFtN1vElFuKBJXB/OssYe3viEAVKkB49dV4qU2JCa', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
 (4, 'tester03', 'Test', 'Man', 'abcdef@gmail.com', '$2y$10$rxdH1d2d2EU23CEoj3BM7ubmqKCstUHZebBUOcEKXFTSfXC80TmgC', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
@@ -221,7 +229,9 @@ INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `passwo
 (6, 'tester05', 'Test', 'Man', 'abcdefgh@gmail.com', '$2y$10$pXtm7UUptwUy4kp7PeSc9exzrk78FoqEDZMzrRTBQ3KpjU/I4rA8m', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
 (7, 'tester01', 'Test', 'Man', 'abcd@gmail.com', '$2y$10$/ryDSghFicKioMjpUFDv7OyGLbdH//MnFyh3zpOgdAgYTeZjEg4fG', 2, 1, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00'),
 (9, 'tester07', 'Test', 'Man', 'abcdef123@gmail.com', '$2y$10$w291BJmw7v0KByaxQznVPOJLim8x1oUGZES92kad/Ay0eGPNht3ne', 2, 3, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00'),
-(11, 'tester09', 'Test', 'Man', 'abcdefgh123@gmail.com', '$2y$10$9tcdAc/puuAL2dyC0d4esOjHGkvD0EFrKna6y68kx4tRcdFABtHdG', 2, 1, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00');
+(11, 'tester09', 'Test', 'Man', 'abcdefgh123@gmail.com', '$2y$10$9tcdAc/puuAL2dyC0d4esOjHGkvD0EFrKna6y68kx4tRcdFABtHdG', 2, 1, NULL, '2015-10-30 17:22:24', '0000-00-00 00:00:00'),
+(12, 'Fore', 'tinker', 'bell', 'wiizwii@gmail.com', 'newpass2015', 2, 2, NULL, '2015-11-02 09:20:34', '2015-11-02 16:20:34'),
+(13, 'christopher', 'Tess', 'ass', 'teii@tmail.com', 'newpass2015', 2, 1, NULL, '2015-11-02 09:23:03', '2015-11-02 16:23:03');
 
 --
 -- Indexes for dumped tables
@@ -317,7 +327,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `introduce`
 --
 ALTER TABLE `introduce`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `message`
 --
@@ -362,7 +372,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=12;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=14;
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

@@ -22,6 +22,17 @@
     </div>
 </div>
 <div class="box-content row">
+    @if($errors->has())
+        <div class="alert alert-danger">
+            @foreach($errors->all() as $error)
+                {{$error}}<br>
+            @endforeach
+        </div>
+    @elseif(Session::has('messages'))
+        <div class="alert alert-success">
+                {{Session::get('messages')}}<br>
+        </div>
+    @endif
     <div class="col-lg-7 col-md-12">
         <h1>Introduce <br>
             <small>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum.</small>
