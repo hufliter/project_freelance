@@ -1,14 +1,10 @@
 @extends('admin.layout.index')
 
 @section('content')
-<div class="row">
-    <div class="col-md-8">
-        <span>
-            <a href="{{route('intro.create')}}" class="btn btn-primary">Create Introduce</a>
-            <a href="{{route('intro.view')}}" class="btn btn-info">View Detail Introduce</a>
-        </span>
-    </div>
-</div>
+<span>
+    <a href="{{route('intro.create')}}" class="btn btn-primary" style="display: none">Create Introduce</a>
+
+</span>
 <div class="box-header well">
     <h2><i class="glyphicon glyphicon-info-sign"></i> Introduction</h2>
 
@@ -33,16 +29,18 @@
                 {{Session::get('messages')}}<br>
         </div>
     @endif
-    <div class="col-lg-7 col-md-12">
-        <h1>Introduce <br>
-            <small>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum.</small>
-        </h1>
-        <p>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
-        Lorem issum Lorem issum Lorem issum Lorem issum </p>
+    <div class="col-md-12">
+        @if(!empty($data))
+        @foreach($data as $item)
+            <h3>{{$item->title}}</h3>
 
-        <p><b>Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum Lorem issum
-        Lorem issum Lorem issum Lorem issum .</b></p>
+            <p>
+                {{base64_decode($item->content)}}
+            </p>
 
+        <a href="{{route('intro.edit',array('id'=>$item->id))}}" class="btn btn-info">View Detail Introduce</a>
+        @endforeach
+        @endif
     </div>
 </div>
 @endsection
