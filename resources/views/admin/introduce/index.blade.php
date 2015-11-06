@@ -35,7 +35,7 @@
             <h3>{{$item->title}}</h3>
 
             <p>
-                {{base64_decode($item->content)}}
+                {{{base64_decode($item->content)}}}
             </p>
 
         <a href="{{route('intro.edit',array('id'=>$item->id))}}" class="btn btn-info">View Detail Introduce</a>
