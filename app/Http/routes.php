@@ -82,7 +82,27 @@ Route::group(['prefix'=>'/admin'], function(){
     //End Introduce
 
     //Category area
-    Route::get('category','admin\CategoryController@index');
+    Route::get('category', [
+        'as' => 'category.index' , 'uses' => 'admin\CategoryController@index'
+    ]);
+    Route::get('category/create', [
+        'as' => 'category.getCreate', 'uses' => 'admin\CategoryController@getCreate'
+    ]);
+    Route::post('category/create', [
+        'as' => 'category.postCreate' , 'uses' => 'admin\CategoryController@postCreate'
+    ]);
+    Route::get('category/view', [
+        'as' => 'category.getView' , 'uses' => 'admin\CategoryController@getView'
+    ]);
+    Route::get('category/edit' , [
+        'as' => 'category.getEdit' , 'uses' => 'admin\CategoryController@getEdit'
+    ]);
+    Route::post('category/edit', [
+        'as' => 'category.postEdit' , 'uses' => 'admin\CategoryController@postEdit'
+    ]);
+    Route::get('category/delete' , [
+        'as' => 'category.delete', 'uses' => 'admin\CategoryController@delete'
+    ]);
     //End category area
 
     //Products area
