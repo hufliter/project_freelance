@@ -106,7 +106,27 @@ Route::group(['prefix'=>'/admin'], function(){
     //End category area
 
     //Products area
-    Route::get('products','admin\ProductsController@index');
+    Route::get('products', [
+        'as' => 'products.index', 'uses' => 'admin\ProductsController@index'
+    ]);
+    Route::get('products/view', [
+        'as' => 'products.view', 'uses' => 'admin\ProductsController@getView'
+    ]);
+    Route::get('products/edit', [
+        'as' => 'products.getEdit', 'uses' => 'admin\ProductsController@getEdit'
+    ]);
+    Route::post('products/edit', [
+        'as' => 'products.postEdit', 'uses' => 'admin\ProductsController@postEdit'
+    ]);
+    Route::get('products/create', [
+        'as' => 'products.getCreate', 'uses' => 'admin\ProductsController@getCreate'
+    ]);
+    Route::post('products/create', [
+        'as' => 'products.postCreate', 'uses' => 'admin\ProductsController@postCreate'
+    ]);
+    Route::get('products/delete', [
+        'as' => 'products.delete', 'uses' => 'admin\ProductsController@delete'
+    ]);
     //End products area
 
     //News area

@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 03, 2015 at 06:41 PM
+-- Generation Time: Nov 08, 2015 at 07:06 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -29,10 +29,23 @@ SET time_zone = "+00:00";
 CREATE TABLE IF NOT EXISTS `categories` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
-  `status` tinyint(4) NOT NULL,
+  `parent_id` int(11) DEFAULT NULL,
+  `is_active` tinyint(4) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `categories`
+--
+
+INSERT INTO `categories` (`id`, `name`, `parent_id`, `is_active`, `created_at`, `updated_at`) VALUES
+(2, 'Cate 1', NULL, 1, '2015-11-06 13:59:45', '0000-00-00 00:00:00'),
+(3, 'Cate 2', NULL, 1, '2015-11-06 13:59:45', '0000-00-00 00:00:00'),
+(4, 'Sub Child Cate 1', 2, 1, '2015-11-06 14:03:51', '0000-00-00 00:00:00'),
+(5, 'Sub child Cate 2', 3, 1, '2015-11-06 14:09:02', '0000-00-00 00:00:00'),
+(7, 'Father Category', 0, 1, '2015-11-08 08:47:02', '2015-11-08 15:47:02'),
+(8, 'Child Category', 7, 1, '2015-11-08 08:48:23', '2015-11-08 15:48:23');
 
 -- --------------------------------------------------------
 
@@ -73,7 +86,7 @@ CREATE TABLE IF NOT EXISTS `introduce` (
 --
 
 INSERT INTO `introduce` (`id`, `title`, `content`, `image`, `is_active`, `created_at`, `updated_at`) VALUES
-(2, 'efw', 'ZnF3cWZ3', '', 1, '2015-11-03 07:47:36', '2015-11-03 14:47:36');
+(2, 'CHÀO MỪNG BẠN ĐẾN VỚI CÔNG TY TNHH PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN!', 'PHA+QyZvY2lyYztuZyB0eSBUTkhIIHBoYcyBdCB0cmkmZWNpcmM7zIluIGMmb2NpcmM7bmcgbmdoaSZlY2lyYzvMo3AgU2HMgGkgR2/MgG4gY2h1eSZlY2lyYztuIGN1bmcgYyZhY2lyYzvMgXAgY2HMgWMgZ2lhzIlpIHBoYcyBcCBi4bqjbyB24buHIGgmYWdyYXZlO25nIGgmb2FjdXRlO2EgeHXhuqV0IGto4bqpdSB0cm9uZyBjb250YWluZXIuIFPhu60gZOG7pW5nIGNo4bqldCBoJnVhY3V0ZTt0IOG6qW0gdHJvbmcgxJEmb2FjdXRlO25nIGcmb2FjdXRlO2kgc+G6o24gcGjhuqltLCB0cm9uZyBjJmFhY3V0ZTtjIHRoJnVncmF2ZTtuZyBoJmFncmF2ZTtuZywga2nhu4duIGgmYWdyYXZlO25nIHYmYWdyYXZlOyB0cm9uZyBjb250YWluZXIuIFPhu60gZOG7pW5nIHQmdWFjdXRlO2kga2gmaWFjdXRlOyBjaCZlZ3JhdmU7biB2JmFncmF2ZTtvIGMmYWFjdXRlO2Mga2hv4bqjbmcgdHLhu5FuZyBnaeG7r2EgYyZhYWN1dGU7YyBraeG7h24gaCZhZ3JhdmU7bmcgaGF5IGdp4buvYSBraeG7h24gaCZhZ3JhdmU7bmcgdiZhZ3JhdmU7IGNvbnRhaW5lci4gQ2jhuqV0IGgmdWFjdXRlO3Qg4bqpbSBkdXkgdHJpzIAgY2hvIGMmYWFjdXRlO2Mgc+G6o24gcGjhuqltLCB0aCZ1Z3JhdmU7bmcgaCZhZ3JhdmU7bmcsIGtp4buHbiBoJmFncmF2ZTtuZyB2JmFncmF2ZTsga2gmb2NpcmM7bmcga2gmaWFjdXRlOyB0cm9uZyBjb250YWluZXIgbHUmb2NpcmM7biBraCZvY2lyYzsgcmHMgW8sIG5nxINuIG5nxrDMgGEgaGkmZWNpcmM7zKNuIHTGsMahzKNuZyBo4bqlcCBoxqFpLCDEkSZvY2lyYzvMiSBtJm9jaXJjO8yAIGgmb2NpcmM7aSB0ciZlY2lyYztuIGhhzIBuZyBob8yBYSB2YcyAIGhpJmVjaXJjO8yjbiB0xrDGocyjbmcgbcawYSB0cm9uZyBjb250YWluZXIuIFQmdWFjdXRlO2kga2gmaWFjdXRlOyBjaCZlZ3JhdmU7biBoJmFncmF2ZTtuZyBnaSZ1YWN1dGU7cCBjaG8gaCZhZ3JhdmU7bmcgaCZvYWN1dGU7YSBraCZvY2lyYztuZyBi4buLIHgmZWNpcmM7IGThu4tjaCwgxJHhu5UgbmcmYXRpbGRlOyB0cm9uZyBxdSZhYWN1dGU7IHRyJmlncmF2ZTtuaCB24bqtbiBjaHV54buDbi4gxJBhzIltIGJhzIlvIGhhzIBuZyBob8yBYSDEkSZlY2lyYzvMgW4gdGF5IG5nxrDGocyAaSBuaCZhY2lyYzvMo24gdiZhY2lyYzvMg24gZ2nGsMyDIG5ndXkmZWNpcmM7biBwaCZhY2lyYzvMiW0gY2gmYWNpcmM7zIF0IGJhbiDEkSZhY2lyYzvMgHUsIGtoJm9jaXJjO25nIGJpzKMgxrDGocyBdCBoYcyAbmcsIG3hu6duIHRoJnVncmF2ZTtuZyBoYXkgZCZpYWN1dGU7bmggdGgmdWdyYXZlO25nIGNhcnRvbiwga2gmb2NpcmM7bmcgbCZhZ3JhdmU7bSBoxrAgaOG6oWkgbmgmYXRpbGRlO24gbSZhYWN1dGU7YyBt4bqldCB0JmlhY3V0ZTtuaCB0aOG6qW0gbeG7uSBj4bunYSBiYW8gYiZpZ3JhdmU7LCBraCZvY2lyYztuZyBi4buLIG3hu5FjIGhheSBuJmFjaXJjO8yBbSBtJm9jaXJjO8yBYywga2gmb2NpcmM7bmcgbCZhZ3JhdmU7bSBo4buPbmcgYyZhYWN1dGU7YyB0aGnhur90IGLhu4sgxJFp4buHbiB2JmFncmF2ZTsgxJFp4buHbiB04butLCBraCZvY2lyYztuZyBsJmFncmF2ZTttIGhvZW4gcuG7iSwgb3hpIGhvzIFhLCDEg24gbSZvZ3JhdmU7biwgcGhhaSBtJmFncmF2ZTt1IGtpbSBsb+G6oWksJmhlbGxpcDs8L3A+DQo8cD5NJm9jaXJjO8yDaSBuxINtIGNvzIEgaGHMgG5nIHRyxINtIHRyaSZlY2lyYzvMo3UgY29udGFpbmVyIGzGsHUgdGgmb2NpcmM7bmcgdHImZWNpcmM7biBiaSZlY2lyYzvMiW4gxJEmZWNpcmM7zIkgbWFuZyBoYcyAbmcgaG/MgWEgxJEmZWNpcmM7zIFuIGtoxIPMgXAgbsahaSB0ciZlY2lyYztuIHRoJmVjaXJjO8yBIGdpxqHMgWkuIEtob2HMiW5nIDIwJSBoJmFncmF2ZTtuZyBoJm9hY3V0ZTthIHRyb25nIHMmb2NpcmM7zIEgxJFvzIEgY2/MgSBuZ3V5IGPGoSBiacyjIGjGsCBob8yJbmcgZG8gxJHhu5UgbmcmYXRpbGRlOyB2JmFncmF2ZTsgZG8ga2gmb2NpcmM7bmcga2hpzIEgJmFjaXJjO8yJbSDGsMahzIF0IHRyb25nIGNvbnRhaW5lciBnJmFjaXJjO3kgcmEgbGHMgG0gdCZvY2lyYzvMgW4ga2XMgW0gaGHMgG5nIHR5zIkgVVNEIMSRJmVjaXJjO8yJIGtoxIPMgWMgcGh1zKNjIGgmYWNpcmM7zKN1IHF1YcyJLCDEkSZvY2lyYzvMgG5nIHRoxqHMgGkgbGHMgG0gbSZhY2lyYzvMgXQgdXkgdGnMgW4gxJEmb2NpcmM7zIFpIHbGocyBaSBraGHMgWNoIGhhzIBuZy48L3A+DQo8cD5DJm9jaXJjO25nIHR5IFROSEggcGhhzIF0IHRyaSZlY2lyYzvMiW4gYyZvY2lyYztuZyBuZ2hpJmVjaXJjO8yjcCBTYcyAaSBHb8yAbiBsdSZvY2lyYztuIGtodXkmZWNpcmM7zIFuIGNhzIFvIMSRJmVjaXJjO8yBbiBraGHMgWNoIGhhzIBuZyBzxrDMiSBkdcyjbmcgY2gmYWNpcmM7zIF0IGh1zIF0ICZhY2lyYzvMiW0gdiZhZ3JhdmU7IHQmdWFjdXRlO2kga2gmaWFjdXRlOyBjaCZlZ3JhdmU7biBoJmFncmF2ZTtuZyB0cm9uZyBjJmFhY3V0ZTtjIGNvbnRhaW5lciBoYcyAbmcgaG/MgWEgY3XMiWEgbWnMgG5oIMSRJmVjaXJjO8yJIMSRYcyJbSBiYcyJbyBraCZvY2lyYztuZyB4YcyJeSByYSBiJmFjaXJjO8yBdCBrecyAIHPGsMyjIGMmb2NpcmM7zIEgbmHMgG8uIMSQJm9jaXJjO8yAbmcgdGjGocyAaSBraGHMgWNoIGhhzIBuZyB0dSZhY2lyYztuIHRodcyJIG5naGkmZWNpcmM7bSBjYcyBYyB0aSZlY2lyYzt1IGNodSZhY2lyYzvMiW4gdiZlY2lyYzvMgCBjaCZhY2lyYzvMgXQgbMawxqHMo25nIGhhzIBuZyBob8yBYSwgY2HMgWMgcXV5IHTEg8yBYyBhbiB0b2HMgG4gdHJvbmcga2kmZWNpcmM7zIltIHRyYSBjb250YWluZXIgdmHMgCDEkW/MgW5nIGhhzIBuZy48L3A+DQo8cD5DaOG6pXQgaCZ1YWN1dGU7dCDhuqltIFNpbGljYSBHZWwgxJHGsOG7o2Mgc+G7rSBk4bulbmcgdHJvbmcgxJEmb2FjdXRlO25nIGcmb2FjdXRlO2kgc+G6o24gcGjhuqltIHYmYWdyYXZlOyB0cm9uZyBjJmFhY3V0ZTtjIHRoJnVncmF2ZTtuZyBoJmFncmF2ZTtuZyBsJmFncmF2ZTsgcGgmdWdyYXZlOyBo4bujcCwgYW4gdG8mYWdyYXZlO24gdiZhZ3JhdmU7IGtpbmggdOG6vyBuaOG6pXQuIMSQJm9jaXJjO2kga2hpIFNpbGljYSBHZWwgY8WpbmcgxJHGsOG7o2MgZCZ1Z3JhdmU7bmcgdHJvbmcgYyZhYWN1dGU7YyBraeG7h24gaCZhZ3JhdmU7bmcgaGF5IGNvbnRhaW5lci48L3A+DQo8cD5DaCZhY2lyYzvMgXQgaHXMgXQgJmFjaXJjO8yJbSBTdXBlckRyeSBz4butIGThu6VuZyB0cm9uZyBjJmFhY3V0ZTtjIGtp4buHbiBoJmFncmF2ZTtuZyB2JmFncmF2ZTs8L3A+DQo8cD50cm9uZyBjJmFhY3V0ZTtjIGNvbnRhaW5lciDEkeG6oXQgaGnhu4d1IHF14bqjIGNhbyBuaOG6pXQgbmjGsG5nIGzhuqFpIGtpbmggdOG6vyBuaOG6pXQuIFN1cGVyRHJ5IHLhuqV0IGFuIHRvJmFncmF2ZTtuLCBkJmVjaXJjO8yDIHBoJmFjaXJjO24gaHXMiXksIHRoJmFjaXJjO24gdGhpJmVjaXJjO8yjbiB2xqHMgWkgbSZvY2lyYztpIHRyxrDGocyAbmcuIMSQYcyDIMSRxrDGocyjYyBTR1Mga2kmZWNpcmM7zIltIMSRacyjbmgsIGtoJm9jaXJjO25nIGNvzIEgY2gmYWNpcmM7zIF0IGcmYWNpcmM7eSBkacyjIMawzIFuZyBEaW1ldGh5bCBGdW1hcmF0ZSAoRE1GKSwgdHUmYWNpcmM7biB0aHXMiSBjYcyBYyBxdXkgxJFpzKNuaCBSRUFDSCwgUm9IUyBjdcyJYSB0aGnMoyB0csawxqHMgG5nIENoJmFjaXJjO3UgJkFjaXJjO3UuIE5nb2HMgGkgcmEgU3VwZXJEcnkgY2/MgG4gY2/MgSBuaMawzINuZyDEkcSDzKNjIHRpzIFuaCBuJm9jaXJjO8yJaSB0ciZvY2lyYzvMo2k6PC9wPg0KPHVsPg0KPGxpPktoYcyJIG7Eg25nIGh1zIF0ICZhY2lyYzvMiW0gKHRpzIkgbCZlY2lyYzvMoyBodcyBdCAmYWNpcmM7zIltKSBkJmVjaXJjO8yDIGRhzIBuZyDEkWkmZWNpcmM7zIB1IGNoacyJbmggdMawzIAgNTAlIMSRJmVjaXJjO8yBbiAxNTAlIHNvIHbGocyBaSB0cm/Mo25nIGzGsMahzKNuZyBjaCZhY2lyYzvMgXQgaHXMgXQgJmFjaXJjO8yJbSwgdHXMgHkgdGhlbyB5JmVjaXJjO3UgYyZhY2lyYzvMgHUgY3XMiWEga2hhzIFjaCBoYcyAbmcuPC9saT4NCjxsaT5UJm9jaXJjO8yBYyDEkSZvY2lyYzvMoyBodcyBdCAmYWNpcmM7zIltLCB0aMahzIBpIGdpYW4gaHXMgXQgJmFjaXJjO8yJbSBwaHXMgCBoxqHMo3AgdsahzIFpIGhhzIBuaCB0cmnMgG5oIGRhzIBpIG5nYcyAeSBjdcyJYSBoYcyAbmcgaG/MgWEgdHJvbmcgY29udGFpbmVyLjwvbGk+DQo8bGk+xJBvzIFuZyBnb8yBaSBixIPMgG5nIGhhaSBsxqHMgXAgYmFvIGJpzIAuIEzGocyBcCBiJmVjaXJjO24gbmdvYcyAaSBsYcyAIHZhzIlpIGtoJm9jaXJjO25nIGQmZWNpcmM7zKN0LCBsxqHMgXAgYiZlY2lyYztuIHRyb25nIGxhzIAgdiZhY2lyYzvMo3QgbGkmZWNpcmM7zKN1IMSRxIPMo2MgYmkmZWNpcmM7zKN0IGNoacyJIGNobyBoxqFpIG7GsMahzIFjIMSRaSB2YcyAbyBtYcyAIGtoJm9jaXJjO25nIGNobyBiJmFjaXJjO8yBdCBrecyAIGNoJmFjaXJjO8yBdCBuYcyAbyDEkWkgbmfGsMahzKNjIHRyxqHMiSByYS4gRG8gxJFvzIEgciZhY2lyYzvMgXQgYW4gdG9hzIBuIGtoaSBzxrDMiSBkdcyjbmcsIGNoacyjdSDEkcawxqHMo2MgdmEgxJEmYWNpcmM7zKNwLCBjaGXMgG4gZcyBcCB0cm9uZyBxdWHMgSB0cmnMgG5oIHYmYWNpcmM7zKNuIGNodXkmZWNpcmM7zIluIGhhzIBuZyBob8yBYSBtYcyAIGNoJmFjaXJjO8yBdCBodcyBdCAmYWNpcmM7zIltIHYmYWNpcmM7zINuIGtoJm9jaXJjO25nIGJpzKMgcm/MgCByacyJLjwvbGk+DQo8bGk+U8awzIkgZHXMo25nIG1vzIFjIHRyZW8gY2h1eSZlY2lyYztuIGR1zKNuZyBjaG8gY29udGFpbmVyLCByJmFjaXJjO8yBdCBjaMSDzIFjIGNoxIPMgW4sIGQmZWNpcmM7zIMgdGhhbyB0YcyBYy4NCjxwPlRyxrDhu5tjIGtpYSBjaCZlZ3JhdmU7biBsJm9hY3V0ZTt0IGgmYWdyYXZlO25nIG5nxrDhu51pIHRhIHRoxrDhu51uZyBz4butIGThu6VuZyBwYWxsZXQsIGfhu5csIHjhu5FwLCBjYXJ0b24gbmjGsG5nIG3hu6ljIMSR4buZIGLhuqNvIHbhu4cgdGjhuqVwIHYmYWdyYXZlOyBy4bqldCBt4bqldCB0aOG7nWkgZ2lhbiB0cm9uZyB2aeG7h2MgxJEmb2FjdXRlO25nIGgmYWdyYXZlO25nIHYmYWdyYXZlOyByJnVhY3V0ZTt0IGgmYWdyYXZlO25nIHJhIGto4buPaSBjb250YWluZXIuIE5nJmFncmF2ZTt5IG5heSwgcGjGsMahbmcgcGgmYWFjdXRlO3AgY2gmZWdyYXZlO24gbCZvYWN1dGU7dCBoJmFncmF2ZTtuZyBi4bqxbmcgdCZ1YWN1dGU7aSBraCZpYWN1dGU7IHLhuqV0IHRp4buHbiBs4bujaSB2JmFncmF2ZTsgYW4gdG8mYWdyYXZlO24gY2hvIGgmYWdyYXZlO25nIGgmb2FjdXRlO2EgdiZhZ3JhdmU7IG0mb2NpcmM7aSB0csaw4budbmcsIHRo4budaSBnaWFuIMSRJm9hY3V0ZTtuZyBoJmFncmF2ZTtuZyB2JmFncmF2ZTsgciZ1YWN1dGU7dCBoJmFncmF2ZTtuZyBkaeG7hW4gcmEgbmhhbmggY2gmb2FjdXRlO25nLCBjaCZpYWN1dGU7bmggeCZhYWN1dGU7Yy48L3A+DQo8cD5DYcyJbSDGoW4sPC9wPg0KPHA+QyZvY2lyYztuZyB0eSBUTkhIIHBoYcyBdCB0cmkmZWNpcmM7zIluIGMmb2NpcmM7bmcgbmdoaSZlY2lyYzvMo3AgU2HMgGkgR2/MgG4uPC9wPg0KPC9saT4NCjwvdWw+', '', 1, '2015-11-03 07:47:36', '2015-11-06 12:47:40');
 
 -- --------------------------------------------------------
 
@@ -115,28 +128,12 @@ CREATE TABLE IF NOT EXISTS `products` (
   `cate_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
-  `size` varchar(255) NOT NULL,
-  `weight` varchar(255) NOT NULL,
-  `ingredient` text NOT NULL,
-  `product_usage` int(11) NOT NULL,
+  `usage` text NOT NULL,
   `description` text NOT NULL,
-  `status` tinyint(4) NOT NULL DEFAULT '1',
+  `is_active` tinyint(4) NOT NULL DEFAULT '1',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `product_usage`
---
-
-CREATE TABLE IF NOT EXISTS `product_usage` (
-`id` int(11) NOT NULL,
-  `product_id` int(11) NOT NULL,
-  `usage_id` int(11) NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL
+  `updated_at` datetime NOT NULL,
+  `slug` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
@@ -179,19 +176,6 @@ CREATE TABLE IF NOT EXISTS `technical` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `url` text NOT NULL,
-  `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
-  `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `usage`
---
-
-CREATE TABLE IF NOT EXISTS `usage` (
-`id` int(11) NOT NULL,
-  `usage_detail` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
@@ -274,12 +258,6 @@ ALTER TABLE `products`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `product_usage`
---
-ALTER TABLE `product_usage`
- ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `recruitment`
 --
 ALTER TABLE `recruitment`
@@ -298,12 +276,6 @@ ALTER TABLE `technical`
  ADD PRIMARY KEY (`id`);
 
 --
--- Indexes for table `usage`
---
-ALTER TABLE `usage`
- ADD PRIMARY KEY (`id`);
-
---
 -- Indexes for table `users`
 --
 ALTER TABLE `users`
@@ -317,7 +289,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `categories`
 --
 ALTER TABLE `categories`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 --
 -- AUTO_INCREMENT for table `contact`
 --
@@ -344,11 +316,6 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 ALTER TABLE `products`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
--- AUTO_INCREMENT for table `product_usage`
---
-ALTER TABLE `product_usage`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
 -- AUTO_INCREMENT for table `recruitment`
 --
 ALTER TABLE `recruitment`
@@ -362,11 +329,6 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `technical`
 --
 ALTER TABLE `technical`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
---
--- AUTO_INCREMENT for table `usage`
---
-ALTER TABLE `usage`
 MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 --
 -- AUTO_INCREMENT for table `users`

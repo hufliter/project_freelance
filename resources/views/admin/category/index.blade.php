@@ -31,6 +31,7 @@
         <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
             <thead>
             <tr>
+                <th>Id</th>
                 <th>Name</th>
                 <th>Parent_id</th>
                 <th>is_active</th>
@@ -40,28 +41,38 @@
             </tr>
             </thead>
             <tbody>
-
+                @foreach($cate as $items)
                 <tr>
-                    <td>name</td>
-                    <td class="center">parent</td>
-                    <td class="center">is_active</td>
-                    <td class="center">created</td>
-                    <td class="center">updated</td>
+                    <td>{{$items->id}}</td>
+                    <td>{{$items->name}}</td>
+                    <td class="center">{{$items->parent_id}}</td>
                     <td class="center">
-                        <a class="btn btn-success" href="#">
+                        @if($items->is_active == 1)
+                        <span class="label-success label label-default">Active</span>
+                        @elseif($items->is_active == 2)
+                        <span class="label-warning label label-default">Pending</span>
+                        @else
+                        <span class="label-danger label label-default">Banned</span>
+                        @endif
+                    </td>
+                    <td class="center">{{date('Y/m/d',strtotime($items->created_at))}}</td>
+                    <td class="center">{{date('Y/m/d',strtotime($items->updated_at))}}</td>
+                    <td class="center">
+                        <a class="btn btn-success" href="{{route('category.getView',['id'=>$items->id])}}">
                             <i class="glyphicon glyphicon-zoom-in icon-white"></i>
                             View
                         </a>
-                        <a class="btn btn-info" href="#">
+                        <a class="btn btn-info" href="{{route('category.getEdit',['id'=>$items->id])}}">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             Edit
                         </a>
-                        <a class="btn btn-danger" href="#" onclick="return confirm('Are you sure you want to delete this user?');">
+                        <a class="btn btn-danger" href="{{route('category.delete',['id'=>$items->id])}}" onclick="return confirm('Are you sure you want to delete this user?');">
                             <i class="glyphicon glyphicon-trash icon-white"></i>
                             Delete
                         </a>
                     </td>
                 </tr>
+                @endforeach
             </tbody>
         </table>
     </div>
