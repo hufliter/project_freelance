@@ -45,7 +45,7 @@
 
                 <div class="form-group">
                     {!! Form::label('Image') !!}
-                    {!! Form::file('fileUpload', null) !!}
+                    {!! Form::file('fileUpload[]', array('multiple'=>true)) !!}
                 </div>
 
                 <div class="form-group">
