@@ -15,7 +15,7 @@
             </div>
         </div>
         <div class="box-content">
-            {!! Form::open(array('route' => array('products.postCreate'), 'method' => 'POST')) !!}
+            {!! Form::open(array('route' => array('products.postCreate'), 'method' => 'POST', 'files' => true)) !!}
                 <div class="form-group">
                     {!! Form::label('Product Code') !!}
                     {!! Form::text('slug', null,
@@ -25,7 +25,15 @@
                 </div>
                 <div class="form-group">
                     {!! Form::label('Category') !!}
-                    {!! Form::select('cate_id') !!}
+                    @if(!empty($cate))
+                        <select name="parent_id" class="form-group">
+                            @foreach($cate as $items)
+                            <optgroup label="{{$items->name}}">
+                                <option value="{{$items->child_id}}">{{$items->child_name}}</option>
+                            </optgroup>
+                            @endforeach
+                        </select>
+                    @endif
                 </div>
                 <div class="form-group">
                     {!! Form::label('Product Name') !!}
@@ -34,24 +42,27 @@
                               'class'=>'form-control',
                               'placeholder'=>'Product Name')) !!}
                 </div>
+
                 <div class="form-group">
                     {!! Form::label('Image') !!}
-                    {!! Form::file('image', null,
-                        array('required',
-                              'class'=>'form-control',
-                              'placeholder'=>'Image')) !!}
+                    {!! Form::file('fileUpload', null) !!}
                 </div>
+
                 <div class="form-group">
                     {!! Form::label('Usage') !!}
                     {!! Form::textarea('usage', null,
-                                    array( 'class'=>'form-control',
-                                          'placeholder'=>'Usage')) !!}
+                        array(
+                            'required',
+                            'class'=>'form-control',
+                            'placeholder'=>'Usage')) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Description') !!}
                     {!! Form::textarea('description', null,
-                                    array( 'class'=>'form-control',
-                                          'placeholder'=>'Description')) !!}
+                        array(
+                            'required',
+                            'class'=>'form-control',
+                            'placeholder'=>'Description')) !!}
                 </div>
                 <div class="form-group">
                     {!! Form::label('Active') !!}
@@ -60,7 +71,7 @@
                               'class'=>'form-control',
                               'placeholder'=>'Active')) !!}
                 </div>
-                <button type="submit" class="btn btn-primary">Submit</button>
+                {!! Form::submit('Create Product!', array('class' => 'btn btn-primary')) !!}
             {!! Form::close() !!}
         </div>
     </div>
