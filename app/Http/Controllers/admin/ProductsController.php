@@ -34,42 +34,121 @@ class ProductsController extends Controller {
 
             $rules = array(
                 'slug' => 'required|min:3|max:50|unique:products',
-                'parent_id' => 'required',
+                'cate_id' => 'required',
                 'usage' => 'required|min:3|max:300',
                 'description' => 'required|min:3|max:300',
             );
             $validator = Validator::make($data,$rules);
+            $files = Input::file('file_upload');
             if( $validator->fails() ){
                 return Redirect::route('products.index')->withErrors($validator);
             } else {
-                if( $req->hasFile('fileUpload') ) {
-                    $files = Input::file('fileUpload');
+                if( $req->hasFile('file_upload') ) {
+                    $files = Input::file('file_upload');
                     $file_count = count($files);
                     $uploadCount = 0;
+                    $imgArr = array();
                     foreach($files as $file){
                         $imgRules = array(
-                            'fileUpload' => 'required|mimes:png,gif,jpeg'
+                            'file_upload' => 'required|mimes:png,gif,jpeg'
                         );
-                        $imgValidator = Validator::make(array('fileUpload'=>$file),$imgRules);
+                        $imgValidator = Validator::make(array('file_upload'=>$file),$imgRules);
                         if( $imgValidator->fails() ){
                             return Redirect::route('products.index')->withErrors($imgValidator);
                         } else {
                             $imgPath = 'upload/img';
                             $destinationPath = public_path($imgPath);
                             $fileName = $file->getClientOriginalName();
+                            $fileName = $this->cleanFileName($fileName);
+                            $fileName = uniqid() . "_" . $fileName;
                             $upload_success = $file->move($destinationPath,$fileName);
+                            $imgArr[] = $fileName;
                             $uploadCount++;
                         }
                     }
-                    //xu ly phan save db + hinh anh.
+
+                    //some function is missing. build slug, check data user given before add to db, change image name.
                     if( $uploadCount == $file_count ) {
-                        return Redirect::route('products.index')->withMessages('Create Product Successful');
+                        $encodedImgArr = json_encode($imgArr);
+                        $products = new Products();
+                        $products->cate_id = $data['cate_id'];
+                        $products->name = $data['name'];
+                        $products->image = $encodedImgArr;
+                        $products->usage = $data['usage'];
+                        $products->description =  $data['description'];
+                        $products->is_active = $data['is_active'];
+                        $products->slug = $data['slug'];
+
+                        if( $products->save() ) {
+                            return Redirect::route('products.index')->withMessages('Create Product Successful');
+                        } else {
+                            return Redirect::route('products.index')->withErrors('Something went wrong');
+                        }
                     } else {
                         return Redirect::route('products.index')->withErrors('Something went wrong');
                     }
                 }
             }
         }
+    }
+    public function delete(Request $req) {
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ){
+            $products = new Products();
+            $productsData = $products->findOrFail($id);
+            if( $productsData->delete() ){
+                return Redirect::route('products.index')->withMessage('Deleted Product Successful');
+            } else {
+                return Redirect::route('products.index')->withErrors('Something went wrong');
+            }
+        } else {
+            return Redirect::route('products.index')->withErrors('Invalid Product Id');
+        }
+    }
+    public function getView(Request $req) {
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ) {
+            $product = new Products();
+            $productData = $product->findOrFail($id);
+
+            if( !empty($productData) ){
+                $image = json_decode($productData->image);
+                $productData->image = $image;
+                return view('admin.products.view',array('product'=>$productData));
+            } else {
+                return Redirect::route('products.index')->withErrors('Not Found Product');
+            }
+        } else {
+            return Redirect::route('products.index')->withErrors('Invalid Product Id');
+        }
+    }
+    public function getEdit(Request $req) {
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ){
+            $product = new Products();
+            $productData = $product->findOrFail($id);
+
+            if( !empty($productData) ){
+                $image = json_decode($productData->image);
+                $productData->image = $image;
+
+                return view('admin.products.edit',array('product'=>$productData));
+            } else {
+                return Redirect::route('products.index')->withErrors('Not found Product');
+            }
+        } else {
+            return Redirect::route('products.index')->withErrors('Invalid Product Id');
+        }
+    }
+
+    private function cleanFileName($fileName)
+    {
+        //remove blanks
+        $fileName = preg_replace('/\s+/', '', $fileName);
+        //remove charactes
+        $fileName = preg_replace("/[^A-Za-z0-9_-\s.]/", "", $fileName);
+
+        return $fileName;
     }
 }
 ?>

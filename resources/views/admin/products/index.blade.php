@@ -34,11 +34,12 @@
             <tr>
                 <th>Category</th>
                 <th>Product Name</th>
-                <th>Image</th>
+                {{--<th>Image</th>--}}
                 <th>Product Usage</th>
                 <th>Description</th>
                 <th>Status</th>
                 <th>Created At</th>
+                <th>Actions</th>
             </tr>
             </thead>
             <tbody>
@@ -47,10 +48,9 @@
                 <tr>
                     <td>{{$items->cate_id}}</td>
                     <td class="center">{{$items->name}}</td>
-                    <td class="center">{{$items->image}}</td>
-                    <td class="center">{{$items->product_usage}}</td>
+                    {{--<td class="center">{{$items->image}}</td>--}}
+                    <td class="center">{{$items->usage}}</td>
                     <td class="center">{{$items->description}}</td>
-                    <td class="center">{{date('Y/m/d',strtotime($items->created_at))}}</td>
                     <td class="center">
                         @if($items->is_active == 1)
                         <span class="label-success label label-default">Active</span>
@@ -60,6 +60,8 @@
                         <span class="label-danger label label-default">Banned</span>
                         @endif
                     </td>
+                    <td class="center">{{date('Y/m/d',strtotime($items->created_at))}}</td>
+
                     <td class="center">
                         <a class="btn btn-success" href="{{route('products.view',['id'=>$items->id])}}">
                             <i class="glyphicon glyphicon-zoom-in icon-white"></i>

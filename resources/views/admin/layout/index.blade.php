@@ -23,6 +23,7 @@
     <link href='{{asset('css/jquery.iphone.toggle.css')}}' rel='stylesheet'>
     <link href='{{asset('css/uploadify.css')}}' rel='stylesheet'>
     <link href='{{asset('css/animate.min.css')}}' rel='stylesheet'>
+    <link href='{{asset('css/site.css')}}' rel='stylesheet'>
 
     <!-- jQuery -->
     <script src="{{asset('bower_components/jquery/jquery.min.js')}}"></script>
@@ -243,6 +244,7 @@
 <script src="{{asset('js/jquery.history.js')}}"></script>
 <!-- application script for Charisma demo -->
 <script src="{{asset('js/charisma.js')}}"></script>
+<script src="{{asset('js/myscript.js')}}"></script>
 
 </body>
 </html>
