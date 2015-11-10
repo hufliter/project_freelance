@@ -8,3 +8,4 @@ storage/
 config/
 .gitattributes
 .gitignore
+/public/upload
