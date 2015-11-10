@@ -19,7 +19,7 @@ class ProductsController extends Controller {
 
     public function index(Request $req) {
         $products = new Products();
-        $productsData = $products->all();
+        $productsData = $products->findAllProducts();
         return view('admin.products.index',array('products'=>$productsData));
     }
     public function getCreate(Request $req){
@@ -126,13 +126,13 @@ class ProductsController extends Controller {
         $id = $req->input('id');
         if( !empty($id) && is_numeric($id) ){
             $product = new Products();
-            $productData = $product->findOrFail($id);
-
+            $productData = $product->findProductById($id);
             if( !empty($productData) ){
                 $image = json_decode($productData->image);
                 $productData->image = $image;
-
-                return view('admin.products.edit',array('product'=>$productData));
+                $cate = new Category();
+                $cateData = $cate->getAllCate();
+                return view('admin.products.edit',array('product'=>$productData,'cate'=>$cateData));
             } else {
                 return Redirect::route('products.index')->withErrors('Not found Product');
             }
@@ -146,7 +146,7 @@ class ProductsController extends Controller {
         //remove blanks
         $fileName = preg_replace('/\s+/', '', $fileName);
         //remove charactes
-        $fileName = preg_replace("/[^A-Za-z0-9_-\s.]/", "", $fileName);
+        $fileName = preg_replace("/^([-a-z0-9_\s])+$/i", "", $fileName);
 
         return $fileName;
     }

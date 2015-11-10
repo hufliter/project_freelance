@@ -48,6 +48,18 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('Category') !!}
+                    @if(!empty($cate))
+                        <select name="cate_id" class="form-control">
+                            @foreach($cate as $items)
+                                <option class="h4" value="{{$items->id}}">{{$items->name}}</option>
+                                <option class="offset-by-one" value="{{$items->child_id}}">{{$items->child_name}}</option>
+                            @endforeach
+                        </select>
+                    @endif
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('Description') !!}
                     {!! Form::textarea('description', null ,
                         array('required',

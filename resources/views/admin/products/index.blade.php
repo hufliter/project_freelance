@@ -46,15 +46,15 @@
                 @if(!empty($products))
                 @foreach($products as $items)
                 <tr>
-                    <td>{{$items->cate_id}}</td>
-                    <td class="center">{{$items->name}}</td>
+                    <td>{{$items->cate_name}}</td>
+                    <td class="center">{{$items->product_name}}</td>
                     {{--<td class="center">{{$items->image}}</td>--}}
                     <td class="center">{{$items->usage}}</td>
-                    <td class="center">{{$items->description}}</td>
+                    <td class="center">{{$items->product_description}}</td>
                     <td class="center">
-                        @if($items->is_active == 1)
+                        @if($items->product_active == 1)
                         <span class="label-success label label-default">Active</span>
-                        @elseif($items->is_active == 2)
+                        @elseif($items->product_active == 2)
                         <span class="label-warning label label-default">Pending</span>
                         @else
                         <span class="label-danger label label-default">Banned</span>
@@ -63,15 +63,15 @@
                     <td class="center">{{date('Y/m/d',strtotime($items->created_at))}}</td>
 
                     <td class="center">
-                        <a class="btn btn-success" href="{{route('products.view',['id'=>$items->id])}}">
+                        <a class="btn btn-success" href="{{route('products.view',['id'=>$items->product_id])}}">
                             <i class="glyphicon glyphicon-zoom-in icon-white"></i>
                             View
                         </a>
-                        <a class="btn btn-info" href="{{route('products.getEdit',['id'=>$items->id])}}">
+                        <a class="btn btn-info" href="{{route('products.getEdit',['id'=>$items->product_id])}}">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             Edit
                         </a>
-                        <a class="btn btn-danger" href="{{route('products.delete',['id'=>$items->id])}}" onclick="return confirm('Are you sure you want to delete this product?');">
+                        <a class="btn btn-danger" href="{{route('products.delete',['id'=>$items->product_id])}}" onclick="return confirm('Are you sure you want to delete this product?');">
                             <i class="glyphicon glyphicon-trash icon-white"></i>
                             Delete
                         </a>
