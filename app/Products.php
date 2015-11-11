@@ -26,7 +26,9 @@ class Products extends Model
     public function findProductById($id){
         $q = DB::table('products as p')
             ->leftJoin('categories as c','c.id','=','p.cate_id')
-            ->where('p.id','=',$id);
+            ->where('p.id','=',$id)
+            ->select('p.id as product_id', 'p.image' ,'p.name as product_name ' , 'p.slug', 'p.usage', 'p.description as product_description ', 'p.created_at' , 'p.updated_at','p.is_active as product_active')
+            ->addSelect('c.id as cate_id','c.name as cate_name');
         $result = $q->get();
         if( !empty($result) ){
             return $result[0];

@@ -3,7 +3,7 @@
 <div class="box col-md-12">
     <div class="box-inner">
         <div class="box-header well" data-original-title="">
-            <h2><i class="glyphicon glyphicon-th"></i> View Products {{$product->slug}}</h2>
+            <h2><i class="glyphicon glyphicon-th"></i> Xem Sản Phẩm {{$product->slug}}</h2>
 
             <div class="box-icon">
                 <a href="#" class="btn btn-setting btn-round btn-default"><i

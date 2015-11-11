@@ -18,9 +18,9 @@
 
             {!! HTML::ul($errors->all()) !!}
 
-            {!! Form::model($product, array('route' => array('products.postEdit', $product->id), 'method' => 'POST', 'file'=>true)) !!}
+            {!! Form::model($product, array('route' => array('products.postEdit', $product->product_id), 'method' => 'POST', 'files'=>true)) !!}
                 <div class="form-group">
-                    {!! Form::hidden('id') !!}
+                    {!! Form::hidden('product_id') !!}
                 </div>
 
                 <div class="form-group">
@@ -33,7 +33,7 @@
 
                 <div class="form-group">
                     {!! Form::label('Product Name') !!}
-                    {!! Form::text('name', null,
+                    {!! Form::text('product_name', null,
                         array('required',
                               'class'=>'form-control',
                               'placeholder'=>'Product Name')) !!}
@@ -45,6 +45,21 @@
                         array('required',
                                 'class'=>'form-control',
                                 'placeholder' => 'Product Usage')) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Image') !!}
+                    {!! Form::file('file_upload[]', array('multiple'=>true)) !!}
+                </div>
+
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @foreach($product->image as $image)
+                        <div class="col-md-2 nopadding">
+                            <img class="img-thumbnail" src="{{asset('upload/img/'.$image)}}">
+                        </div>
+                        @endforeach
+                    </div>
                 </div>
 
                 <div class="form-group">
@@ -61,7 +76,7 @@
 
                 <div class="form-group">
                     {!! Form::label('Description') !!}
-                    {!! Form::textarea('description', null ,
+                    {!! Form::textarea('product_description', null,
                         array('required',
                                 'class'=>'form-control',
                                 'placeholder' => 'Product Description')) !!}
@@ -69,10 +84,7 @@
 
                 <div class="form-group">
                     {!! Form::label('Active') !!}
-                    {!! Form::checkbox('is_active', null,
-                        array('required',
-                              'class'=>'form-control',
-                              'placeholder'=>'Active')) !!}
+                    {!! Form::checkbox('product_active') !!}
                 </div>
                 <a class="btn btn-primary" href="{{route('products.index')}}">Back</a>
             {!! Form::submit('Edit Product!', array('class' => 'btn btn-info')) !!}

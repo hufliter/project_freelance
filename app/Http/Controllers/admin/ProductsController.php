@@ -10,6 +10,8 @@ use Illuminate\Support\Facades\Input;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Support\Facades\Validator;
+use Intervention\Image\Facades\Image;
+use Symfony\Component\Console\Helper;
 
 
 class ProductsController extends Controller {
@@ -39,7 +41,6 @@ class ProductsController extends Controller {
                 'description' => 'required|min:3|max:300',
             );
             $validator = Validator::make($data,$rules);
-            $files = Input::file('file_upload');
             if( $validator->fails() ){
                 return Redirect::route('products.index')->withErrors($validator);
             } else {
@@ -57,11 +58,9 @@ class ProductsController extends Controller {
                             return Redirect::route('products.index')->withErrors($imgValidator);
                         } else {
                             $imgPath = 'upload/img';
-                            $destinationPath = public_path($imgPath);
-                            $fileName = $file->getClientOriginalName();
-                            $fileName = $this->cleanFileName($fileName);
-                            $fileName = uniqid() . "_" . $fileName;
-                            $upload_success = $file->move($destinationPath,$fileName);
+                            $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+                            $path = public_path('upload/img/' . $fileName);
+                            Image::make($file->getRealPath())->resize(350,200)->save($path);
                             $imgArr[] = $fileName;
                             $uploadCount++;
                         }
@@ -138,6 +137,73 @@ class ProductsController extends Controller {
             }
         } else {
             return Redirect::route('products.index')->withErrors('Invalid Product Id');
+        }
+    }
+
+    public function postEdit(Request $req){
+        $data = $req->all();
+        if( !empty($data) ) {
+            $rules = array(
+                'slug' => 'required|min:3|max:50',
+                'cate_id' => 'required',
+                'usage' => 'required|min:3|max:300',
+                'product_description' => 'required|min:3|max:300',
+            );
+            $validator = Validator::make($data,$rules);
+            if( $validator->fails() ){
+                return Redirect::route('products.index')->withErrors($validator);
+            } else {
+
+                $products = new Products();
+                $productsData = $products->findOrFail($data['product_id']);
+                $productsData->cate_id = $data['cate_id'];
+                $productsData->name = $data['product_name'];
+                $productsData->usage = $data['usage'];
+                $productsData->description =  $data['product_description'];
+                $productsData->is_active = $data['product_active'];
+                $productsData->slug = $data['slug'];
+
+                if( $req->hasFile('file_upload') ) {
+                    $files = Input::file('file_upload');
+                    $file_count = count($files);
+                    $uploadCount = 0;
+                    $imgArr = array();
+                    foreach($files as $file){
+                        $imgRules = array(
+                            'file_upload' => 'required|mimes:png,gif,jpeg'
+                        );
+                        $imgValidator = Validator::make(array('file_upload'=>$file),$imgRules);
+                        if( $imgValidator->fails() ){
+                            return Redirect::route('products.index')->withErrors($imgValidator);
+                        } else {
+                            $imgPath = 'upload/img';
+                            $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
+                            $path = public_path('upload/img/' . $fileName);
+                            Image::make($file->getRealPath())->resize(350,200)->save($path);
+                            $imgArr[] = $fileName;
+                            $uploadCount++;
+                        }
+                    }
+
+                    //edit function: need to load old image.
+                    if( $uploadCount == $file_count ) {
+                        $encodedImgArr = json_encode($imgArr);
+
+                        $productsData->image = $encodedImgArr;
+
+
+                    } else {
+                        return Redirect::route('products.index')->withErrors('Oop! Something went wrong');
+                    }
+                } else {
+                    $productsData->image = $productsData->image;
+                }
+                if( $productsData->save() ) {
+                    return Redirect::route('products.index')->withMessages('Edit Product Successful');
+                } else {
+                    return Redirect::route('products.index')->withErrors('Something went wrong');
+                }
+            }
         }
     }
 
