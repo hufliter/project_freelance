@@ -11,9 +11,9 @@
 |
 */
 
-Route::get('/', function () {
+/*Route::get('/', function () {
     return view('welcome');
-});
+});*/
 
 //admin area
 Route::group(['prefix'=>'/admin'], function(){
@@ -141,3 +141,8 @@ Route::group(['prefix'=>'/admin'], function(){
     Route::get('contact','admin\ContactController@index');
     //End Contact area
 });
+
+//frontend area
+Route::get('/', [
+    'as'=> 'fe.index', 'uses' => 'SiteController@index'
+]);
