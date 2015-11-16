@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 4.2.3deb1.trusty~ppa.1
+-- version 4.2.11
 -- http://www.phpmyadmin.net
 --
--- Host: localhost
--- Generation Time: Nov 09, 2015 at 07:04 PM
--- Server version: 5.6.27-0ubuntu0.14.04.1
--- PHP Version: 5.5.9-1ubuntu4.14
+-- Host: 127.0.0.1
+-- Generation Time: Nov 16, 2015 at 07:13 PM
+-- Server version: 5.6.21
+-- PHP Version: 5.6.3
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 SET time_zone = "+00:00";
@@ -33,7 +33,7 @@ CREATE TABLE IF NOT EXISTS `categories` (
   `is_active` tinyint(4) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=9 ;
+) ENGINE=InnoDB AUTO_INCREMENT=9 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `categories`
@@ -46,6 +46,21 @@ INSERT INTO `categories` (`id`, `name`, `parent_id`, `is_active`, `created_at`, 
 (5, 'Sub child Cate 2', 3, 1, '2015-11-06 14:09:02', '0000-00-00 00:00:00'),
 (7, 'Father Category', 0, 1, '2015-11-08 08:47:02', '2015-11-08 15:47:02'),
 (8, 'Child Category', 7, 1, '2015-11-08 08:48:23', '2015-11-08 15:48:23');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `config`
+--
+
+CREATE TABLE IF NOT EXISTS `config` (
+  `company_address` varchar(255) NOT NULL,
+  `company_name` varchar(255) NOT NULL,
+  `company_phone` varchar(255) NOT NULL,
+  `company_email` varchar(255) NOT NULL,
+  `company_fax` varchar(255) NOT NULL,
+  `img_slider` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -63,7 +78,14 @@ CREATE TABLE IF NOT EXISTS `contact` (
   `content` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `contact`
+--
+
+INSERT INTO `contact` (`id`, `title`, `address`, `phone`, `fax`, `email`, `content`, `created_at`, `updated_at`) VALUES
+(1, 'New Contact', '911 Ngô Quyền, Q.10 TP.HCM', '0919991992', '', 'luzsec@gmail.com', 'Phản hồi từ người dùng', '2015-11-16 17:40:59', '0000-00-00 00:00:00');
 
 -- --------------------------------------------------------
 
@@ -79,7 +101,7 @@ CREATE TABLE IF NOT EXISTS `introduce` (
   `is_active` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=3 ;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `introduce`
@@ -99,7 +121,7 @@ CREATE TABLE IF NOT EXISTS `message` (
   `room_id` int(11) NOT NULL,
   `room_type` int(11) NOT NULL,
   `message` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -115,7 +137,7 @@ CREATE TABLE IF NOT EXISTS `news` (
   `description` text NOT NULL,
   `created_at` timestamp NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -127,6 +149,11 @@ CREATE TABLE IF NOT EXISTS `products` (
 `id` int(11) NOT NULL,
   `cate_id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
+  `size` varchar(255) NOT NULL,
+  `weight` int(11) NOT NULL,
+  `package` varchar(255) NOT NULL,
+  `words` varchar(255) NOT NULL,
+  `solder` varchar(255) NOT NULL,
   `image` varchar(255) NOT NULL,
   `usage` text NOT NULL,
   `description` text NOT NULL,
@@ -134,7 +161,14 @@ CREATE TABLE IF NOT EXISTS `products` (
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `slug` varchar(255) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `products`
+--
+
+INSERT INTO `products` (`id`, `cate_id`, `name`, `size`, `weight`, `package`, `words`, `solder`, `image`, `usage`, `description`, `is_active`, `created_at`, `updated_at`, `slug`) VALUES
+(3, 5, '', '', 0, '', '', '', '["564a0c8313249.png","564a0c83333e0.png"]', 'Mô tả sản phẩm', 'ứng dụng sản phẩm', 1, '2015-11-16 10:04:03', '2015-11-16 17:04:03', 'Sản phẩm 1');
 
 -- --------------------------------------------------------
 
@@ -146,11 +180,13 @@ CREATE TABLE IF NOT EXISTS `recruitment` (
 `id` int(11) NOT NULL,
   `job_title` varchar(255) NOT NULL,
   `position` varchar(255) NOT NULL,
+  `quantity` int(4) NOT NULL,
   `salary` varchar(255) NOT NULL,
+  `requirement` varchar(255) NOT NULL,
   `description` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -164,7 +200,7 @@ CREATE TABLE IF NOT EXISTS `room` (
   `email` varchar(255) NOT NULL,
   `phone` varchar(255) NOT NULL,
   `type` tinyint(4) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -178,7 +214,7 @@ CREATE TABLE IF NOT EXISTS `technical` (
   `url` text NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 AUTO_INCREMENT=1 ;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -198,7 +234,7 @@ CREATE TABLE IF NOT EXISTS `users` (
   `remember_token` varchar(255) DEFAULT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB  DEFAULT CHARSET=utf8 AUTO_INCREMENT=14 ;
+) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `users`
@@ -294,7 +330,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=9;
 -- AUTO_INCREMENT for table `contact`
 --
 ALTER TABLE `contact`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=2;
 --
 -- AUTO_INCREMENT for table `introduce`
 --
@@ -314,7 +350,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `recruitment`
 --
