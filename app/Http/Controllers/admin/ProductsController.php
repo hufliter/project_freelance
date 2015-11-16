@@ -71,7 +71,7 @@ class ProductsController extends Controller {
                         $encodedImgArr = json_encode($imgArr);
                         $products = new Products();
                         $products->cate_id = $data['cate_id'];
-                        $products->name = $data['name'];
+                        /*$products->name = $data['name'];*/
                         $products->image = $encodedImgArr;
                         $products->usage = $data['usage'];
                         $products->description =  $data['description'];

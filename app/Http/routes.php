@@ -138,8 +138,29 @@ Route::group(['prefix'=>'/admin'], function(){
     //End Technical area
 
     //Contact area
-    Route::get('contact','admin\ContactController@index');
+    Route::get('contact',[
+        'as' => 'contact.index', 'uses' => 'admin\ContactController@index'
+    ]);
+    Route::get('contact/view',[
+        'as' => 'contact.getView', 'uses' => 'admin\ContactController@getView'
+    ]);
+    Route::get('contact/edit',[
+        'as' => 'contact.getEdit', 'uses' => 'admin\ContactController@getEdit'
+    ]);
+    Route::post('contact/edit',[
+        'as' => 'contact.postEdit', 'uses' => 'admin\ContactController@postEdit'
+    ]);
+    Route::get('contact/delete',[
+        'as' => 'contact.delete', 'uses' => 'admin\ContactController@delete'
+    ]);
     //End Contact area
+
+    //Recruitment area
+    Route:get('recruitment', [
+        'as' => 'recruitment.index', 'uses' => 'admin\RecruitmentController@index'
+    ]);
+    //end recruitment area
+
 });
 
 //frontend area

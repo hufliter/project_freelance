@@ -105,6 +105,9 @@
 
                         <li><a class="ajax-link" href="{{ URL::to('/admin/contact')  }}"><i class="glyphicon glyphicon-calendar"></i><span> Contact</span></a>
                         </li>
+                        <li>
+                            <a class="ajax-link" href="{{ URL::to('/admin/recruitment')  }}"><i class="glyphicon glyphicon-tag"></i><span> Recruitment</span></a>
+                        </li>
 
                     </ul>
                     <label id="for-is-ajax" for="is-ajax"><input id="is-ajax" type="checkbox"> Ajax on menu</label>
