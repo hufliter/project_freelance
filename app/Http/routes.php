@@ -134,7 +134,12 @@ Route::group(['prefix'=>'/admin'], function(){
     //End News area
 
     //Technical area
-    Route::get('technical','admin\TechnicalController@index');
+    Route::get('technical', [
+        'as' => 'technical.index', 'uses' => 'admin\TechnicalController@index'
+    ]);
+    Route::get('technical/oauth2callback', [
+        'as' => 'technical.oauth2callback', 'uses' => 'admin\TechnicalController@oauth2callback'
+    ]);
     //End Technical area
 
     //Contact area
