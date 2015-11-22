@@ -137,9 +137,25 @@ Route::group(['prefix'=>'/admin'], function(){
     Route::get('technical', [
         'as' => 'technical.index', 'uses' => 'admin\TechnicalController@index'
     ]);
-    Route::get('technical/oauth2callback', [
-        'as' => 'technical.oauth2callback', 'uses' => 'admin\TechnicalController@oauth2callback'
+    Route::get('technical/view', [
+        'as' => 'technical.view', 'uses' => 'admin\TechnicalController@getView'
     ]);
+    Route::get('technical/edit', [
+        'as' => 'technical.getEdit', 'uses' => 'admin\TechnicalController@getEdit'
+    ]);
+    Route::post('technical/edit', [
+        'as' => 'technical.postEdit', 'uses' => 'admin\TechnicalController@postEdit'
+    ]);
+    Route::get('technical/create', [
+        'as' => 'technical.getCreate', 'uses' => 'admin\TechnicalController@getCreate'
+    ]);
+    Route::post('technical/create', [
+        'as' => 'technical.postCreate', 'uses' => 'admin\TechnicalController@postCreate'
+    ]);
+    Route::get('technical/delete', [
+        'as' => 'technical.delete', 'uses' => 'admin\TechnicalController@delete'
+    ]);
+
     //End Technical area
 
     //Contact area
@@ -161,8 +177,26 @@ Route::group(['prefix'=>'/admin'], function(){
     //End Contact area
 
     //Recruitment area
-    Route:get('recruitment', [
+    Route::get('recruitment', [
         'as' => 'recruitment.index', 'uses' => 'admin\RecruitmentController@index'
+    ]);
+    Route::get('recruitment/create', [
+        'as' => 'recruitment.getCreate', 'uses' => 'admin\RecruitmentController@getCreate'
+    ]);
+    Route::post('recruitment/create', [
+        'as' => 'recruitment.postCreate', 'uses' => 'admin\RecruitmentController@postCreate'
+    ]);
+    Route::get('recruitment/view', [
+        'as' => 'recruitment.getView', 'uses' => 'admin\RecruitmentController@getView'
+    ]);
+    Route::get('recruitment/edit', [
+        'as' => 'recruitment.getEdit', 'uses' => 'admin\RecruitmentController@getEdit'
+    ]);
+    Route::post('recruitment/edit', [
+        'as' => 'recruitment.postEdit', 'uses' => 'admin\RecruitmentController@postEdit'
+    ]);
+    Route::get('recruitment/delete', [
+        'as' => 'recruitment.delete', 'uses' => 'admin\RecruitmentController@delete'
     ]);
     //end recruitment area
 
@@ -172,3 +206,38 @@ Route::group(['prefix'=>'/admin'], function(){
 Route::get('/', [
     'as'=> 'fe.index', 'uses' => 'SiteController@index'
 ]);
+Route::get('/introduce', [
+    'as'=> 'fe.introduce', 'uses' => 'IntroduceController@index'
+]);
+
+Route::get('/news', [
+    'as'=> 'fe.news', 'uses' => 'SiteController@index'
+]);
+
+//fe recruitment
+Route::get('/recruitment', [
+    'as'=> 'fe.recruitment', 'uses' => 'RecruitmentController@index'
+]);
+Route::get('/recruitment/view', [
+    'as'=> 'fe.viewRecruitment', 'uses' => 'RecruitmentController@view'
+]);
+//end recruitment
+
+Route::get('/contact', [
+    'as'=> 'fe.contact', 'uses' => 'ContactController@index'
+]);
+
+//technical
+Route::get('/technical', [
+    'as'=> 'fe.technical', 'uses' => 'TechnicalController@index'
+]);
+//end technical
+
+//products
+Route::get('/products', [
+    'as'=> 'fe.products', 'uses' => 'ProductsController@index'
+]);
+Route::get('/products/view', [
+    'as'=> 'fe.viewProduct', 'uses' => 'ProductsController@view'
+]);
+//end products

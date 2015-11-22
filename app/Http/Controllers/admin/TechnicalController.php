@@ -2,65 +2,117 @@
 namespace App\Http\Controllers\admin;
 
 use App\Http\Controllers\Controller;
-use App\Libs\SIFunctions;
+use App\Technical;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use Illuminate\Support\Facades\Redirect;
+use Illuminate\Support\Facades\Validator;
 
 class TechnicalController extends Controller {
     public function __construct(){
         $this->middleware('auth');
     }
     public function index(Request $req) {
-        /*$client = new \Google_Client();
-        $client->setAuthConfigFile(app_path('client_secret_302066283904-nbslege32jnsup9pulqo78fv3b39s80i.apps.googleusercontent.com.json'));
-        $client->addScope(\Google_Service_Drive::DRIVE_METADATA_READONLY);
-        $client->setDeveloperKey('DVWgdu_GkC_rJjwst_m0NN6M');
-        $service = new \Google_Service_Drive($client);
-        $optParams = array(
-            'maxResults' => 10,
-        );
-        $results = $service->files->listFiles($optParams);
-
-        if (count($results->getItems()) == 0) {
-            print "No files found.\n";
-        } else {
-            print "Files:\n";
-            foreach ($results->getItems() as $file) {
-                printf("%s (%s)\n", $file->getTitle(), $file->getId());
-            }
+        $technical = New Technical();
+        $technicalData = $technical->all();
+        if( empty($technicalData) ){
+            $technicalData = null;
         }
-        exit();*/
-
-        /*if (isset($_SESSION['access_token']) && $_SESSION['access_token']) {
-            $client->setAccessToken($_SESSION['access_token']);
-            $drive_service = new Google_Service_Drive($client);
-            $files_list = $drive_service->files->listFiles(array())->getItems();
-
-        } else {
-            $redirect_uri = Redirect::route('technical.oauth2callback');
-            header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
-        }*/
-
-        /*$sess = $req->session('access_token');
-        var_dump($sess);
-        exit();*/
-        return view('admin.technical.index');
+        return view('admin.technical.index',['technical'=>$technicalData]);
     }
-    public function oauth2callback(Request $req){
-        $code = $req->input('code');
-        $client = new \Google_Client();
-        $client->setAuthConfigFile(app_path('client_secret_302066283904-nbslege32jnsup9pulqo78fv3b39s80i.apps.googleusercontent.com.json'));
-        $client->setRedirectUri('http://' . $_SERVER['HTTP_HOST'] . '/admin/technical/oauth2callback');
-        $client->addScope(\Google_Service_Drive::DRIVE_METADATA_READONLY);
-        if (! isset($code)) {
-            $auth_url = $client->createAuthUrl();
-            header('Location: ' . filter_var($auth_url, FILTER_SANITIZE_URL));
+    public function getCreate(){
+        return view('admin.technical.create');
+    }
+    public function postCreate(Request $req){
+        $data = $req->all();
+        if( !empty($data) ){
+            $rules = array(
+                'name' => 'required|min:3|max:50|unique:technical',
+                'url' => 'required|min:3|unique:technical',
+            );
+            $validator = Validator::make($data,$rules);
+            if( $validator->fails() ){
+                return Redirect::route('technical.index')->withErrors($validator);
+            } else {
+                $technical = new Technical($data);
+                if( $technical->save() ){
+                    return Redirect::route('technical.index')->withMessages('Tạo thông tin kĩ thuật thành công');
+                } else {
+                    return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi! thử lại');
+                }
+            }
         } else {
-            $client->authenticate($_GET['code']);
-            $req->session()->put('google_access_token',$client->getAccessToken());
-            $redirect_uri = Redirect::to('/');
-            header('Location: ' . filter_var($redirect_uri, FILTER_SANITIZE_URL));
+            return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi!');
+        }
+    }
+    public function getView(Request $req){
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ){
+            $technical = New Technical();
+            $technicalData = $technical->findOrFail($id);
+
+            if( !empty($technicalData) ){
+                return view('admin.technical.view',['technical'=>$technicalData]);
+            } else {
+                return Redirect::route('technical.index')->withErrors('Không Tìm Thấy Thông Tin');
+            }
+        } else {
+            return Redirect::route('technical.index')->withErrors('Sai mã thông tin kĩ thuật');
+        }
+    }
+    public function getEdit(Request $req){
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ){
+            $technical = new Technical();
+            $technicalData = $technical->findOrFail($id);
+            if( !empty($technicalData) ){
+                return view('admin.technical.edit',array('data'=>$technicalData));
+            } else {
+                return Redirect::route('recruitment.index')->withErrors('Không tìm thấy thông tin');
+            }
+        } else {
+            return Redirect::route('recruitment.index')->withErrors('Đã xảy ra lỗi');
+        }
+    }
+    public function postEdit(Request $req){
+        $id = $req->input('id');
+        $data = $req->all();
+        if( !empty($data) ){
+            $rules = array(
+                'name' => 'required|min:3|max:50|unique:technical',
+                'url' => 'required|min:3',
+            );
+            $validator = Validator::make($data,$rules);
+            if( $validator->fails() ){
+                return Redirect::route('technical.index')->withErrors($validator);
+            } else {
+                $technical = new Technical($data);
+                $technicalData = $technical->findOrFail($id);
+                $technicalData->name = $data['name'];
+                $technicalData->url = $data['url'];
+                $technicalData->active = $data['active'];
+                if( $technicalData->save() ){
+                    return Redirect::route('technical.index')->withMessages('Cập Nhật thông tin kĩ thuật thành công');
+                } else {
+                    return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi! thử lại');
+                }
+            }
+        } else {
+            return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi!');
+        }
+    }
+    public function delete(Request $req){
+        $id = $req->input('id');
+        if( !empty($id) && is_numeric($id) ){
+            $technical = new Technical();
+            $technicalData = $technical->findOrFail($id);
+            if( $technicalData->delete() ){
+                return Redirect::route('technical.index')->withMessages('Xóa thông tin kĩ thuật thành công');
+            } else {
+                return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi! thử lại');
+            }
+        } else {
+            return Redirect::route('technical.index')->withErrors('Đã xảy ra lỗi!');
         }
     }
 }

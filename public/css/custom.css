@@ -10,7 +10,7 @@
 
 body {
     font-family: Arial;
-    background: #cdf6da url('../img/header-logo.png') top center no-repeat;
+    background: #cdf6da url('../img/header-logo.png') top center repeat-x;
     color: #2834c9;
     font-size: 14px;
     line-height: 18px;
@@ -18,15 +18,17 @@ body {
 #header {
     text-align: center;
     background-size: cover;
-    margin-bottom: 40px;
+    padding-bottom: 40px;
 }
 #logo-holder {
     display: table;
+    margin-bottom: 15px;
 }
 #logo-holder p {
     display: table-cell;
     vertical-align: middle;
     padding-left: 10px;
+    font-size: 24px;
 }
 #slogan {
     font-family: 'aircona';
@@ -35,23 +37,27 @@ body {
     text-shadow: 2px 0 0 #fff, -2px 0 0 #fff, 0 2px 0 #fff, 0 -2px 0 #fff, 1px 1px #fff, -1px -1px 0 #fff, 1px -1px 0 #fff, -1px 1px 0 #fff;
 }
 #container {
+    margin-top: 25px;
 }
 
 .custom-input {
     background: #0c7a33;
-    color: rgba(0, 0, 0, 0.33);
+    color: white;
     text-align: center;
     border: 0;
     height: 30px;
-    -webkit-box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);
-    -moz-box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);
-    box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);
+    /*-webkit-box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);*/
+    /*-moz-box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);*/
+    /*box-shadow: inset 1px 10px 33px 2px rgba(13,66,85,1);*/
 }
 .custom-list li {
     list-style-image: url('../img/list.png');
 }
+.custom-list li > ul > li {
+    list-style-image: none;
+}
 .navbar-nav {
-    margin-top: 10px;
+    margin-top: 20px;
     border-bottom: 2px solid #6d9cb4;
     padding-bottom: 2px;
 }
@@ -72,11 +78,22 @@ body {
     background: #29c360;
 
 }
-
+.dropdown-menu {
+    background: none;
+    -webkit-box-shadow: none;
+    -moz-box-shadow: none;
+    box-shadow: none;
+    border: 0;
+}
+.dropdown-menu > li > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+}
 /** custom box **/
 .custom-box {
     background: #8be8a3;
-    padding-bottom: 10px;
+    padding-bottom: 15px;
     margin-bottom: 20px;
     font-size: 18px;
     box-shadow: inset 0 0 5px #ffff45;
@@ -95,6 +112,15 @@ body {
     -webkit-border-radius: 5px;
     -moz-border-radius: 5px;
     border-radius: 5px;
+}
+.contact-box {
+    padding: 15px 5px;
+    margin: 15px 0;
+    background: white;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px gray;
 }
 #main-carousel {
     margin: 5px 0 15px;
@@ -126,6 +152,27 @@ body {
     color: #006489;
     font-size: 18px;
 }
+.seemore {
+    display: block;
+    text-align: right;
+    padding: 10px 15px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #006489;
+
+}
+.seemore .seemore-icon {
+    display: inline-block;
+    width: 14px;
+    height: 17px;
+    background: transparent url('../img/list.png') center no-repeat;
+    vertical-align: middle;
+    margin: 0 3px;
+}
+.skype_status img{
+    margin:0 !important;
+    vertical-align: 0 !important;
+}
 #footer {
     padding-top: 20px;
     padding-bottom: 20px;
@@ -133,6 +180,8 @@ body {
     color: white;
 }
 
+
+/*  utilities */
 .mg-top-xs,.mg-all-xs {
     margin-top: 5px;
 }

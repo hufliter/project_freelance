@@ -3,12 +3,12 @@
 <div class="box col-md-12">
     <div class="row">
         <div class="col-md-4">
-            <a class="btn btn-primary btn-sm" href="#">Create Category</a>
+            <a class="btn btn-primary btn-sm" href="{{route('technical.getCreate')}}">Tạo Mới</a>
         </div>
     </div>
     <div class="box-inner">
     <div class="box-header well" data-original-title="">
-        <h2><i class="glyphicon glyphicon-user"></i> Category Table</h2>
+        <h2><i class="glyphicon glyphicon-user"></i> Quản Lí Thông Tin Kĩ Thuật</h2>
         <div class="box-icon">
             <a href="#" class="btn btn-setting btn-round btn-default"><i class="glyphicon glyphicon-cog"></i></a>
             <a href="#" class="btn btn-minimize btn-round btn-default"><i
@@ -31,37 +31,38 @@
         <table class="table table-striped table-bordered bootstrap-datatable datatable responsive">
             <thead>
             <tr>
-                <th>Name</th>
-                <th>Parent_id</th>
-                <th>is_active</th>
-                <th>Created_at</th>
-                <th>Updated_at</th>
+                <th>Tiêu Đề</th>
+                <th>Kích Hoạt</th>
+                <th>Ngày tạo</th>
+                <th>Ngày cập nhật</th>
                 <th>Action</th>
             </tr>
             </thead>
             <tbody>
-
+            @if(!empty($technical))
+                @foreach($technical as $items)
                 <tr>
-                    <td>name</td>
-                    <td class="center">parent</td>
-                    <td class="center">í_active</td>
-                    <td class="center">created</td>
-                    <td class="center">updated</td>
+                    <td>{{$items->name}}</td>
+                    <td class="center">{{$items->active}}</td>
+                    <td class="center">{{$items->created_at}}</td>
+                    <td class="center">{{$items->updated_at}}</td>
                     <td class="center">
-                        <a class="btn btn-success" href="#">
+                        <a class="btn btn-success" href="{{route('technical.view',['id'=>$items->id])}}">
                             <i class="glyphicon glyphicon-zoom-in icon-white"></i>
                             View
                         </a>
-                        <a class="btn btn-info" href="#">
+                        <a class="btn btn-info" href="{{route('technical.getEdit',['id'=>$items->id])}}">
                             <i class="glyphicon glyphicon-edit icon-white"></i>
                             Edit
                         </a>
-                        <a class="btn btn-danger" href="#" onclick="return confirm('Are you sure you want to delete this user?');">
+                        <a class="btn btn-danger" href="{{route('technical.delete',['id'=>$items->id])}}" onclick="return confirm('Bạn Có chắc muốn xóa thông tin này?');">
                             <i class="glyphicon glyphicon-trash icon-white"></i>
                             Delete
                         </a>
                     </td>
                 </tr>
+                @endforeach
+            @endif
             </tbody>
         </table>
     </div>

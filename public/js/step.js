@@ -174,36 +174,36 @@
 
                 //if(e.hasClass('video-lesson')){
 
-                    //loop through the local progress variable
-                    $.each(step.progress, function(k, tempData){
+                //loop through the local progress variable
+                $.each(step.progress, function(k, tempData){
 
-                        //if user clicks on video link
-                        if(e.data('video-id') == tempData.videoId && tempData.unlocked){
-                            step.loadVideo(tempData);
-                            var pairContainer = step.loadPairContainer(tempData.videoId);
+                    //if user clicks on video link
+                    if(e.data('video-id') == tempData.videoId && tempData.unlocked){
+                        step.loadVideo(tempData);
+                        var pairContainer = step.loadPairContainer(tempData.videoId);
 
-                            //update the current video index after triggers an id dependent part
-                            step.updateCurVid(k);
-                            if(pairContainer){
-                                pairContainer.find('.view-description').trigger('click');
-                            }
+                        //update the current video index after triggers an id dependent part
+                        step.updateCurVid(k);
+                        if(pairContainer){
+                            pairContainer.find('.view-description').trigger('click');
                         }
-                        //user clicks on the homework link
-                        else if(e.data('homework-id') == tempData.homework.homeworkId && tempData.homework.unlocked) {
+                    }
+                    //user clicks on the homework link
+                    else if(e.data('homework-id') == tempData.homework.homeworkId && tempData.homework.unlocked) {
 
-                            var pairContainer = step.loadPairContainer(tempData.videoId);
+                        var pairContainer = step.loadPairContainer(tempData.videoId);
 
-                            //update the current video index after triggers an id dependent part
-                            step.updateCurVid(k, true);
-                            if(pairContainer){
-                                pairContainer.find('.view-homework').trigger('click');
-                                $('html, body').animate({
-                                    scrollTop: pairContainer.find('.homework-content').offset().top
-                                }, 800);
-                            }
+                        //update the current video index after triggers an id dependent part
+                        step.updateCurVid(k, true);
+                        if(pairContainer){
+                            pairContainer.find('.view-homework').trigger('click');
+                            $('html, body').animate({
+                                scrollTop: pairContainer.find('.homework-content').offset().top
+                            }, 800);
                         }
+                    }
 
-                    });
+                });
 
                 //} else {
                 //
