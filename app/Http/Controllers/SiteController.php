@@ -13,11 +13,7 @@ use willvincent\Feeds\Facades\FeedsFacade as Feeds;
 class SiteController extends Controller
 {
     public function index(){
-        /*$feed = Feeds::make('http://vnexpress.net/rss/kinh-doanh.rss'
-        , 5);
-        $data = $feed->get_items();
-        var_dump($data[0]->data);
-        exit();*/
+
         $products = new Products();
         $productsData = $products->all()->take(4);
         if( empty($productsData) ){

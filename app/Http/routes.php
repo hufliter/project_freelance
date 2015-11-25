@@ -211,7 +211,7 @@ Route::get('/introduce', [
 ]);
 
 Route::get('/news', [
-    'as'=> 'fe.news', 'uses' => 'SiteController@index'
+    'as'=> 'fe.news', 'uses' => 'NewsController@index'
 ]);
 
 //fe recruitment

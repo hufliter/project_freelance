@@ -112,7 +112,7 @@
                            </div>
                        </div>
                        <!-- weather module -->
-                       <iframe class="mg-top-md mg-bottom-md" frameborder="0" marginwidth="0" marginheight="0" src="http://thienduongweb.com/tool/weather/?r=1&w=1&g=0&col=1&d=0" width="100%" height="480" scrolling="yes"></iframe>
+                       <iframe class="mg-top-md mg-bottom-md" frameborder="0" marginwidth="0" marginheight="0" src="http://thienduongweb.com/tool/weather/?r=1&w=1&g=0&col=1&d=0" width="100%" height="480" scrolling="yes" style="border: 2px solid #ffd318;"></iframe>
 
                    </div>
                    <!-- end sidebar -->
@@ -150,7 +150,7 @@
        <footer id="footer">
            <div class="container">
                <div class="row">
-                   <div class="col-xs-12 col-sm-6">
+                   <div class="col-xs-12 col-sm-3">
                        <h5>Thông tin</h5>
                        <h6>CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h6>
                        <address>
@@ -159,12 +159,16 @@
                            <p>Fax: 012312</p>
                        </address>
                    </div>
-                   <div class="col-xs-12 col-sm-6">
-
+                   <div class="col-xs-12 col-sm-9">
+                    <marquee class="marquee">Công ty phát triển công nghệ Sài Gòn | Silicagel | SuperDry | Túi khí chèn hang</marquee>
                    </div>
                </div>
            </div>
        </footer>
     <script src="{{asset('js/jquery-2.1.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('js/jquery.elevateZoom-3.0.8.min.js')}}"></script>
+    <script type="text/javascript">
+        $(".img-responsive").elevateZoom();
+    </script>
 </body></html>

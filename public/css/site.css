@@ -13,3 +13,13 @@
     padding: 0 !important;
     margin: 0 !important;
 }
+.marquee {
+	margin: 0 auto;
+    overflow: hidden;
+    white-space: nowrap;
+    box-sizing: border-box;
+    animation: marquee 50s linear infinite;
+}
+.marquee:hover{
+	animation-play-state: paused;
+}
