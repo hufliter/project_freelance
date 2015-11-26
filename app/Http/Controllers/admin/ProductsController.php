@@ -60,7 +60,7 @@ class ProductsController extends Controller {
                             $imgPath = 'upload/img';
                             $fileName = uniqid() . '.' . $file->getClientOriginalExtension();
                             $path = public_path('upload/img/' . $fileName);
-                            Image::make($file->getRealPath())->resize(350,200)->save($path);
+                            Image::make($file->getRealPath())->save($path);
                             $imgArr[] = $fileName;
                             $uploadCount++;
                         }
