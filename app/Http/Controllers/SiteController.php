@@ -19,7 +19,7 @@ class SiteController extends Controller
         if( empty($productsData) ){
             $productsData = null;
         }
-        $imgArr = [];
+
         foreach($productsData as $items){
             $img = json_decode($items->image);
             $items->image = $img[0];

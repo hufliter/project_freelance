@@ -35,9 +35,9 @@
            <div class="container">
                <div class="row">
                    <div class="col-xs-12 text-right">
-                       <form class="form-inline">
+                       <form class="form-inline" action="{{route('fe.searchProduct')}}">
                            <div class="form-group">
-                               <input type="text" class="form-control custom-input" id="" placeholder="Nhập từ khoá">
+                               <input type="text" name="keywords" class="form-control custom-input" id="" placeholder="Nhập từ khoá">
                            </div>
                            <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
                        </form>
@@ -63,16 +63,7 @@
                    <ul class="nav navbar-nav">
                        <li class="active"><a href="{{route('fe.index')}}">Trang chủ</a></li>
                        <li><a href="{{route('fe.introduce')}}">Giới thiệu</a></li>
-                       <li class="dropdown">
-                           <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">Sản Phẩm <span class="caret"></span></a>
-                           <ul class="dropdown-menu">
-                               <li><a href="#">Action</a></li>
-                               <li><a href="#">Another action</a></li>
-                               <li><a href="#">Something else here</a></li>
-                               <li><a href="#">Separated link</a></li>
-                               <li><a href="#">One more separated link</a></li>
-                           </ul>
-                       </li>
+                       <li><a href="{{route('fe.products')}}">Sản Phẩm</a></li>
                        <li><a href="#">Ứng Dụng</a></li>
                        <li><a href="{{route('fe.technical')}}">Kỹ Thuật</a></li>
                        <li><a href="{{route('fe.news')}}">Tin Tức</a></li>
@@ -94,7 +85,7 @@
                            <img src="{{asset('img/helper.png')}}" alt="Helper logo" />
                            <div class="row mg-top-nm">
                                <div class="col-xs-6">
-                                   <img src="http://opi.yahoo.com/online?u=ngonam22&m=g&t=2" class="img-responsive"/>
+                                   <img src="http://opi.yahoo.com/online?u=ngonam22&m=g&t=2" />
                                </div>
                                <div class="col-xs-6 skype_status">
                                    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
@@ -123,10 +114,22 @@
 
                            <div class="carousel-inner" role="listbox">
                                <div class="item active">
-                                   <img src="http://wallstreetenglish.edu.vn/files/images/image-site/slider-november-2015/930x260interview.jpg" alt="hello" />
+                                   <img src="{{asset('img/slider/anh-1.png')}}" alt="hello" />
                                </div>
                                <div class="item">
-                                   <img src="http://wallstreetenglish.edu.vn/files/images/image-site/slider-november-2015/930x260class-pass.jpg" alt="asd" />
+                                   <img src="{{asset('img/slider/anh-2.png')}}" alt="hello" />
+                               </div>
+                               <div class="item">
+                                  <img src="{{asset('img/slider/anh-3.png')}}" alt="hello" />
+                              </div>
+                              <div class="item">
+                                 <img src="{{asset('img/slider/anh-4.png')}}" alt="hello" />
+                             </div>
+                             <div class="item">
+                                <img src="{{asset('img/slider/anh-5.png')}}" alt="hello" />
+                              </div>
+                              <div class="item">
+                               <img src="{{asset('img/slider/anh-6.png')}}" alt="hello" />
                                </div>
                            </div>
 
@@ -170,5 +173,7 @@
     <script src="{{asset('js/jquery.elevateZoom-3.0.8.min.js')}}"></script>
     <script type="text/javascript">
         $(".img-responsive").elevateZoom();
+        $(".img-polaroid").elevateZoom();
     </script>
+    <script src="{{asset('js/myscript.js')}}"></script>
 </body></html>

@@ -12,7 +12,12 @@ class IntroduceController extends Controller
 {
     public function index(){
         $introduce = new Introduce();
-        $introduceData = $introduce->all();
-        return view('frontend.introduce.index',['data'=>$introduceData[0]]);
+        $introduceData = $introduce->take(1)->get();
+
+        if( !empty($introduceData) ){
+            return view('frontend.introduce.index',['data'=>$introduceData[0]]);
+        } else {
+            return view('frontend.errors.404');
+        }
     }
 }

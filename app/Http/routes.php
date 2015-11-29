@@ -240,4 +240,8 @@ Route::get('/products', [
 Route::get('/products/view', [
     'as'=> 'fe.viewProduct', 'uses' => 'ProductsController@view'
 ]);
+
+Route::get('/products/search', [
+    'as'=> 'fe.searchProduct', 'uses' => 'ProductsController@search'
+]);
 //end products
