@@ -85,20 +85,22 @@
                            <img src="{{asset('img/helper.png')}}" alt="Helper logo" />
                            <div class="row mg-top-nm">
                                <div class="col-xs-6">
-                                   <img src="http://opi.yahoo.com/online?u=ngonam22&m=g&t=2" />
+                                  <a href="ymsgr:SendIM?YOUR Yahoo ID">
+                                   <img src="http://opi.yahoo.com/online?u=youryahooidhere&m=g&t=2" />
+                                  </a>
                                </div>
                                <div class="col-xs-6 skype_status">
                                    <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                                   <div id="SkypeButton_Call_ngonam22_1">
+                                    <div id="SkypeButton_Call_saigonindevco_1">
                                        <script type="text/javascript">
-                                           Skype.ui({
-                                               "name": "chat",
-                                               "element": "SkypeButton_Call_ngonam22_1",
-                                               "participants": ["ngonam22"],
-                                               "imageSize": 16
-                                           });
+                                         Skype.ui({
+                                           "name": "chat",
+                                           "element": "SkypeButton_Call_saigonindevco_1",
+                                           "participants": ["saigonindevco"],
+                                           "imageSize": 24
+                                         });
                                        </script>
-                                   </div>
+                                    </div>
                                </div>
                            </div>
                        </div>
