@@ -67,7 +67,7 @@
             <!-- user dropdown ends -->
 
             <ul class="collapse navbar-collapse nav navbar-nav top-menu">
-                <li><a href="{{ URL::to('/') }}"><i class="glyphicon glyphicon-globe"></i> Visit Site</a></li>
+                <li><a href="{{ URL::to('/') }}"><i class="glyphicon glyphicon-globe"></i> Trang Chủ</a></li>
                 <li>
                     <form class="navbar-search pull-left">
                         <input placeholder="Search" class="search-query form-control col-md-10" name="query"
@@ -90,23 +90,23 @@
                     </div>
                     <ul class="nav nav-pills nav-stacked main-menu">
                         <li class="nav-header">Main</li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin')  }}"><i class="glyphicon glyphicon-home"></i><span> Dashboard</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin')  }}"><i class="glyphicon glyphicon-home"></i><span> Bảng Điều Khiển</span></a>
                         </li>
                         <li><a class="ajax-link" href="{{ URL::to('/admin/category')  }}"><i class="glyphicon glyphicon-th-list"></i><span> Category</span></a>
                         </li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/products')  }}"><i class="glyphicon glyphicon-edit"></i><span> Products</span></a></li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/users')  }}"><i class="glyphicon glyphicon-user"></i><span> Users</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/products')  }}"><i class="glyphicon glyphicon-edit"></i><span> Sản Phẩm</span></a></li>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/users')  }}"><i class="glyphicon glyphicon-user"></i><span> Người Dùng</span></a>
                         </li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/intro')  }}"><i class="glyphicon glyphicon-road"></i><span> Introduce</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/intro')  }}"><i class="glyphicon glyphicon-road"></i><span> Giới Thiệu</span></a>
                         </li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/news')  }}"><i class="glyphicon glyphicon-star"></i><span> News</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/news')  }}"><i class="glyphicon glyphicon-star"></i><span> Tin Tức</span></a>
                         </li>
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/technical')  }}"><i class="glyphicon glyphicon-align-justify"></i><span> Technical</span></a></li>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/technical')  }}"><i class="glyphicon glyphicon-align-justify"></i><span> Kĩ Thuật</span></a></li>
 
-                        <li><a class="ajax-link" href="{{ URL::to('/admin/contact')  }}"><i class="glyphicon glyphicon-calendar"></i><span> Contact</span></a>
+                        <li><a class="ajax-link" href="{{ URL::to('/admin/contact')  }}"><i class="glyphicon glyphicon-calendar"></i><span> Liên Hệ</span></a>
                         </li>
                         <li>
-                            <a class="ajax-link" href="{{ URL::to('/admin/recruitment')  }}"><i class="glyphicon glyphicon-tag"></i><span> Recruitment</span></a>
+                            <a class="ajax-link" href="{{ URL::to('/admin/recruitment')  }}"><i class="glyphicon glyphicon-tag"></i><span> Tuyển Dụng</span></a>
                         </li>
 
                     </ul>

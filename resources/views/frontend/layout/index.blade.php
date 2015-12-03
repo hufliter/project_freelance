@@ -32,19 +32,19 @@
 
 
    <div id="container">
-           <div class="container">
-               <div class="row">
-                   <div class="col-xs-12 text-right">
-                       <form class="form-inline" action="{{route('fe.searchProduct')}}">
-                           <div class="form-group">
-                               <input type="text" name="keywords" class="form-control custom-input" id="" placeholder="Nhập từ khoá">
-                           </div>
-                           <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                       </form>
-                   </div>
+       <div class="container">
+           <div class="row">
+               <div class="col-xs-12 text-right">
+                   <form class="form-inline" action="{{route('fe.searchProduct')}}">
+                       <div class="form-group">
+                           <input type="text" name="keywords" class="form-control custom-input" id="" placeholder="Nhập từ khoá">
+                       </div>
+                       <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
+                   </form>
                </div>
            </div>
        </div>
+   </div>
 
        <nav class="navbar">
            <div class="container">
@@ -155,8 +155,7 @@
        <footer id="footer">
            <div class="container">
                <div class="row">
-                   <div class="col-xs-12 col-sm-3">
-                       <h5>Thông tin</h5>
+                   <div class="col-xs-12 col-sm-4">
                        <h6>CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h6>
                        <address>
                            <p>Phone: <a href="">01656343</a></p>
@@ -164,7 +163,7 @@
                            <p>Fax: 012312</p>
                        </address>
                    </div>
-                   <div class="col-xs-12 col-sm-9">
+                   <div class="col-xs-12 col-sm-8">
                     <marquee class="marquee">Công ty phát triển công nghệ Sài Gòn | Silicagel | SuperDry | Túi khí chèn hang</marquee>
                    </div>
                </div>
@@ -172,10 +171,5 @@
        </footer>
     <script src="{{asset('js/jquery-2.1.1.min.js')}}"></script>
     <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/jquery.elevateZoom-3.0.8.min.js')}}"></script>
-    <script type="text/javascript">
-        $(".img-responsive").elevateZoom();
-        $(".img-polaroid").elevateZoom();
-    </script>
     <script src="{{asset('js/myscript.js')}}"></script>
 </body></html>

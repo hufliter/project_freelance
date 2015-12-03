@@ -6,7 +6,7 @@
         @foreach($data as $item)
             @if( $item->is_active == 1 )
         <div class="thumbnail">
-            <img class="group list-group-image" src="{{asset('upload/img/'.$item->image)}}" alt="">
+            <img class="group list-group-image" src="{{asset('upload/img/'.$item->image)}}" alt="" style="max-width: 400px;">
             <div class="caption">
                 <h4 class="group inner list-group-item-heading">{{$item->slug}}</h4>
                 <p class="group inner list-group-item-text">{{$item->description}}</p>

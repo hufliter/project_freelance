@@ -51,7 +51,7 @@
                     {!! Form::label('kích thước') !!}
                     <small>(Ví dụ: 220 x 120 x 40 (mm) hoặc (... ngăn) )</small>
                     {!! Form::text('size', null,
-                        array('required', 'class'=>'form-control', 'placeholder'=>'Size')
+                        array( 'class'=>'form-control', 'placeholder'=>'Size')
                         ) !!}
                 </div>
 
@@ -59,7 +59,7 @@
                     {!! Form::label('Trọng Lượng') !!}
                     <small>(đơn vị: gram )</small>
                     {!! Form::text('weight', null,
-                        array('required', 'class'=>'form-control', 'placeholder'=>'Trọng Lượng')
+                        array( 'class'=>'form-control', 'placeholder'=>'Trọng Lượng')
                         ) !!}
                 </div>
 
@@ -67,7 +67,7 @@
                     {!! Form::label('Bao Bì') !!}
                     <small>(Ví dụ: vải hoặc lụa )</small>
                     {!! Form::text('package', null,
-                        array('required', 'class'=>'form-control', 'placeholder'=>'Bao Bì')
+                        array( 'class'=>'form-control', 'placeholder'=>'Bao Bì')
                         ) !!}
                 </div>
 
@@ -75,7 +75,7 @@
                     {!! Form::label('Hàn') !!}
                     <small>(Ví dụ: biên hoặc bụng)</small>
                     {!! Form::text('package', null,
-                        array('required', 'class'=>'form-control', 'placeholder'=>'Hàn')
+                        array( 'class'=>'form-control', 'placeholder'=>'Hàn')
                         ) !!}
                 </div>
 

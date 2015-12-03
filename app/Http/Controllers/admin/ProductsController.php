@@ -37,8 +37,8 @@ class ProductsController extends Controller {
             $rules = array(
                 'slug' => 'required|min:3|max:50|unique:products',
                 'cate_id' => 'required',
-                'usage' => 'required|min:3|max:300',
-                'description' => 'required|min:3|max:300',
+                'usage' => 'required|min:3|max:5000',
+                'description' => 'required|min:3|max:5000',
             );
             $validator = Validator::make($data,$rules);
             if( $validator->fails() ){

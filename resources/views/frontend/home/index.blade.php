@@ -29,9 +29,10 @@
                        <a href="{{route('fe.viewProduct',['id'=>$items->id])}}">{{$items->slug}}</a>
                    </span>
                </div>
-           </div>
+               </div>
            @endforeach
            @endif
        </div>
    </div>
+
 @endsection
