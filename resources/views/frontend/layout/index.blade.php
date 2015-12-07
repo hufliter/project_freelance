@@ -1,175 +1,206 @@
-<!DOCTYPE html><html lang="vi">
+<!DOCTYPE html>
+<html lang="en">
 <head>
-    <title>Saigon Industrial Development</title>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta property="og:locale" content="vi_VN" />
+  
+	<meta http-equiv="content-type" content="text/html; charset=UTF-8"> 
 
-    <link href="{{asset('bootstrap-3.3.2/css/bootstrap.css')}}" media="screen" rel="stylesheet" type="text/css">
-<!--    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,300&subset=latin,vietnamese' rel='stylesheet' type='text/css'>-->
-    <link href="{{asset('/css/custom.css')}}" media="screen" rel="stylesheet" type="text/css">
-<!--    <link href="/freelancer/asset/bxslider/jquery.bxslider.css" media="screen" rel="stylesheet" type="text/css">-->
-<!--    <link href="/freelancer/asset/css/bxslider-custom.css" media="screen" rel="stylesheet" type="text/css">-->
-</head><body>
-    <div id="header">
-            <div class="container">
-                <div class="row">
-                    <div class="col-xs-12">
-                        <div class="inline-block">
-                            <h4 id="logo-holder">
-                                <img class="pull-left" src="{{asset('img/logo.png')}}" alt="Logo" id="logo">
-                                <p>CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN <br>SAIGON INDUSTRIAL DEVELOPMENT Co.,Ltd</p>
-                            </h4>
-                        </div>
-                    </div>
-                </div>
-                <div class="row">
-                    <p class="col-xs-12" id="slogan">CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN</p>
-                </div>
-            </div>
-        </div>
+	<title>CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</title>
 
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="description" content="">
+	<meta name="keywords" content="">
+	<meta name="author" content="">
 
-   <div id="container">
-       <div class="container">
-           <div class="row">
-               <div class="col-xs-12 text-right">
-                   <form class="form-inline" action="{{route('fe.searchProduct')}}">
-                       <div class="form-group">
-                           <input type="text" name="keywords" class="form-control custom-input" id="" placeholder="Nhập từ khoá">
-                       </div>
-                       <button type="submit" class="btn btn-default"><span class="glyphicon glyphicon-search"></span></button>
-                   </form>
-               </div>
-           </div>
-       </div>
-   </div>
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
 
-       <nav class="navbar">
-           <div class="container">
-               <!-- Brand and toggle get grouped for better mobile display -->
-               <div class="navbar-header">
-                   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="main-nav" aria-expanded="false">
-                       <span class="sr-only">Toggle navigation</span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                       <span class="icon-bar"></span>
-                   </button>
-               </div>
+	<!-- Styles -->
+	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.carousel.css')}}">
+	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.theme.css')}}">
+	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.transitions.css')}}">
+	<link rel="stylesheet" href="{{asset('js/rs-plugin/css/settings.css')}}">
+	<link rel="stylesheet" href="{{asset('js/flexslider/flexslider.css')}}">
+	<link rel="stylesheet" href="{{asset('js/isotope/isotope.css')}}">
+	<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
+	<link rel="stylesheet" href="{{asset('js/magnific-popup/magnific-popup.css')}}">
+	<link rel="stylesheet" href="{{asset('css/style.css')}}">
 
-               <!-- Collect the nav links, forms, and other content for toggling -->
-               <div class="collapse navbar-collapse" id="main-nav">
-                   <ul class="nav navbar-nav">
-                       <li class="active"><a href="{{route('fe.index')}}">Trang chủ</a></li>
-                       <li><a href="{{route('fe.introduce')}}">Giới thiệu</a></li>
-                       <li><a href="{{route('fe.products')}}">Sản Phẩm</a></li>
-                       <li><a href="#">Ứng Dụng</a></li>
-                       <li><a href="{{route('fe.technical')}}">Kỹ Thuật</a></li>
-                       <li><a href="{{route('fe.news')}}">Tin Tức</a></li>
-                       <li><a href="{{route('fe.recruitment')}}">Tuyển dụng</a></li>
-                       <li><a href="{{route('fe.contact')}}">Liên Hệ</a></li>
-                   </ul>
-               </div><!-- /.navbar-collapse -->
-           </div><!-- /.container-fluid -->
-       </nav>
+	<!-- Google Fonts -->
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
+	<link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
 
-       <div id="body">
-           <div class="container">
-               <div class="row">
-                   <!-- start the left sidebar -->
-                   <div class="col-xs-12 col-sm-3">
-                       @include('frontend.partials.category')
+	<!-- Icon Fonts -->
+	<link rel="stylesheet" href="{{asset('css/icomoon/style.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
 
-                       <div class="contact-box text-center">
-                           <img src="{{asset('img/helper.png')}}" alt="Helper logo" />
-                           <div class="row mg-top-nm">
-                               <div class="col-xs-6">
-                                  <a href="ymsgr:SendIM?YOUR Yahoo ID">
-                                   <img src="http://opi.yahoo.com/online?u=youryahooidhere&m=g&t=2" />
-                                  </a>
-                               </div>
-                               <div class="col-xs-6 skype_status">
-                                   <script type="text/javascript" src="http://www.skypeassets.com/i/scom/js/skype-uri.js"></script>
-                                    <div id="SkypeButton_Call_saigonindevco_1">
-                                       <script type="text/javascript">
-                                         Skype.ui({
-                                           "name": "chat",
-                                           "element": "SkypeButton_Call_saigonindevco_1",
-                                           "participants": ["saigonindevco"],
-                                           "imageSize": 24
-                                         });
-                                       </script>
-                                    </div>
-                               </div>
-                           </div>
-                       </div>
-                       <!-- weather module -->
-                       <iframe class="mg-top-md mg-bottom-md" frameborder="0" marginwidth="0" marginheight="0" src="http://thienduongweb.com/tool/weather/?r=1&w=1&g=0&col=1&d=0" width="100%" height="480" scrolling="yes" style="border: 2px solid #ffd318;"></iframe>
+	<!-- SKIN -->
+	<link rel="stylesheet" href="{{asset('css/color-scheme/default-black.css')}}" type="text/css">
 
-                   </div>
-                   <!-- end sidebar -->
+</head>
+<body id="header6">
+<div id="page-top"></div>
+<div class="outer-wrapper">
+	<div class="header-wrap">
 
-                   <!-- body starts here -->
-                   <div class="col-xs-12 col-sm-9">
-                       <div id="main-carousel" class="carousel slide" data-ride="carousel">
+		<!-- HEADER -->
+		<header id="header-main">
+		<div class="container">
+			<div class="navbar yamm navbar-default">
+				<div class="navbar-header">
+					<button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					</button>
+					<a href="index.html" class="navbar-brand"><img src="{{asset('img/basic/logo.png')}}" width="40" alt=""/></a>
+				</div>
 
-                           <div class="carousel-inner" role="listbox">
-                               <div class="item active">
-                                   <img src="{{asset('img/slider/anh-1.png')}}" alt="hello" />
-                               </div>
-                               <div class="item">
-                                   <img src="{{asset('img/slider/anh-2.png')}}" alt="hello" />
-                               </div>
-                               <div class="item">
-                                  <img src="{{asset('img/slider/anh-3.png')}}" alt="hello" />
-                              </div>
-                              <div class="item">
-                                 <img src="{{asset('img/slider/anh-4.png')}}" alt="hello" />
-                             </div>
-                             <div class="item">
-                                <img src="{{asset('img/slider/anh-5.png')}}" alt="hello" />
-                              </div>
-                              <div class="item">
-                               <img src="{{asset('img/slider/anh-6.png')}}" alt="hello" />
-                               </div>
-                           </div>
+				<!-- SEARCH -->
+				<div class="header-x pull-right">
+					<div class="s-search">
+						<div class="ss-trigger"><i class="icon-search2"></i></div>
+						<div class="ss-content">
+							<span class="ss-close icon-cross2"></span>
+							<div class="ssc-inner">
+								<form>
+									<input type="text" placeholder="Type Search text here...">
+									<button type="submit"><i class="icon-search2"></i></button>
+								</form>
+							</div>
+						</div>
+					</div>
+				</div>
 
-                           <a class="left carousel-control" href="#main-carousel" role="button" data-slide="prev">
-                               <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-                               <span class="sr-only">Previous</span>
-                           </a>
-                           <a class="right carousel-control" href="#main-carousel" role="button" data-slide="next">
-                               <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-                               <span class="sr-only">Next</span>
-                           </a>
-                       </div>
-                       @yield('content')
+				<div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+					<ul class="nav navbar-nav">
+						<li class="page-scroll"><a href="#page-top">Trang Chủ</a></li>
+						<li class="page-scroll"><a href="#1">Giới Thiệu</a></li>
+						<li class="page-scroll"><a href="#2">Ứng Dụng</a></li>
+						<li class="page-scroll"><a href="#3">Sản Phẩm</a></li>
+						<li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li>
+						<li class="page-scroll"><a href="#6">Kĩ Thuật</a></li>
+                        <li class="page-scroll"><a href="#5">Tuyển Dụng</a></li>
+						<li class="page-scroll"><a href="#7">Liên Hệ</a></li>
+					</ul>
+				</div>
+			</div>
+		</div>
+	</header>
+	</div>
 
-                   </div>
-                   <!-- end body part -->
-               </div>
-           </div>
-       </div>
+	@yield('content')
 
-       <footer id="footer">
-           <div class="container">
-               <div class="row">
-                   <div class="col-xs-12 col-sm-4">
-                       <h6>CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h6>
-                       <address>
-                           <p>Phone: <a href="">01656343</a></p>
-                           <p>Email: <a href="mailto:webmaster@example.com">a@example.com</a></p>
-                           <p>Fax: 012312</p>
-                       </address>
-                   </div>
-                   <div class="col-xs-12 col-sm-8">
-                    <marquee class="marquee">Công ty phát triển công nghệ Sài Gòn | Silicagel | SuperDry | Túi khí chèn hang</marquee>
-                   </div>
-               </div>
-           </div>
-       </footer>
-    <script src="{{asset('js/jquery-2.1.1.min.js')}}"></script>
-    <script src="{{asset('js/bootstrap.min.js')}}"></script>
-    <script src="{{asset('js/myscript.js')}}"></script>
-</body></html>
+	
+	<!-- FOOTER -->
+	<footer>
+		<div class="container">
+			<div class="row">
+				<div class="col-md-3">
+					<h4 class="space30">About us</h4>
+			    <img src="{{asset('img/basic/logo-ico.png')}}" class="img-responsive space20" width="262" alt=""/>
+					<p>Lorem ipsum dolor sit amet consec tetur elit vel quam ligula. Duis vel pulvinar diam in lacus non nisl commodo convallis.</p>
+					<p>Phasellus rutrum urna ut nibh congue, ut vehicula nibh ultricies.</p>
+				</div>
+				<div class="col-md-3">
+					<h4 class="space30">Recent Posts</h4>
+			  <ul class="f-posts">
+						<li>
+							<img src="{{asset('img/blog/1.jpg')}}" class="img-responsive" alt=""/>
+							<h5><a href="#">Lorem ipsum post title</a></h5>
+							<p><i class="fa fa-comments"></i> 5 Comments</p>
+						</li>
+						<li>
+							<img src="{{asset('img/blog/2.jpg')}}" class="img-responsive" alt=""/>
+							<h5><a href="#">Lorem ipsum post title</a></h5>
+							<p><i class="fa fa-comments"></i> 5 Comments</p>
+						</li>
+						<li>
+							<img src="{{asset('img/blog/3.jpg')}}" class="img-responsive" alt=""/>
+							<h5><a href="#">Lorem ipsum post title</a></h5>
+							<p><i class="fa fa-comments"></i> 5 Comments</p>
+						</li>
+						<li>
+							<img src="{{asset('img/blog/4.jpg')}}" class="img-responsive" alt=""/>
+							<h5><a href="#">Lorem ipsum post title</a></h5>
+							<p><i class="fa fa-comments"></i> 5 Comments</p>
+						</li>
+					</ul>
+				</div>
+				<div class="col-md-3">
+					<h4 class="space30">Contact</h4>
+			  <ul class="c-info">
+						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
+						</li>
+						<li>
+						</li>
+						<li><i class="fa fa-phone"></i> (012) 345 5678 910</li>
+						<li><i class="fa fa-envelope-o"></i> support@dk-themes.com</li>
+						<li><i class="fa fa-skype"></i> myskypeid</li>
+					</ul>
+					<div class="clearfix space10"></div>
+				</div>
+				<div class="col-md-3">
+					<h4 class="space30">Flickr</h4>
+				  <ul id="flickr" class="thumbs"></ul>
+				</div>
+			</div>
+		</div>
+	</footer>
+
+	<!-- FOOTER COPYRIGHT -->
+	<div class="footer-bottom">
+		<div class="container">
+			<div class="row">
+				<div class="col-md-8">
+					<p>&copy; Copyright 2015. Maxima. Designed by <a href="#" target="_blank"> CK Themes</a></p>
+				</div>
+				<div class="col-md-4">
+					<div class="f-social pull-right">
+						<a class="fa fa-twitter" href="#"></a>
+						<a class="fa fa-facebook" href="#"></a>
+						<a class="fa fa-linkedin" href="#"></a>
+						<a class="fa fa-dribbble" href="#"></a>
+						<a class="fa fa-google-plus" href="#"></a>
+						<a class="fa fa-skype" href="#"></a>
+						<a class="fa fa-behance" href="#"></a>
+						<a class="fa fa-stumbleupon" href="#"></a>
+						<a class="fa fa-rss" href="#"></a>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<!-- jQuery -->
+<script src="{{asset('js/jquery.js')}}"></script>
+
+<!-- Plugins -->
+<script src="{{asset('js/bootstrap.min.js')}}"></script>
+<script src="{{asset('js/menu.js')}}"></script>
+<script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
+<script src="{{asset('js/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
+<script src="{{asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
+<script src="{{asset('js/jquery.easing.min.js')}}"></script>
+<script src="{{asset('js/isotope/isotope.pkgd.js')}}"></script>
+<script src="{{asset('js/jflickrfeed.min.js')}}"></script>
+<script src="{{asset('js/tweecool.js')}}"></script>
+<script src="{{asset('js/flexslider/jquery.flexslider.js')}}"></script>
+<script src="{{asset('js/easypie/jquery.easypiechart.min.js')}}"></script>
+<script src="{{asset('js/jquery-ui.js')}}"></script>
+<script src="{{asset('js/jquery.appear.js')}}"></script>
+<script src="{{asset('js/jquery.inview.js')}}"></script>
+<script src="{{asset('js/jquery.countdown.min.js')}}"></script>
+<script src="{{asset('js/jquery.sticky.js')}}"></script>
+<script src="{{asset('js/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
+<script src="{{asset('js/jquery.easing/jquery.easing.js')}}"></script>
+
+<script src="{{asset('js/main.js')}}"></script>
+
+<script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
+<script src="{{asset('js/gmaps/greyscale.js')}}"></script>
+ 
+</body>
+</html>
