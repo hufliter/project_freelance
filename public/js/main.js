@@ -683,6 +683,7 @@ $(window).load(function() {
             value = $this.attr('data-option-value');
         value = value === 'false' ? false : value;
         options[key] = value;
+        console.log(options);
         if (key === 'layoutMode' && typeof changeLayoutMode === 'function') {
             changeLayoutMode($this, options);
         } else {

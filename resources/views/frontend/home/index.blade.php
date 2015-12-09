@@ -307,41 +307,37 @@
       </div>
              
         <ul class="filter" data-option-key="filter">
-          @if( !empty($category) )
-        @foreach($category as $item)
-          @if( !empty($item->is_active == 1) ) 
-            @if( $item->parent_id == 0 )
-            <li><a class="selected" href="#filter" data-option-value="*">{{$item->name}}</a></li>
+        @if( !empty($category) )
+          <li><a class="selected" href="#filter" data-option-value="*">All</a></li>
+          @foreach($category as $item)
+            @if( !empty($item->is_active == 1) ) 
+              <li><a href="#filter" data-option-value=".{{$item->filter_cate_name}}">{{$item->name}}</a></li>
             @endif
-
-            @if( $item->parent_id != 0 )
-              <li>
-                <ul>
-                  <li><a href="#" data-option-value=".{{$item->name}}">{{$item->name}}</a></li>
-                </ul>
-              </li>
-            @endif
-            
-            @endif
-        @endforeach
-          @endif
+          @endforeach
+        @endif
         </ul>
         
         <div id="portfolio-home" class="isotope folio-boxed-3col" style="position: relative; height: 867px;">
-          <div class="project-item branding" style="position: absolute; left: 0px; top: 0px;">
+          @if( !empty($product) )
+          @foreach( $product as $items )
+          <div class="project-item {{$items->filter_name}}" style="position: absolute; left: 0px; top: 0px;">
             <a href="./portfolio-single-slider.html">
               <div class="project-gal">
+              <!-- Should add natural image with dimension 700x450 -->
                 <img src="{{asset('img/projects/1.jpg')}}" class="img-responsive" alt="">
                 <div class="overlay-folio2">
                   <div class="project-info">
-                    <h2>Aliquam tincidunt risus.</h2>
-                    <p>Web , Creative</p>
+                    <h2>{{$items->slug}}</h2>
+                    <!-- Admin should update add name product -->
+                    <p>Name Products go here</p>
                   </div>
                 </div>
               </div>
             </a>
           </div>
-          <div class="project-item illustration web-design illustration" style="position: absolute; left: 449px; top: 0px;">
+          @endforeach
+          @endif
+          <!-- <div class="project-item illustration web-design illustration" style="position: absolute; left: 449px; top: 0px;">
             <a href="./portfolio-single-slider.html">
               <div class="project-gal">
                 <img src="{{asset('img/projects/2.jpg')}}" class="img-responsive" alt="">
@@ -405,7 +401,7 @@
                 </div>
               </div>
             </a>
-          </div>
+          </div> -->
         </div>
       </section>
     </div>

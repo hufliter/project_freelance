@@ -13,7 +13,7 @@ class Products extends Model
     public function findAllProducts(){
         $q = DB::table('products as p')
             ->leftJoin('categories as c','c.id','=','p.cate_id')
-            ->select('p.id as product_id', 'p.name as product_name ' , 'p.slug', 'p.usage', 'p.description as product_description ', 'p.created_at' , 'p.updated_at','p.is_active as product_active')
+            ->select('p.id as product_id', 'p.name as product_name ','p.image' , 'p.slug', 'p.usage', 'p.description as product_description ', 'p.created_at' , 'p.updated_at','p.is_active as product_active')
             ->addSelect('c.id as cate_id','c.name as cate_name');
         $result = $q->get();
         if( !empty($result) ){

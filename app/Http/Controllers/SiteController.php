@@ -31,12 +31,35 @@ class SiteController extends Controller
         $introData = $intro->findAllIntroduce();
 
         $cate = new Category();
-        $cateDate = $cate->all();
+        $cateData = $cate->all();
+        if( !empty( $cateData ) ){
+            foreach ($cateData as $i) {
+                $cateLowerCase = strtolower($i->name);
+                $cleanCateData = str_replace(' ', '-', $cateLowerCase);
+                $i->filter_cate_name = $cleanCateData;
+            }
+        } else {
+            $cateData = '';
+        }
         
+        //produce
+        $product = new Products();
+        $productData = $product->findAllProducts();
+        if( !empty($productData) ) {
+            foreach ($productData as $items) {
+                $img = json_decode($items->image);
+                $items->image = $img[0];
+                $toLowerCase = strtolower($items->cate_name);
+                $cleanData = str_replace(' ', '-', $toLowerCase);
+                $items->filter_name = $cleanData;
+            }
+        } else {
+            $productData = '';
+        }
         return view('frontend.home.index',[
             'introduce'=>$introData[0],
-            'category'=>$cateDate
+            'category'=>$cateData,
+            'product' => $productData
         ]);
     }
-
 }
