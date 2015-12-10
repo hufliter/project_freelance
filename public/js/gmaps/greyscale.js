@@ -3,9 +3,9 @@ google.maps.event.addDomListener(window, 'load', init);
 
 function init() {
 	var mapOptions = {
-		zoom: 11,
+		zoom: 17,
 
-		center: new google.maps.LatLng(40.6700, -73.9400), // New York
+		center: new google.maps.LatLng(10.78744, 106.68490), // New York
 
 		styles: [{
 			"featureType": "landscape",
@@ -90,8 +90,8 @@ function init() {
 	var map = new google.maps.Map(mapElement, mapOptions);
 
 	var marker = new google.maps.Marker({
-		position: new google.maps.LatLng(40.6700, -73.9400),
+		position: new google.maps.LatLng(10.78744, 106.68490),
 		map: map,
-		title: 'Snazzy!'
+		title: 'Saigon Industrial Development'
 	});
 }
