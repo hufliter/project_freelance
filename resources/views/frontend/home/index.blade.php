@@ -299,7 +299,7 @@
     
     <div class="clearfix space90"></div>
   
-      <section id="portfolio-section">
+      <!-- <section id="portfolio-section"> -->
       <div class="container container-full" id="3">
       <section id="portfolio-section">
     <div class="container">
@@ -321,7 +321,7 @@
           @if( !empty($product) )
           @foreach( $product as $items )
           <div class="project-item {{$items->filter_name}}" style="position: absolute; left: 0px; top: 0px;">
-            <a href="./portfolio-single-slider.html">
+            <a href="{{ route('fe.viewProduct',['id'=>$items->product_id]) }}">
               <div class="project-gal">
               <!-- Should add natural image with dimension 700x450 -->
                 <img src="{{asset('img/projects/1.jpg')}}" class="img-responsive" alt="">

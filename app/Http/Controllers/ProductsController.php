@@ -37,6 +37,7 @@ class ProductsController extends Controller
             $productData = $product->findOrFail($id);
             $productData->image = json_decode($productData->image);
             if( !empty($productData) ){
+                
                 return view('frontend.products.view',['data'=>$productData]);
             }
         }

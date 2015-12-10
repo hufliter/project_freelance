@@ -81,7 +81,7 @@
 						<li class="page-scroll"><a href="#3">Sản Phẩm</a></li>
 						<li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li>
 						<li class="page-scroll"><a href="#6">Kĩ Thuật</a></li>
-                        <li class="page-scroll"><a href="#5">Tuyển Dụng</a></li>
+                        <li class="page-scroll"><a href="#5">Tin Tức</a></li>
 						<li class="page-scroll"><a href="#7">Liên Hệ</a></li>
 					</ul>
 				</div>

@@ -16,17 +16,6 @@ class SiteController extends Controller
 {
     public function index(){
 
-        /*$products = new Products();
-        $productsData = $products->all()->take(4);
-        if( empty($productsData) ){
-            $productsData = null;
-        }
-
-        foreach($productsData as $items){
-            $img = json_decode($items->image);
-            $items->image = $img[0];
-        }
-        ,['products'=>$productsData]*/
         $intro = new Introduce();
         $introData = $intro->findAllIntroduce();
 
@@ -56,10 +45,51 @@ class SiteController extends Controller
         } else {
             $productData = '';
         }
+
+
+        //feed get news
+        $feed = Feeds::make(['http://vnexpress.net/rss/kinh-doanh.rss','http://vnexpress.net/rss/the-gioi.rss']
+        , 2);
+        $data = $feed->get_items();
+        $titleArr = array();
+        $desc = array();
+        foreach($data as $items){
+            $expressData =$items->data;
+            $childData = $expressData['child'][""];
+            array_push($titleArr,$childData['title']);
+            array_push($desc,$childData['description']);
+        }
+        $realTit = array();
+        foreach ($titleArr as $tit) {
+            foreach ($tit as $tt) {
+                array_push($realTit, $tt['data']);
+            }
+        }
+        $realDesc = array();
+        foreach ($desc as $dec) {
+            foreach($dec as $d){
+                //should write a function to separate content , image, title
+                $strPos1 = strpos( $d['data'] , 'http');
+                $strPos2 = strpos( $d['data'], '<img');
+                $linkNews = substr($d['data'], $strPos1, $strPos2);
+                $linkNews = str_replace('>', '', $linkNews);
+
+                $imgPos1 = strpos( $d['data'], 'http://img');
+                $imgPos2 = strpos($d['data'], '</br>');
+                $imgNews = substr($d['data'], $imgPos1 ,$imgPos2);
+                var_dump($imgNews);
+
+                array_push($realDesc, $d['data']);
+            }
+        }
+        exit();
+        $newsFeed = array_combine($realTit, $realDesc);
+
         return view('frontend.home.index',[
             'introduce'=>$introData[0],
             'category'=>$cateData,
-            'product' => $productData
+            'product' => $productData,
+            'news' => $newsFeed,
         ]);
     }
 }
