@@ -36,4 +36,19 @@ class Products extends Model
             return null;
         }
     }
+
+    public function getPopularProducts(){
+        $q = DB::table('products as p')
+            ->where('p.is_popular','=', 1)
+            ->where('p.is_active','=',1)
+            ->orderBy('p.updated_at','desc')
+            ->take(4);
+        $result = $q->get();
+
+        if( !empty($result) ) {
+            return $result;
+        } else {
+            return null;
+        }
+    }
 }

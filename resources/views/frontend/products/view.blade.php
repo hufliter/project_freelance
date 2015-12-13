@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3><span>{{$data->slug}}</span>{{$data->name}}</h3>
+                        <h3><span>{{$data->slug}}</span>{{$data->name}} Product name</h3>
                     </div>
                 </div>
             </div>
@@ -34,8 +34,9 @@
                 <div class="col-md-9">
                     <div id="blog-slider" class="owl-carousel owl-theme">
                     @foreach($data->image as $img)
-                        <div class="item">                      
-                            <img src="{{ asset('upload/img/'.$img) }}" class="img-responsive" alt="">
+                        <div class="item">
+                            <!-- Image need set 700x450 to view beauty -->                      
+                            <img src="{{ asset('upload/img/'.$img) }}" class="img-responsive" alt="" style="height: 450px; width: 700px;">
                         </div>
                     @endforeach
                     </div>
@@ -59,10 +60,12 @@
             <h4 class="uppercase">Sản Phẩm Tiêu Biểu</h4>
             <hr>
             <div id="portfolio-home" class="isotope gutter folio-boxed-4col">
+                @if(!empty($popularData))
+                @foreach($popularData as $pi)
                 <div class="project-item photography branding">
-                    <a href="./portfolio-single-slider.html">
+                    <a href="{{route('fe.viewProduct',['id'=>$pi->id])}}">
                         <div class="project-gal">
-                            <img src="images/projects/1.jpg" class="img-responsive" alt="Not found">
+                            <img src="{{ asset('upload/img/'.$pi->image) }}" class="img-responsive" alt="Not found" style="height:177px;">
                             <div class="overlay-folio2">
                                 <div class="project-info">
                                     <h2>Aliquam tincidunt risus.</h2>
@@ -72,45 +75,8 @@
                         </div>
                     </a>
                 </div>
-                <div class="project-item illustration web-design illustration">
-                    <a href="./portfolio-single-slider.html">
-                        <div class="project-gal">
-                            <img src="images/projects/2.jpg" class="img-responsive" alt="Not found">
-                            <div class="overlay-folio2">
-                                <div class="project-info">
-                                    <h2>Vestibulum auctor</h2>
-                                    <p>Image Gallery</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="project-item illustration print">
-                    <a href="./portfolio-single-slider.html">
-                        <div class="project-gal">
-                            <img src="images/projects/3.jpg" class="img-responsive" alt="Not found">
-                            <div class="overlay-folio2">
-                                <div class="project-info">
-                                    <h2>Vestibulum auctor</h2>
-                                    <p>Image Gallery</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
-                <div class="project-item photography web-design">
-                    <a href="./portfolio-single-slider.html">
-                        <div class="project-gal">
-                            <img src="images/projects/4.jpg" class="img-responsive" alt="Not found">
-                            <div class="overlay-folio2">
-                                <div class="project-info">
-                                    <h2>Vestibulum auctor</h2>
-                                    <p>Image Gallery</p>
-                                </div>
-                            </div>
-                        </div>
-                    </a>
-                </div>
+                @endforeach
+                @endif
             </div>
         </div>
     </div>

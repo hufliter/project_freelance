@@ -49,7 +49,7 @@ class SiteController extends Controller
 
         //feed get news
         $feed = Feeds::make(['http://vnexpress.net/rss/kinh-doanh.rss','http://vnexpress.net/rss/the-gioi.rss']
-        , 2);
+        , 3);
         $data = $feed->get_items();
         $titleArr = array();
         $desc = array();
@@ -65,26 +65,30 @@ class SiteController extends Controller
                 array_push($realTit, $tt['data']);
             }
         }
+
         $realDesc = array();
         foreach ($desc as $dec) {
             foreach($dec as $d){
+                $temp = [];
                 //should write a function to separate content , image, title
                 $strPos1 = strpos( $d['data'] , 'http');
                 $strPos2 = strpos( $d['data'], '<img');
                 $linkNews = substr($d['data'], $strPos1, $strPos2);
-                $linkNews = str_replace('>', '', $linkNews);
+                $linkNews = str_replace('">', '', $linkNews);
+                $linksArr = explode("<img", $linkNews);
 
-                $imgPos1 = strpos( $d['data'], 'http://img');
-                $imgPos2 = strpos($d['data'], '</br>');
+                $imgPos1 = strpos($d['data'], 'http://img');
+                $imgPos2 = strpos($d['data'], "</br>");
                 $imgNews = substr($d['data'], $imgPos1 ,$imgPos2);
-                var_dump($imgNews);
-
-                array_push($realDesc, $d['data']);
+                $imgNews = str_replace('</br>', '', $imgNews);
+                $imgArr = explode('" ></a>', $imgNews);
+                $temp['img'] = $imgArr[0];
+                $temp['content'] = $imgArr[1];
+                $temp['link'] = $linksArr[0];
+                array_push($realDesc, $temp);
             }
         }
-        exit();
         $newsFeed = array_combine($realTit, $realDesc);
-
         return view('frontend.home.index',[
             'introduce'=>$introData[0],
             'category'=>$cateData,

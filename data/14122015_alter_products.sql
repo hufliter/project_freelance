@@ -1,0 +1,1 @@
+ALTER TABLE `products` ADD `is_popular` TINYINT NOT NULL DEFAULT '0' AFTER `is_active`;

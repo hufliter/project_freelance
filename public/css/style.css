@@ -6425,7 +6425,20 @@ aside {
 }
 
 }
-
+.title-wrap {
+    display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
+.content-wrap {
+	display: inline-block;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden !important;
+    text-overflow: ellipsis;
+}
 /*
 img{ filter: grayscale(75%);  -webkit-filter: grayscale(75%); filter: grayscale(75%); }
 img:hover{ filter: grayscale(0%);  -webkit-filter: grayscale(0%); filter: grayscale(0%); }

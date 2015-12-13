@@ -37,8 +37,16 @@ class ProductsController extends Controller
             $productData = $product->findOrFail($id);
             $productData->image = json_decode($productData->image);
             if( !empty($productData) ){
-                
-                return view('frontend.products.view',['data'=>$productData]);
+                //find product is popular
+                $popularProducts = $product->getPopularProducts();
+                foreach($popularProducts as $items){
+                    $img = json_decode($items->image);
+                    $items->image = $img[0];
+                }
+                return view('frontend.products.view',[
+                    'data'=>$productData,
+                    'popularData' => $popularProducts
+                ]);
             }
         }
     }

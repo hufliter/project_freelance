@@ -303,7 +303,7 @@
       <div class="container container-full" id="3">
       <section id="portfolio-section">
     <div class="container">
-        <h3 class="uppercase text-center">Portfolio</h3>
+        <h3 class="uppercase text-center">Sản Phẩm</h3>
       </div>
              
         <ul class="filter" data-option-key="filter">
@@ -324,7 +324,7 @@
             <a href="{{ route('fe.viewProduct',['id'=>$items->product_id]) }}">
               <div class="project-gal">
               <!-- Should add natural image with dimension 700x450 -->
-                <img src="{{asset('img/projects/1.jpg')}}" class="img-responsive" alt="">
+                <img src="{{asset('upload/img/'.$items->image)}}" class="img-responsive" alt="Not Found" style="height: 290px;">
                 <div class="overlay-folio2">
                   <div class="project-info">
                     <h2>{{$items->slug}}</h2>
@@ -419,179 +419,65 @@
     <div class="border-top padding80">
     <div class="container home-blog" id="5">
       <div class="text-center space40">
-        <h2 class="title uppercase">Latest from blog</h2>
-        <p>Sed laoreet libero eget tempus blandit praesent eu erat sed sem facilisis rutrum metus<br>facilisis eros justo non ipsum aliquam lacinia non eu ex.</p>
+        <h2 class="title uppercase">TIN TỨC</h2>
+        <p>Tin Tức Kinh Doanh/Quân Sự</p>
       </div>
       <div class="row">
-        <div class="col-md-4">
+      @if(!empty($news))
+      @foreach($news as $title => $items)
+        <div class="col-md-4" style="padding-bottom:10px">
           <div class="hb-info">
             <div class="hb-thumb">
-              <img src="{{asset('img/blog/1.jpg')}}" class="img-responsive" alt=""/>
-              <div class="date-meta">
-                June<span>06</span>2015
-              </div>
+              <img style="width: 100%;" src="{{$items['img']}}" class="img-responsive" alt="Not Found"/>
             </div>
-            <h4><a href="blog-single.html">Climb the mountain</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-            <a href="blog-single.html" class="readmore">Read more...</a>
+            <h4 title="{{$title}}"><a href="{{$items['link']}}" target="_blank" class="title-wrap">{{$title}} </a></h4>
+            <p class="content-wrap">{!!$items['content']!!}</p>
+            <a href="{{$items['link']}}" class="readmore" target="_blank">Chi Tiết...</a>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="hb-info">
-            <div class="hb-thumb">
-              <img src="{{asset('img/blog/2.jpg')}}" class="img-responsive" alt=""/>
-              <div class="date-meta">
-                June<span>02</span>2015
-              </div>
-            </div>
-            <h4><a href="blog-single.html">Girl showing stats</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-            <a href="blog-single.html" class="readmore">Read more...</a>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="hb-info">
-            <div class="hb-thumb">
-              <img src="{{asset('img/blog/3.jpg')}}" class="img-responsive" alt=""/>
-              <div class="date-meta">
-                May<span>30</span>2015
-              </div>
-            </div>
-            <h4><a href="blog-single.html">A photographers heart</a></h4>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque volutpat mi tellus, euismod viverra dolor ultrices sit amet.</p>
-            <a href="blog-single.html" class="readmore">Read more...</a>
-          </div>
-        </div>
+      @endforeach 
+      @endif
       </div>
     </div>
   </div>
-    
+
+  <div class="space80"></div>
+  <!-- Contact us -->
   <div class="border-top"></div>
-  
-      <div class="container home-blog padding80">
-      <div class="text-center space40" id="6">
-        <h2 class="title uppercase">Latest Product</h2>
-      </div>
-      <div class="row">
-        <ul class="shop-grid">
-            <li>
-              <div class="product">
-                <div class="text-center">
-                  <div class="product-thumbnail">
-                    <img src="{{asset('img/shop/1.jpg')}}" class="img-responsive" alt="">
-                    <div class="product-overlay">
-                      <a class="product-overlay-link" href="#"><i class="fa fa-search-plus"></i></a>
-                      <a class="product-overlay-cart" href="#"><i class="fa fa-cart-plus"></i></a>
-                    </div>
-                  </div>
-                  <h3 class="product-title"><a href="#">Grey jacket</a></h3>
-                  <span class="product-price">£ 69.99</span>
-                  <a href="#" class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">Add to cart</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="product">
-                <span class="badge blue"><span>50%</span><br>Off</span>
-                <div class="text-center">
-                  <div class="product-thumbnail">
-                    <img src="{{asset('img/shop/2.jpg')}}" class="img-responsive" alt="">
-                    <div class="product-overlay">
-                      <a class="product-overlay-link" href="#"><i class="fa fa-search-plus"></i></a>
-                      <a class="product-overlay-cart" href="#"><i class="fa fa-cart-plus"></i></a>
-                    </div>
-                  </div>
-                  <h3 class="product-title"><a href="#">Leather bag</a></h3>
-                  <span class="product-price">£ 119.99</span>
-                  <a href="#" class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">Add to cart</a>
-                </div>
-              </div>
-            </li>
-            <li>
-              <div class="product">
-                <div class="text-center">
-                  <div class="product-thumbnail">
-                    <img src="{{asset('img/shop/3.jpg')}}" class="img-responsive" alt="">
-                    <div class="product-overlay">
-                      <a class="product-overlay-link" href="#"><i class="fa fa-search-plus"></i></a>
-                      <a class="product-overlay-cart" href="#"><i class="fa fa-cart-plus"></i></a>
-                    </div>
-                  </div>
-                  <h3 class="product-title"><a href="#">Checked Shirt</a></h3>
-                  <span class="product-price">£ 39.99</span>
-                  <a href="#" class="button btn-md btn-radius btn-center color2 btn-radius add_to_cart_button">Add to cart</a>
-                </div>
-              </div>
-            </li>
-          
-            
-          </ul></div>
-    </div>
-    
-    
-    <div class="clients container">
-      <div id="carousel_five" class="owl-carousel">
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/1.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/2.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/3.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/4.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/5.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/6.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-        <div class="item client-logo">
-          <a href="#"><img src="{{asset('img/clients/7.png')}}" class="img-responsive" alt=""/></a>
-        </div>
-      </div>
-    </div>
-        <div class="space80"></div>
-
-        <div class="border-top"></div>
   <div class="container-fluid no-padding" id="7">
-  <div>
-      <div class="text-center">
-        <h2 class="title uppercase">Contact Us</h2>
-        <p>Sed laoreet libero eget tempus blandit praesent eu erat sed sem facilisis rutrum metus<br>facilisis eros justo non ipsum aliquam lacinia non eu ex.</p>
+    <div>
+        <div class="text-center">
+          <h2 class="title uppercase">Liên Hệ</h2>
+          <p>Hãy liên hệ ngay cho chúng tôi nếu bạn có nhu cầu sử dụng sản phẩm của chúng tôi<br>
+          Mọi thắc mắc của bạn sẽ được chúng tôi giải đáp nhanh chóng.</p>
+        </div>
+              <div class="space40"></div>
+
+      <div class="col-md-6 full-contact">
+            <div class="space50"></div>
+            <h3 class="no-margin">Thông Tin Liên Hệ</h3>
+            <div class="space20"></div>
+            <ul class="contact-info">
+              <li>
+                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> An Phu Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
+              </li>
+              <li>
+                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">finalfantasy812@gmail.com</a></p>
+              </li>
+              <li>
+                <p><strong><i class="fa fa-phone"></i> Số Điện Thoại:</strong> +84 1266 183831</p>
+              </li>
+              <li>
+                <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p>
+              </li>
+            </ul>
       </div>
-            <div class="space40"></div>
-
-    <div class="col-md-6 full-contact">
-  
-          
-          <div class="space50"></div>
-          <h3 class="no-margin">Contact info</h3>
-          <div class="space20"></div>
-          <ul class="contact-info">
-            <li>
-              <p><strong><i class="fa fa-map-marker"></i> Address:</strong> No 123 , Wallstreet, Newyork NY123456</p>
-            </li>
-            <li>
-              <p><strong><i class="fa fa-envelope"></i> Mail Us:</strong> <a href="#">Support@website.com</a></p>
-            </li>
-            <li>
-              <p><strong><i class="fa fa-phone"></i> Phone:</strong> +91 1800 2345 2132</p>
-            </li>
-            <li>
-              <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p>
-            </li>
-          </ul>
-        
-    </div>
-    <div class="col-md-6 no-padding">
-      <div class="map-greyscale" id="map-greyscale"></div>
+      <div class="col-md-6 no-padding">
+        <div class="map-greyscale" id="map-greyscale"></div>
+      </div>
     </div>
   </div>
+  <!--End Contact us -->
 
-  </div>
-    </div>
+</div>
 @endsection
