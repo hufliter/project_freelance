@@ -3,7 +3,7 @@
 -- http://www.phpmyadmin.net
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 16, 2015 at 07:13 PM
+-- Generation Time: Dec 13, 2015 at 08:09 PM
 -- Server version: 5.6.21
 -- PHP Version: 5.6.3
 
@@ -40,7 +40,6 @@ CREATE TABLE IF NOT EXISTS `categories` (
 --
 
 INSERT INTO `categories` (`id`, `name`, `parent_id`, `is_active`, `created_at`, `updated_at`) VALUES
-(2, 'Cate 1', 0, 1, '2015-11-06 13:59:45', '0000-00-00 00:00:00'),
 (3, 'Cate 2', 0, 1, '2015-11-06 13:59:45', '0000-00-00 00:00:00'),
 (4, 'Sub Child Cate 1', 2, 1, '2015-11-06 14:03:51', '0000-00-00 00:00:00'),
 (5, 'Sub child Cate 2', 3, 1, '2015-11-06 14:09:02', '0000-00-00 00:00:00'),
@@ -158,17 +157,21 @@ CREATE TABLE IF NOT EXISTS `products` (
   `usage` text NOT NULL,
   `description` text NOT NULL,
   `is_active` tinyint(4) NOT NULL DEFAULT '1',
+  `is_popular` tinyint(4) NOT NULL DEFAULT '0',
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL,
   `slug` varchar(255) NOT NULL
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
 
 --
 -- Dumping data for table `products`
 --
 
-INSERT INTO `products` (`id`, `cate_id`, `name`, `size`, `weight`, `package`, `words`, `solder`, `image`, `usage`, `description`, `is_active`, `created_at`, `updated_at`, `slug`) VALUES
-(3, 5, '', '', 0, '', '', '', '["564a0c8313249.png","564a0c83333e0.png"]', 'Mô tả sản phẩm', 'ứng dụng sản phẩm', 1, '2015-11-16 10:04:03', '2015-11-16 17:04:03', 'Sản phẩm 1');
+INSERT INTO `products` (`id`, `cate_id`, `name`, `size`, `weight`, `package`, `words`, `solder`, `image`, `usage`, `description`, `is_active`, `is_popular`, `created_at`, `updated_at`, `slug`) VALUES
+(3, 5, '', '', 0, '', '', '', '["564a0c8313249.png","564a0c83333e0.png"]', 'Mô tả sản phẩm', 'ứng dụng sản phẩm', 1, 1, '2015-11-16 10:04:03', '2015-11-16 17:04:03', 'SP001'),
+(4, 4, '', '', 0, '', '', '', '["565204ad6cb8a.png","565204ae0f5c0.png"]', 'Mo ta', 'ung dung', 1, 1, '2015-11-22 11:08:46', '2015-11-22 18:08:46', 'KO102'),
+(5, 3, '', '', 0, '', '', '', '["56573b89071de.png","56573b8953ad2.png"]', 'Không mô tả', 'Ứng dụng', 1, 1, '2015-11-26 10:04:09', '2015-11-26 17:04:09', 'PROMOTE-A-1'),
+(6, 8, '', '', 0, '', '', '', '["56608eb3a25d8.jpg"]', 'Khong mo ta', 'ung dung', 1, 1, '2015-12-03 11:49:23', '2015-12-03 18:49:23', 'KO1020');
 
 -- --------------------------------------------------------
 
@@ -184,9 +187,19 @@ CREATE TABLE IF NOT EXISTS `recruitment` (
   `salary` varchar(255) NOT NULL,
   `requirement` varchar(255) NOT NULL,
   `description` text NOT NULL,
+  `contact` varchar(255) NOT NULL,
+  `active` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `recruitment`
+--
+
+INSERT INTO `recruitment` (`id`, `job_title`, `position`, `quantity`, `salary`, `requirement`, `description`, `contact`, `active`, `created_at`, `updated_at`) VALUES
+(2, 'New Jobs  Asdasd', 'Php developer qd qwd qwd', 6, '1000', 'No requirement', 'No description', 'My Contact', 1, '2015-11-21 12:40:21', '2015-11-21 19:45:41'),
+(3, 'New Jobs Updated', 'Php developer Senior', 1, '2000', 'No requirement', 'No description', 'My Contact', 1, '2015-11-21 12:43:55', '2015-11-21 19:43:55');
 
 -- --------------------------------------------------------
 
@@ -212,9 +225,18 @@ CREATE TABLE IF NOT EXISTS `technical` (
 `id` int(11) NOT NULL,
   `name` varchar(255) NOT NULL,
   `url` text NOT NULL,
+  `active` tinyint(4) NOT NULL,
   `created_at` timestamp NOT NULL DEFAULT CURRENT_TIMESTAMP,
   `updated_at` datetime NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=3 DEFAULT CHARSET=utf8;
+
+--
+-- Dumping data for table `technical`
+--
+
+INSERT INTO `technical` (`id`, `name`, `url`, `active`, `created_at`, `updated_at`) VALUES
+(1, 'My CV Edited', 'https://drive.google.com/file/d/0B2ru84q_uOSBNGZtd0E5QWNNek0/view?usp=sharing', 1, '2015-11-21 21:04:42', '2015-11-22 04:22:21'),
+(2, 'Some Link', 'http;//', 1, '2015-12-03 12:27:45', '2015-12-03 19:27:45');
 
 -- --------------------------------------------------------
 
@@ -241,7 +263,7 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`id`, `username`, `firstname`, `lastname`, `email`, `password`, `role`, `is_active`, `remember_token`, `created_at`, `updated_at`) VALUES
-(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'jalrzkgOvsVUM2RFiU1mmjodZ8FJda7bbBN4x0V9kD6knTI5kPdrAdhY0Qzr', '2015-10-28 11:10:06', '2015-11-03 13:58:03'),
+(1, 'admin', 'Super', 'User', 'finalfantasy812@gmail.com', '$2y$10$ki7rmXEFJXA/lGbTRN5TV.38WLIg2uWcpsFMmDicbdfeG8AFrjOaS', 1, 1, 'zXRniebdSyVaQSPdTxmOTLtJmPX7597Zu24AP76UQSq1UiKdDEfilWc9MpfR', '2015-10-28 11:10:06', '2015-12-03 19:17:23'),
 (2, 'tester01', 'Test', 'Man', 'abcd@gmail.com', '$2y$10$cVzz4lMO/ltHToxiivS3e.uQdjZP99hMq7tYZqYyvau2./SK5nWVy', 2, 1, '2kPhfSRDvK43GOvNMq7eOFZPCyNe3skDZJAq1w6YHV8AB6raRSyHPB57xnQT', '2015-10-30 17:21:10', '2015-10-30 18:13:15'),
 (3, 'tester02', 'Test', 'Man', 'abcde@gmail.com', '$2y$10$m/JaifbJkvANvFtN1vElFuKBJXB/OssYe3viEAVKkB49dV4qU2JCa', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
 (4, 'tester03', 'Test', 'Man', 'abcdef@gmail.com', '$2y$10$rxdH1d2d2EU23CEoj3BM7ubmqKCstUHZebBUOcEKXFTSfXC80TmgC', 2, 1, NULL, '2015-10-30 17:21:11', '0000-00-00 00:00:00'),
@@ -350,12 +372,12 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `products`
 --
 ALTER TABLE `products`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=7;
 --
 -- AUTO_INCREMENT for table `recruitment`
 --
 ALTER TABLE `recruitment`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=4;
 --
 -- AUTO_INCREMENT for table `room`
 --
@@ -365,7 +387,7 @@ MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 -- AUTO_INCREMENT for table `technical`
 --
 ALTER TABLE `technical`
-MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
+MODIFY `id` int(11) NOT NULL AUTO_INCREMENT,AUTO_INCREMENT=3;
 --
 -- AUTO_INCREMENT for table `users`
 --
