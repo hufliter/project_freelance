@@ -470,6 +470,9 @@
               <li>
                 <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p>
               </li>
+              <li>
+                <p><strong><i class="fa fa-skype"></i> myskypeid: </strong> skypeidhere</p>
+              </li>
             </ul>
       </div>
       <div class="col-md-6 no-padding">

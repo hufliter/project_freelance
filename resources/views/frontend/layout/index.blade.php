@@ -99,13 +99,13 @@
 			<div class="row">
 				<div class="col-md-3">
 					<h4 class="space30">About us</h4>
-			    <img src="{{asset('img/basic/logo-ico.png')}}" class="img-responsive space20" width="262" alt=""/>
+			    	<img src="{{asset('img/basic/logo-ico.png')}}" class="img-responsive space20" width="262" alt=""/>
 					<p>Lorem ipsum dolor sit amet consec tetur elit vel quam ligula. Duis vel pulvinar diam in lacus non nisl commodo convallis.</p>
 					<p>Phasellus rutrum urna ut nibh congue, ut vehicula nibh ultricies.</p>
 				</div>
 				<div class="col-md-3">
 					<h4 class="space30">Recent Posts</h4>
-			  <ul class="f-posts">
+			 		<ul class="f-posts">
 						<li>
 							<img src="{{asset('img/blog/1.jpg')}}" class="img-responsive" alt=""/>
 							<h5><a href="#">Lorem ipsum post title</a></h5>
@@ -130,7 +130,7 @@
 				</div>
 				<div class="col-md-3">
 					<h4 class="space30">Contact</h4>
-			  <ul class="c-info">
+			  		<ul class="c-info">
 						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
 						</li>
 						<li>
@@ -154,7 +154,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<p>&copy; Copyright 2015. Maxima. Designed by <a href="#" target="_blank"> CK Themes</a></p>
+					<p>&copy; Copyright 2015. TP. <a href="#" target="_blank"> TPGabriel</a></p>
 				</div>
 				<div class="col-md-4">
 					<div class="f-social pull-right">
