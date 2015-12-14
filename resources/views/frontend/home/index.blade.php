@@ -186,81 +186,26 @@
     <div class="padding80 border-top">
       <div class="container" id="2">
       <div class="col-md-8 col-md-offset-2 text-center space50">
-        <h2>Our Services</h2>
-        <p>Sed dapibus, leo ut placerat bibendum, ligula ligula consectetur eros, sed efficitur justo ex ut risus. Integer nec eros non elit finibus dictum quis sit amet augue.</p>
+        <h2>Thông Tin Kĩ Thuật</h2>
+        <p>Đây là các nội dung chi tiết về các thông số kĩ thuật cũng như các cách thức sử dụng sản phẩm của chúng tôi.</p>
       </div>
       <div class="row">
+        @if(!empty($technical))
+        @foreach($technical as $items)
         <div class="col-md-4">
           <div class="feature-box">
             <div class="feature-box-icon">
-              <i class="icon-monitor"></i>
+              <a href="{{$items->url}}" target="_blank" ><i class="icon-cog3"></i></a>
             </div>
             <div class="feature-box-info">
-              <h4>Web Design</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
+              <h4><a href="{{$items->url}}" target="_blank">{{$items->name}}</a></h4>
             </div>
           </div>
         </div>
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <i class="icon-layout"></i>
-            </div>
-            <div class="feature-box-info">
-              <h4>Branding</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <i class="icon-cog3"></i>
-            </div>
-            <div class="feature-box-info">
-              <h4>SEO</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
-            </div>
-          </div>
-        </div>
+        @endforeach
+        @endif
       </div>
       
-      <div class="space20"></div>
-      <div class="row">
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <i class="icon-camera"></i>
-            </div>
-            <div class="feature-box-info">
-              <h4>Photography</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <i class="icon-lightbulb"></i>
-            </div>
-            <div class="feature-box-info">
-              <h4>Internet Marketing</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
-            </div>
-          </div>
-        </div>
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <i class="icon-strategy"></i>
-            </div>
-            <div class="feature-box-info">
-              <h4>UI Design</h4>
-              <p>Lorem ipsum dolor sit amet consectetur adipiscing metus elit.</p>
-            </div>
-          </div>
-        </div>
-      </div>
     </div></div>
     <div class="pattern-grey">
     <div id="stats1" class="container">

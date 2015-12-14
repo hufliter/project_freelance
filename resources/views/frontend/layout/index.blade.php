@@ -54,7 +54,7 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 					</button>
-					<a href="index.html" class="navbar-brand"><img src="{{asset('img/basic/logo.png')}}" width="40" alt=""/></a>
+					<a href="/" class="navbar-brand"><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a>
 				</div>
 
 				<!-- SEARCH -->
@@ -77,10 +77,10 @@
 					<ul class="nav navbar-nav">
 						<li class="page-scroll"><a href="#page-top">Trang Chủ</a></li>
 						<li class="page-scroll"><a href="#1">Giới Thiệu</a></li>
-						<li class="page-scroll"><a href="#2">Ứng Dụng</a></li>
+						<li class="page-scroll"><a href="#2">Kĩ Thuật</a></li>
 						<li class="page-scroll"><a href="#3">Sản Phẩm</a></li>
 						<li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li>
-						<li class="page-scroll"><a href="#6">Kĩ Thuật</a></li>
+						<!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
                         <li class="page-scroll"><a href="#5">Tin Tức</a></li>
 						<li class="page-scroll"><a href="#7">Liên Hệ</a></li>
 					</ul>
@@ -97,38 +97,13 @@
 	<footer>
 		<div class="container">
 			<div class="row">
-				<div class="col-md-3">
-					<h4 class="space30">About us</h4>
-			    	<img src="{{asset('img/basic/logo-ico.png')}}" class="img-responsive space20" width="262" alt=""/>
-					<p>Lorem ipsum dolor sit amet consec tetur elit vel quam ligula. Duis vel pulvinar diam in lacus non nisl commodo convallis.</p>
-					<p>Phasellus rutrum urna ut nibh congue, ut vehicula nibh ultricies.</p>
+				<div class="col-md-4">
+			    	<img src="{{asset('img/logo.png')}}" class="img-responsive space20" alt="Not Found" style="float: left; margin: auto; padding: 0;" />
+					<h4 style="font-weight: bold; text-align: center;">Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn</h4>
+					<h4 style="font-weight: bold; text-align: center;">Saigon Industrial Development Co,LTD</h4>
 				</div>
-				<div class="col-md-3">
-					<h4 class="space30">Recent Posts</h4>
-			 		<ul class="f-posts">
-						<li>
-							<img src="{{asset('img/blog/1.jpg')}}" class="img-responsive" alt=""/>
-							<h5><a href="#">Lorem ipsum post title</a></h5>
-							<p><i class="fa fa-comments"></i> 5 Comments</p>
-						</li>
-						<li>
-							<img src="{{asset('img/blog/2.jpg')}}" class="img-responsive" alt=""/>
-							<h5><a href="#">Lorem ipsum post title</a></h5>
-							<p><i class="fa fa-comments"></i> 5 Comments</p>
-						</li>
-						<li>
-							<img src="{{asset('img/blog/3.jpg')}}" class="img-responsive" alt=""/>
-							<h5><a href="#">Lorem ipsum post title</a></h5>
-							<p><i class="fa fa-comments"></i> 5 Comments</p>
-						</li>
-						<li>
-							<img src="{{asset('img/blog/4.jpg')}}" class="img-responsive" alt=""/>
-							<h5><a href="#">Lorem ipsum post title</a></h5>
-							<p><i class="fa fa-comments"></i> 5 Comments</p>
-						</li>
-					</ul>
-				</div>
-				<div class="col-md-3">
+				
+				<div class="col-md-4">
 					<h4 class="space30">Contact</h4>
 			  		<ul class="c-info">
 						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
@@ -141,7 +116,7 @@
 					</ul>
 					<div class="clearfix space10"></div>
 				</div>
-				<div class="col-md-3">
+				<div class="col-md-4">
 					<h4 class="space30">Flickr</h4>
 				  <ul id="flickr" class="thumbs"></ul>
 				</div>

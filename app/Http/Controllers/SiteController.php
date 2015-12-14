@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Products;
 use App\Introduce;
 use App\Category;
+use App\Technical;
 use Illuminate\Http\Request;
 use App\Http\Requests;
 use App\Http\Controllers\Controller;
@@ -89,11 +90,20 @@ class SiteController extends Controller
             }
         }
         $newsFeed = array_combine($realTit, $realDesc);
+
+
+        //get technical link
+        $technical = New Technical();
+        $technicalData = $technical->all();
+        if( empty($technicalData) ) {
+            $technicalData = '';
+        }
         return view('frontend.home.index',[
             'introduce'=>$introData[0],
             'category'=>$cateData,
             'product' => $productData,
             'news' => $newsFeed,
+            'technical' => $technicalData,
         ]);
     }
 }
