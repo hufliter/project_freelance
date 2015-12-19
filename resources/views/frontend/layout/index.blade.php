@@ -11,32 +11,7 @@
 	<meta name="keywords" content="">
 	<meta name="author" content="">
 
-	<!-- Bootstrap CSS -->
-	<link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}" type="text/css">
-
-	<!-- Styles -->
-	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.carousel.css')}}">
-	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.theme.css')}}">
-	<link rel="stylesheet" href="{{asset('js/owl-carousel/owl.transitions.css')}}">
-	<link rel="stylesheet" href="{{asset('js/rs-plugin/css/settings.css')}}">
-	<link rel="stylesheet" href="{{asset('js/flexslider/flexslider.css')}}">
-	<link rel="stylesheet" href="{{asset('js/isotope/isotope.css')}}">
-	<link rel="stylesheet" href="{{asset('css/jquery-ui.css')}}">
-	<link rel="stylesheet" href="{{asset('js/magnific-popup/magnific-popup.css')}}">
-	<link rel="stylesheet" href="{{asset('css/style.css')}}">
-
-	<!-- Google Fonts -->
-	<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Raleway:400,200,100,300,500,600,700,800,900' rel='stylesheet' type='text/css'>
-	<link href='http://fonts.googleapis.com/css?family=Dosis:400,200,300,500,600,700,800' rel='stylesheet' type='text/css'>
-
-	<!-- Icon Fonts -->
-	<link rel="stylesheet" href="{{asset('css/icomoon/style.css')}}" type="text/css">
-	<link rel="stylesheet" href="{{asset('css/font-awesome.min.css')}}" type="text/css">
-
-	<!-- SKIN -->
-	<link rel="stylesheet" href="{{asset('css/color-scheme/default-black.css')}}" type="text/css">
+	<link rel="stylesheet" href="{{ elixir('css/all.css') }}">
 
 </head>
 <body id="header6">
@@ -149,31 +124,7 @@
 	</div>
 </div>
 
-<!-- jQuery -->
-<script src="{{asset('js/jquery.js')}}"></script>
-
-<!-- Plugins -->
-<script src="{{asset('js/bootstrap.min.js')}}"></script>
-<script src="{{asset('js/menu.js')}}"></script>
-<script src="{{asset('js/owl-carousel/owl.carousel.min.js')}}"></script>
-<script src="{{asset('js/rs-plugin/js/jquery.themepunch.tools.min.js')}}"></script>
-<script src="{{asset('js/rs-plugin/js/jquery.themepunch.revolution.min.js')}}"></script>
-<script src="{{asset('js/jquery.easing.min.js')}}"></script>
-<script src="{{asset('js/isotope/isotope.pkgd.js')}}"></script>
-<script src="{{asset('js/jflickrfeed.min.js')}}"></script>
-<script src="{{asset('js/tweecool.js')}}"></script>
-<script src="{{asset('js/flexslider/jquery.flexslider.js')}}"></script>
-<script src="{{asset('js/easypie/jquery.easypiechart.min.js')}}"></script>
-<script src="{{asset('js/jquery-ui.js')}}"></script>
-<script src="{{asset('js/jquery.appear.js')}}"></script>
-<script src="{{asset('js/jquery.inview.js')}}"></script>
-<script src="{{asset('js/jquery.countdown.min.js')}}"></script>
-<script src="{{asset('js/jquery.sticky.js')}}"></script>
-<script src="{{asset('js/magnific-popup/jquery.magnific-popup.min.js')}}"></script>
-<script src="{{asset('js/jquery.easing/jquery.easing.js')}}"></script>
-
-<script src="{{asset('js/main.js')}}"></script>
-
+<script src="{{ elixir('js/all.js') }}"></script>
 <script type="text/javascript" src="https://maps.googleapis.com/maps/api/js?sensor=false"></script>
 <script src="{{asset('js/gmaps/greyscale.js')}}"></script>
 </body>

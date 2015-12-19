@@ -351,15 +351,6 @@
       </section>
     </div>
     </section>
-
-    <div class="container padding70" >
-      <div class="text-center space40" id="4">
-        <h2 class="title uppercase">Tỉ Giá & Thời Tiết</h2>
-      </div>
-      <div class="row">
-        <iframe class="mg-top-md mg-bottom-md" frameborder="0" marginwidth="0" marginheight="0" src="http://thienduongweb.com/tool/weather/?r=1&w=1&g=0&col=1&d=0" width="100%" height="480" scrolling="yes"></iframe>
-      </div>
-    </div>
       
     <div class="border-top padding80">
     <div class="container home-blog" id="5">
