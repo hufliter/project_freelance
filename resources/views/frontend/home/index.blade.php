@@ -30,7 +30,10 @@
           </div>
         </div>
 
-        <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+        <div 
+        id="navbar-collapse-1" 
+        class="navbar-collapse collapse navbar-right" 
+        style="font-family: arial; font-weight: bold;">
           <ul class="nav navbar-nav">
             <li class="page-scroll"><a href="#page-top">Trang Chủ</a></li>
             <li class="page-scroll"><a href="#1">Giới Thiệu</a></li>
@@ -187,7 +190,7 @@
 
   <!-- INNER CONTENT -->
 
-  <div class="container-fluid no-padding" >
+  <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/pattern/pattern3.png') }} ')">
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center space50" id="1">
         <h2 class="uppercase">Giới Thiệu</h2>
@@ -361,40 +364,6 @@
       </div>
       
     </div></div>
-    <div class="pattern-grey">
-    <div id="stats1" class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class=" icon-camera"></i>
-            <p><span class="count count1">499</span></p>
-            <h2>Photos Taken</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-lock"></i>
-            <p><span class="count count1">1123</span></p>
-            <h2>New Members</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-trophy"></i>
-            <p><span class="count count1">187</span></p>
-            <h2>Competitions</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-telescope"></i>
-            <p><span class="count count1">923</span></p>
-            <h2>Job Openings</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
       
     <div class="border-top padding80">
     <div class="container home-blog" id="5">

@@ -981,43 +981,43 @@ background:transparent !important;
 }
 
 .page_header_parallax {
-	background: #000 url(../images/bg/p_header.jpg) no-repeat fixed center;
+	background: #8E8A8A url(../img/bg/p_header.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax2 {
-	background: #000 url(../images/bg/p_header2.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header2.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax3 {
-	background: #000 url(../images/bg/p_header3.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header3.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax4 {
-	background: #000 url(../images/bg/p_header4.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header4.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax5 {
-	background: #000 url(../images/bg/p_header5.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header5.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax6 {
-	background: #000 url(../images/bg/p_header6.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header6.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
 
 .page_header_parallax7 {
-	background: #000 url(../images/bg/p_header7.jpg) no-repeat fixed center;
+	background: #000 url(../img/bg/p_header7.jpg) no-repeat fixed center;
 	background-size: cover;
 	padding: 80px 0 80px;
 }
@@ -1045,7 +1045,7 @@ background:transparent !important;
 }
 
 .page_header.career-head {
-	background: #000 url(../images/other/career.jpg) no-repeat fixed top center;
+	background: #000 url(../img/other/career.jpg) no-repeat fixed top center;
 	background-position: 0 -35%;
 }
 
@@ -2279,98 +2279,98 @@ margin-left:85px;
 }
 
 .parallax-bg1 {
-	background: url(../images/bg/parallax/8.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/8.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 .parallax-bg2 {
-	background: url(../images/bg/parallax/2.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/2.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 .parallax-bg3 {
-	background: url(../images/bg/parallax/3.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/3.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 .parallax-bg4 {
-	background: url(../images/bg/parallax/4.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/4.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 .parallax-bg5 {
-	background: url(../images/bg/parallax/5.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/5.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 .parallax-bg6 {
-	background: url(../images/bg/parallax/6.jpg) no-repeat center center fixed !important;
+	background: url(../img/bg/parallax/6.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-res .parallax-bg5 {
-	background: url(../images/onepage/3/5.jpg) no-repeat center center fixed !important;
+	background: url(../img/onepage/3/5.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-res .parallax-bg6 {
-	background: url(../images/onepage/3/7.jpg) no-repeat center center fixed !important;
+	background: url(../img/onepage/3/7.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-res .parallax-bg1 {
-	background: url(../images/onepage/3/9.jpg) no-repeat center center fixed !important;
+	background: url(../img/onepage/3/9.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-medical .parallax-bg2 {
-	background: url(../images/onepage/4/3.jpg) fixed !important;
+	background: url(../img/onepage/4/3.jpg) fixed !important;
 	position: relative;
 	background-size: auto !important;
 }
 
 #one-law .parallax-bg2 {
-	background: url(../images/onepage/4/3.jpg) fixed !important;
+	background: url(../img/onepage/4/3.jpg) fixed !important;
 	position: relative;
 	background-size: auto !important;
 }
 
 #one-hosting .parallax-bg2 {
-	background: url(../images/onepage/4/3.jpg) fixed !important;
+	background: url(../img/onepage/4/3.jpg) fixed !important;
 	position: relative;
 	background-size: auto !important;
 }
 
 
 #one-medical .parallax-bg3 {
-	background: url(../images/onepage/4/1.jpg) no-repeat center center fixed !important;
+	background: url(../img/onepage/4/1.jpg) no-repeat center center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-charity .parallax-bg5 {
-	background: url(../images/onepage/5/volunter.jpg) no-repeat bottom center fixed !important;
+	background: url(../img/onepage/5/volunter.jpg) no-repeat bottom center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-gym .parallax-bg5 {
-	background: url(../images/onepage/6/5.jpg) no-repeat bottom center fixed !important;
+	background: url(../img/onepage/6/5.jpg) no-repeat bottom center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
 
 #one-gym .parallax-bg2 {
-	background: url(../images/onepage/6/6.jpg) no-repeat bottom center fixed !important;
+	background: url(../img/onepage/6/6.jpg) no-repeat bottom center fixed !important;
 	position: relative;
 	background-size: cover !important;
 }
@@ -2391,11 +2391,11 @@ margin-left:85px;
   background: #f2f2f2;
 }
 .pattern-bg1 {
-	background: url(../images/bg/pattern/1.png) repeat fixed !important;
+	background: url(../img/bg/pattern/1.png) repeat fixed !important;
 }
 
 .pattern-bg2 {
-	background: url(../images/bg/pattern/2.png) repeat fixed !important;
+	background: url(../img/bg/pattern/2.png) repeat fixed !important;
 }
 
 .stats3-info i {
@@ -3579,7 +3579,7 @@ transition:.4s;
 .f-subscribe small {
 	width: 85px;
 	height: 76px;
-	background: transparent url("../images/bubble.png") no-repeat scroll center center;
+	background: transparent url("../img/bubble.png") no-repeat scroll center center;
 	display: table;
 	border-radius: 50%;
 	float: left;
@@ -3630,7 +3630,7 @@ transition:.4s;
 .f-tweet small {
 	width: 85px;
 	height: 76px;
-	background: transparent url("../images/bubble.png") no-repeat scroll center center;
+	background: transparent url("../img/bubble.png") no-repeat scroll center center;
 	display: table;
 	border-radius: 50%;
 	float: left;
@@ -5043,7 +5043,7 @@ color:#8dc73f;
 
 #about-section2 .content-tab {
 	padding-top: 65px;
-	background: url('../images/bg/parallax/4.jpg') center top fixed;
+	background: url('../img/bg/parallax/4.jpg') center top fixed;
 	background-size: cover;
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
@@ -5656,7 +5656,7 @@ top:2px;
 }
 
 .intro-wrap {
-	background:url(../images/slider/9.jpg) no-repeat center;
+	background:url(../img/slider/9.jpg) no-repeat center;
 	background-size:cover;
 }
 

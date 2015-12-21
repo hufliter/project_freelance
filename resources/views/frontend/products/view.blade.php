@@ -30,7 +30,10 @@
           </div>
         </div>
 
-        <div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
+        <div 
+        id="navbar-collapse-1" 
+        class="navbar-collapse collapse navbar-right"
+        style="font-family: arial; font-weight: bold;">
           <ul class="nav navbar-nav">
             <li class="page-scroll"><a href="{{ route('fe.index') }}#page-top">Trang Chủ</a></li>
             <li class="page-scroll"><a href="{{ route('fe.index') }}#1">Giới Thiệu</a></li>
