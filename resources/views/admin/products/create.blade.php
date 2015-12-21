@@ -34,13 +34,13 @@
                         </select>
                     @endif
                 </div>
-                {{--<div class="form-group">
+                <div class="form-group">
                     {!! Form::label('Tên Sản Phẩm') !!}
                     {!! Form::text('name', null,
                         array('required',
                               'class'=>'form-control',
                               'placeholder'=>'Tên Sản Phẩm')) !!}
-                </div>--}}
+                </div>
 
                 <div class="form-group">
                     {!! Form::label('Hình Ảnh') !!}
@@ -74,7 +74,7 @@
                 <div class="form-group">
                     {!! Form::label('Hàn') !!}
                     <small>(Ví dụ: biên hoặc bụng)</small>
-                    {!! Form::text('package', null,
+                    {!! Form::text('solder', null,
                         array( 'class'=>'form-control', 'placeholder'=>'Hàn')
                         ) !!}
                 </div>
@@ -104,6 +104,13 @@
                         array('required',
                               'class'=>'form-control',
                               'placeholder'=>'Kích hoạt')) !!}
+                </div>
+                <div class="form-group">
+                    {!! Form::label('Sản phẩm nổi bật') !!}
+                    {!! Form::checkbox('is_popular', 1,
+                        array('required',
+                              'class'=>'form-control',
+                              'placeholder'=>'Sản phẩm nổi bật')) !!}
                 </div>
                 {!! Form::submit('Tạo Sản Phẩm!', array('class' => 'btn btn-primary')) !!}
             {!! Form::close() !!}

@@ -152,7 +152,7 @@
       <div class="container">
       <div class="section-info ">
         <div class="col-md-12">
-          <h4>Tại Sao Chọn Chúng Tôi?</h4>
+          <h4>Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h4>
           <div class="space30"></div>
           @if( !empty($introduce) )
           <div class="panel-group" id="accordion">
@@ -183,73 +183,14 @@
   
   
     <div class="clearfix"></div>
-    <div class="padding80 border-top">
-      <div class="container" id="2">
-      <div class="col-md-8 col-md-offset-2 text-center space50">
-        <h2>Thông Tin Kĩ Thuật</h2>
-        <p>Đây là các nội dung chi tiết về các thông số kĩ thuật cũng như các cách thức sử dụng sản phẩm của chúng tôi.</p>
-      </div>
-      <div class="row">
-        @if(!empty($technical))
-        @foreach($technical as $items)
-        <div class="col-md-4">
-          <div class="feature-box">
-            <div class="feature-box-icon">
-              <a href="{{$items->url}}" target="_blank" ><i class="icon-cog3"></i></a>
-            </div>
-            <div class="feature-box-info">
-              <h4><a href="{{$items->url}}" target="_blank">{{$items->name}}</a></h4>
-            </div>
-          </div>
-        </div>
-        @endforeach
-        @endif
-      </div>
-      
-    </div></div>
-    <div class="pattern-grey">
-    <div id="stats1" class="container">
-      <div class="row">
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class=" icon-camera"></i>
-            <p><span class="count count1">499</span></p>
-            <h2>Photos Taken</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-lock"></i>
-            <p><span class="count count1">1123</span></p>
-            <h2>New Members</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-trophy"></i>
-            <p><span class="count count1">187</span></p>
-            <h2>Competitions</h2>
-          </div>
-        </div>
-        <div class="col-md-3 col-sm-6">
-          <div class="stats1-info">
-            <i class="icon-telescope"></i>
-            <p><span class="count count1">923</span></p>
-            <h2>Job Openings</h2>
-          </div>
-        </div>
-      </div>
-    </div>
-    </div>
-    
     <div class="clearfix space90"></div>
   
       <!-- <section id="portfolio-section"> -->
-      <div class="container container-full" id="3">
+    <div class="container container-full" id="3">
       <section id="portfolio-section">
-    <div class="container">
-        <h3 class="uppercase text-center">Sản Phẩm</h3>
-      </div>
+        <div class="container">
+          <h3 class="uppercase text-center">Sản Phẩm</h3>
+        </div>
              
         <ul class="filter" data-option-key="filter">
         @if( !empty($category) )
@@ -350,7 +291,64 @@
         </div>
       </section>
     </div>
-    </section>
+    <div class="padding80 border-top">
+      <div class="container" id="2">
+      <div class="col-md-8 col-md-offset-2 text-center space50">
+        <h2>Hỗ trợ kĩ thuật</h2>
+        <p>Đây là các nội dung chi tiết về các thông số kĩ thuật cũng như các cách thức sử dụng sản phẩm của chúng tôi.</p>
+      </div>
+      <div class="row">
+        @if(!empty($technical))
+        @foreach($technical as $items)
+        <div class="col-md-4">
+          <div class="feature-box">
+            <div class="feature-box-icon">
+              <a href="{{$items->url}}" target="_blank" ><i class="icon-cog3"></i></a>
+            </div>
+            <div class="feature-box-info">
+              <h4><a href="{{$items->url}}" target="_blank">{{$items->name}}</a></h4>
+            </div>
+          </div>
+        </div>
+        @endforeach
+        @endif
+      </div>
+      
+    </div></div>
+    <div class="pattern-grey">
+    <div id="stats1" class="container">
+      <div class="row">
+        <div class="col-md-3 col-sm-6">
+          <div class="stats1-info">
+            <i class=" icon-camera"></i>
+            <p><span class="count count1">499</span></p>
+            <h2>Photos Taken</h2>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stats1-info">
+            <i class="icon-lock"></i>
+            <p><span class="count count1">1123</span></p>
+            <h2>New Members</h2>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stats1-info">
+            <i class="icon-trophy"></i>
+            <p><span class="count count1">187</span></p>
+            <h2>Competitions</h2>
+          </div>
+        </div>
+        <div class="col-md-3 col-sm-6">
+          <div class="stats1-info">
+            <i class="icon-telescope"></i>
+            <p><span class="count count1">923</span></p>
+            <h2>Job Openings</h2>
+          </div>
+        </div>
+      </div>
+    </div>
+    </div>
       
     <div class="border-top padding80">
     <div class="container home-blog" id="5">

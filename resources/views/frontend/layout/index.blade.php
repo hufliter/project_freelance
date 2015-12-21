@@ -50,14 +50,14 @@
 
 				<div id="navbar-collapse-1" class="navbar-collapse collapse navbar-right">
 					<ul class="nav navbar-nav">
-						<li class="page-scroll"><a href="#page-top">Trang Chủ</a></li>
-						<li class="page-scroll"><a href="#1">Giới Thiệu</a></li>
-						<li class="page-scroll"><a href="#2">Kĩ Thuật</a></li>
-						<li class="page-scroll"><a href="#3">Sản Phẩm</a></li>
-						<li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li>
+						<li class="page-scroll"><a href="{{ route('fe.index') }}#page-top">Trang Chủ</a></li>
+						<li class="page-scroll"><a href="{{ route('fe.index') }}#1">Giới Thiệu</a></li>
+						<li class="page-scroll"><a href="{{ route('fe.index') }}#3">Sản Phẩm</a></li>
+						<li class="page-scroll"><a href="{{ route('fe.index') }}#2">Hỗ trợ kĩ thuật</a></li>
+						<!-- <li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li> -->
 						<!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
-                        <li class="page-scroll"><a href="#5">Tin Tức</a></li>
-						<li class="page-scroll"><a href="#7">Liên Hệ</a></li>
+                        <li class="page-scroll"><a href="{{ route('fe.index') }}#5">Tin Tức</a></li>
+						<li class="page-scroll"><a href="{{ route('fe.index') }}#7">Liên Hệ</a></li>
 					</ul>
 				</div>
 			</div>
@@ -91,10 +91,7 @@
 					</ul>
 					<div class="clearfix space10"></div>
 				</div>
-				<div class="col-md-4">
-					<h4 class="space30">Flickr</h4>
-				  <ul id="flickr" class="thumbs"></ul>
-				</div>
+				
 			</div>
 		</div>
 	</footer>

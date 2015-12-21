@@ -7,7 +7,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3><span>{{$data->slug}}</span>{{$data->name}} Product name</h3>
+                        <h3><span>{{$data->slug}}</span>{{$data->name}}</h3>
                     </div>
                 </div>
             </div>
@@ -47,11 +47,11 @@
                         <p>{{$data->description}}</p>
                         <div class="clearfix space20"></div>
                         <ul class="project-meta">
-                            <li><i class="icon-tag2"></i>Kích thước: - {{$data->size}} </li>
-                            <li><i class="icon-tag2"></i>Trọng Lượng: - {{$data->weight}} </li>
-                            <li><i class="icon-file2"></i><span class="project_client">Kiểu Đóng gói: - {{$data->package}}</span></li>
-                            <li><i class="icon-file2"></i><span class="project_client">Ngôn ngữ : - {{$data->words}}</span></li>
-                            <li><i class="icon-link3"></i>Hàn: - {{$data->solder}}</li>
+                            <li><i class="icon-tag2"></i>Kích thước: - {{ $data->size }} </li>
+                            <li><i class="icon-tag2"></i>Trọng Lượng: - {{ $data->weight }} </li>
+                            <li><i class="icon-file2"></i><span class="project_client">Kiểu Đóng gói: - {{ $data->package }}</span></li>
+                            <li><i class="icon-file2"></i><span class="project_client">Ngôn ngữ : - {{ $data->words }}</span></li>
+                            <li><i class="icon-link3"></i>Hàn: - {{ $data->solder }}</li>
                         </ul>
                     </div>
                 </div>

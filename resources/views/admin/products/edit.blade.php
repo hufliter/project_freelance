@@ -24,46 +24,15 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('Product Code') !!}
+                    {!! Form::label('Mã sản phẩm') !!}
                     {!! Form::text('slug', null,
                         array('required',
                               'class'=>'form-control',
-                              'placeholder'=>'Product Code')) !!}
+                              'placeholder'=>'Mã sản phẩm')) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('Product Name') !!}
-                    {!! Form::text('product_name', null,
-                        array('required',
-                              'class'=>'form-control',
-                              'placeholder'=>'Product Name')) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('Usage') !!}
-                    {!! Form::textarea('usage', null ,
-                        array('required',
-                                'class'=>'form-control',
-                                'placeholder' => 'Product Usage')) !!}
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('Image') !!}
-                    {!! Form::file('file_upload[]', array('multiple'=>true)) !!}
-                </div>
-
-                <div class="form-group">
-                    <div class="col-md-12">
-                        @foreach($product->image as $image)
-                        <div class="col-md-2 nopadding">
-                            <img class="img-thumbnail" src="{{asset('upload/img/'.$image)}}">
-                        </div>
-                        @endforeach
-                    </div>
-                </div>
-
-                <div class="form-group">
-                    {!! Form::label('Category') !!}
+                    {!! Form::label('Loại sản phẩm') !!}
                     @if(!empty($cate))
                         <select name="cate_id" class="form-control">
                             @foreach($cate as $items)
@@ -75,19 +44,91 @@
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('Description') !!}
-                    {!! Form::textarea('product_description', null,
+                    {!! Form::label('Tên sản phẩm') !!}
+                    {!! Form::text('product_name', null,
                         array('required',
-                                'class'=>'form-control',
-                                'placeholder' => 'Product Description')) !!}
+                              'class'=>'form-control',
+                              'placeholder'=>'Tên sản phẩm')) !!}
                 </div>
 
                 <div class="form-group">
-                    {!! Form::label('Active') !!}
+                    {!! Form::label('Mô tả') !!}
+                    {!! Form::textarea('usage', null ,
+                        array('required',
+                                'class'=>'form-control',
+                                'placeholder' => 'Mô tả sản phẩm')) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Hình ảnh') !!}
+                    {!! Form::file('file_upload[]', array('multiple'=>true)) !!}
+                </div>
+                <div class="form-group">
+                    <div class="col-md-12">
+                        @foreach($product->image as $image)
+                        <div class="col-md-2 nopadding">
+                            <img class="img-thumbnail" src="{{asset('upload/img/'.$image)}}">
+                        </div>
+                        @endforeach
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('kích thước') !!}
+                    <small>(Ví dụ: 220 x 120 x 40 (mm) hoặc (... ngăn) )</small>
+                    {!! Form::text('size', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Size')
+                        ) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Trọng Lượng') !!}
+                    <small>(đơn vị: gram )</small>
+                    {!! Form::text('weight', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Trọng Lượng')
+                        ) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Bao Bì') !!}
+                    <small>(Ví dụ: vải hoặc lụa )</small>
+                    {!! Form::text('package', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Bao Bì')
+                        ) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Hàn') !!}
+                    <small>(Ví dụ: biên hoặc bụng)</small>
+                    {!! Form::text('solder', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Hàn')
+                        ) !!}
+                </div>
+
+                
+
+                <div class="form-group">
+                    {!! Form::label('Ứng dụng') !!}
+                    {!! Form::textarea('product_description', null,
+                        array('required',
+                                'class'=>'form-control',
+                                'placeholder' => 'Ứng dụng')) !!}
+                </div>
+
+                <div class="form-group">
+                    {!! Form::label('Kích hoạt') !!}
                     {!! Form::checkbox('product_active') !!}
                 </div>
-                <a class="btn btn-primary" href="{{route('products.index')}}">Back</a>
-            {!! Form::submit('Edit Product!', array('class' => 'btn btn-info')) !!}
+
+                <div class="form-group">
+                    {!! Form::label('Sản phẩm nổi bật') !!}
+                    {!! Form::checkbox('is_popular', 1,
+                        array('required',
+                              'class'=>'form-control',
+                              'placeholder'=>'Sản phẩm nổi bật')) !!}
+                </div>
+                <a class="btn btn-primary" href="{{route('products.index')}}">Quay lại</a>
+            {!! Form::submit('Chỉnh sửa sản phẩm!', array('class' => 'btn btn-info')) !!}
 
             {!! Form::close() !!}
 

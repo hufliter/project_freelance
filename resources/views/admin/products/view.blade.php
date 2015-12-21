@@ -20,7 +20,7 @@
                 {{--@foreach($cate as $key => $items)--}}
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Category Name</label>
+                            <label>Tên Sản Phẩm</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->name}}</span>
@@ -28,7 +28,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Category</label>
+                            <label>Loại Sản Phẩm</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->cate_id}}</span>
@@ -36,7 +36,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Usage</label>
+                            <label>Mô Tả</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->usage}}</span>
@@ -45,7 +45,7 @@
 
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Image</label>
+                            <label>Hình Ảnh</label>
                         </div>
                         @foreach($product->image as $image)
                         <div class="col-md-2 nopadding">
@@ -56,7 +56,7 @@
 
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Description</label>
+                            <label>Ứng dụng</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->description}}</span>
@@ -64,7 +64,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Product Code</label>
+                            <label>Mã sản phẩm</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->slug}}</span>
@@ -72,7 +72,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Active</label>
+                            <label>Trạng Thái</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->is_active}}</span>
@@ -80,7 +80,7 @@
                     </div>
                     <div class="col-md-12">
                         <div class="col-md-2">
-                            <label>Created at</label>
+                            <label>Ngày Tạo</label>
                         </div>
                         <div class="col-md-10">
                             <span>{{$product->created_at}}</span>
@@ -92,9 +92,9 @@
         </div>
     </div>
     <span class="box col-md-4">
-        <a href="{{route('products.index')}}" class="btn btn-primary btn-sm">Back</a>
-        <a href="{{route('products.getEdit',['id'=>$product->id])}}" class="btn btn-info btn-sm">Edit</a>
-        <a href="{{route('products.delete',['id'=>$product->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this Category?');">Delete</a>
+        <a href="{{route('products.index')}}" class="btn btn-primary btn-sm">Quay lại</a>
+        <a href="{{route('products.getEdit',['id'=>$product->id])}}" class="btn btn-info btn-sm">Sửa</a>
+        <a href="{{route('products.delete',['id'=>$product->id])}}" class="btn btn-danger btn-sm" onclick="return confirm('Are you sure you want to delete this Category?');">Xóa</a>
     </span>
 
 </div>

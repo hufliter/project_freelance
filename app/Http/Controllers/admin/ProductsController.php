@@ -36,6 +36,7 @@ class ProductsController extends Controller {
 
             $rules = array(
                 'slug' => 'required|min:3|max:50|unique:products',
+                'name' => 'required|min:3|max:100',
                 'cate_id' => 'required',
                 'usage' => 'required|min:3|max:5000',
                 'description' => 'required|min:3|max:5000',
@@ -71,10 +72,16 @@ class ProductsController extends Controller {
                         $encodedImgArr = json_encode($imgArr);
                         $products = new Products();
                         $products->cate_id = $data['cate_id'];
-                        /*$products->name = $data['name'];*/
+                        $products->name = $data['name'];
                         $products->image = $encodedImgArr;
                         $products->usage = $data['usage'];
+                        $products->size = $data['size'];
+                        $products->weight = $data['weight'];
+                        $products->package = $data['package'];
+                        /*$products->words = $data['words'];*/
+                        $products->solder = $data['solder'];
                         $products->description =  $data['description'];
+                        $products->is_popular = $data['is_popular'];
                         $products->is_active = $data['is_active'];
                         $products->slug = $data['slug'];
 
@@ -145,6 +152,7 @@ class ProductsController extends Controller {
         if( !empty($data) ) {
             $rules = array(
                 'slug' => 'required|min:3|max:50',
+                'product_name' => 'required|min:3|max:50',
                 'cate_id' => 'required',
                 'usage' => 'required|min:3|max:300',
                 'product_description' => 'required|min:3|max:300',
@@ -162,6 +170,12 @@ class ProductsController extends Controller {
                 $productsData->description =  $data['product_description'];
                 $productsData->is_active = $data['product_active'];
                 $productsData->slug = $data['slug'];
+                $productsData->size = $data['size'];
+                $productsData->weight = $data['weight'];
+                $productsData->package = $data['package'];
+                /*$productsData->words = $data['words'];*/
+                $productsData->solder = $data['solder'];
+                $productsData->is_popular = $data['is_popular'];
 
                 if( $req->hasFile('file_upload') ) {
                     $files = Input::file('file_upload');
