@@ -27,12 +27,12 @@
 			<div class="row">
 				<div class="col-md-4">
 			    	<img src="{{asset('img/logo.png')}}" class="img-responsive space20" alt="Not Found" style="float: left; margin: auto; padding: 0;" />
-					<h4 style="font-weight: bold; text-align: center;">Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn</h4>
-					<h4 style="font-weight: bold; text-align: center;">Saigon Industrial Development Co,LTD</h4>
+					<h4 style="color:white; font-weight: bold; text-align: center;">Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn</h4>
+					<h4 style="color:white; font-weight: bold; text-align: center;">Saigon Industrial Development Co,LTD</h4>
 				</div>
 				
 				<div class="col-md-4">
-					<h4 class="space30">Contact</h4>
+					<h4 class="space30" style="color:white;">Contact</h4>
 			  		<ul class="c-info">
 						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
 						</li>

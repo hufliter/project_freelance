@@ -35,14 +35,14 @@
         class="navbar-collapse collapse navbar-right" 
         style="font-family: arial; font-weight: bold;">
           <ul class="nav navbar-nav">
-            <li class="page-scroll"><a href="#page-top">Trang Chủ</a></li>
-            <li class="page-scroll"><a href="#1">Giới Thiệu</a></li>
-            <li class="page-scroll"><a href="#3">Sản Phẩm</a></li>
-            <li class="page-scroll"><a href="#2">Hỗ trợ kĩ thuật</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#page-top">Trang Chủ</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#1">Giới Thiệu</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#3">Sản Phẩm</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#2">Hỗ trợ kĩ thuật</a></li>
             <!-- <li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li> -->
             <!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
-                        <li class="page-scroll"><a href="#5">Tin Tức</a></li>
-            <li class="page-scroll"><a href="#7">Liên Hệ</a></li>
+                        <li class="page-scroll"><a class="nav-text" href="#5">Tin Tức</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#7">Liên Hệ</a></li>
           </ul>
         </div>
       </div>
@@ -193,7 +193,7 @@
   <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/pattern/pattern3.png') }} ')">
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center space50" id="1">
-        <h2 class="uppercase">Giới Thiệu</h2>
+        <h2 class="uppercase">Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h2>
         <p>Công ty phát triển công nghiệp Sài Gòn.<br/>
         Saigon industrial development Co.,Ltd
         </p>
@@ -201,8 +201,6 @@
       <div class="container">
       <div class="section-info ">
         <div class="col-md-12">
-          <h4>Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h4>
-          <div class="space30"></div>
           @if( !empty($introduce) )
           <div class="panel-group" id="accordion">
             <div class="panel panel-default">

@@ -352,7 +352,7 @@ background:transparent !important;
 .navbar-brand {
 	font-family: Pacifico;
 	color: #000 !important;
-	margin-top: 15px;
+	margin-top: 10px;
 	font-size: 35px;
 	height: 0;
 }
@@ -1085,7 +1085,7 @@ height:47px;
 }
 
 footer {
-	background: #f8f8f8 url(../img/footer-bg.png) no-repeat bottom right;
+	background: #292929 url(../img/footer-bg.png) no-repeat bottom right;
 	background-size: 80%;
 	padding: 80px 0 90px;
 	border-top: 1px solid #eee;
@@ -5965,7 +5965,7 @@ border-top: 1px solid rgba(0, 0, 0, 0.07);
 }
 
 #header6 .is-sticky header {
-	background:#f8f8f8;
+	background:#0f0f0f;
 }
 
 #header6 .header-wrap {
@@ -6396,4 +6396,8 @@ aside {
     white-space: nowrap;
     overflow: hidden !important;
     text-overflow: ellipsis;
+}
+.nav-text {
+	color: white!important;
+	
 }
