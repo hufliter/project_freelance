@@ -39,9 +39,7 @@
             <li class="page-scroll"><a class="nav-text" href="#1">Giới Thiệu</a></li>
             <li class="page-scroll"><a class="nav-text" href="#3">Sản Phẩm</a></li>
             <li class="page-scroll"><a class="nav-text" href="#2">Hỗ trợ kĩ thuật</a></li>
-            <!-- <li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li> -->
-            <!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
-                        <li class="page-scroll"><a class="nav-text" href="#5">Tin Tức</a></li>
+            <li class="page-scroll"><a class="nav-text" href="#5">Tin Tức</a></li>
             <li class="page-scroll"><a class="nav-text" href="#7">Liên Hệ</a></li>
           </ul>
         </div>
@@ -262,7 +260,7 @@
                   <div class="project-info">
                     <h2>{{$items->slug}}</h2>
                     <!-- Admin should update add name product -->
-                    <p>Name Products go here</p>
+                    <p>{{$items->product_name}}</p>
                   </div>
                 </div>
               </div>
@@ -270,71 +268,6 @@
           </div>
           @endforeach
           @endif
-          <!-- <div class="project-item illustration web-design illustration" style="position: absolute; left: 449px; top: 0px;">
-            <a href="./portfolio-single-slider.html">
-              <div class="project-gal">
-                <img src="{{asset('img/projects/2.jpg')}}" class="img-responsive" alt="">
-                <div class="overlay-folio2">
-                  <div class="project-info">
-                    <h2>Vestibulum auctor</h2>
-                    <p>Image Gallery</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="project-item illustration print" style="position: absolute; left: 899px; top: 0px;">
-            <a href="./portfolio-single-slider.html">
-              <div class="project-gal">
-                <img src="{{asset('img/projects/3.jpg')}}" class="img-responsive" alt="">
-                <div class="overlay-folio2">
-                  <div class="project-info">
-                    <h2>Vestibulum auctor</h2>
-                    <p>Image Gallery</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="project-item web-design" style="position: absolute; left: 0px; top: 289px;">
-            <a href="./portfolio-single-slider.html">
-              <div class="project-gal">
-                <img src="{{asset('img/projects/4.jpg')}}" class="img-responsive" alt="">
-                <div class="overlay-folio2">
-                  <div class="project-info">
-                    <h2>Vestibulum auctor</h2>
-                    <p>Image Gallery</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="project-item branding" style="position: absolute; left: 449px; top: 289px;">
-            <a href="./portfolio-single-slider.html">
-              <div class="project-gal">
-                <img src="{{asset('img/projects/5.jpg')}}" class="img-responsive" alt="">
-                <div class="overlay-folio2">
-                  <div class="project-info">
-                    <h2>Vestibulum auctor</h2>
-                    <p>Image Gallery</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div>
-          <div class="project-item illustration web-design print" style="position: absolute; left: 899px; top: 289px;">
-            <a href="./portfolio-single-slider.html">
-              <div class="project-gal">
-                <img src="{{asset('img/projects/6.jpg')}}" class="img-responsive" alt="">
-                <div class="overlay-folio2">
-                  <div class="project-info">
-                    <h2>Vestibulum auctor</h2>
-                    <p>Image Gallery</p>
-                  </div>
-                </div>
-              </div>
-            </a>
-          </div> -->
         </div>
       </section>
     </div>
@@ -409,16 +342,16 @@
                 <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> An Phu Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
               </li>
               <li>
-                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">finalfantasy812@gmail.com</a></p>
+                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonindeco.com</a></p>
               </li>
               <li>
-                <p><strong><i class="fa fa-phone"></i> Số Điện Thoại:</strong> +84 1266 183831</p>
+                <p><strong><i class="fa fa-phone"></i> Số Điện Thoại:</strong> 0995 230 930 </p>
               </li>
               <li>
                 <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p>
               </li>
               <li>
-                <p><strong><i class="fa fa-skype"></i> myskypeid: </strong> skypeidhere</p>
+                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>
               </li>
             </ul>
       </div>

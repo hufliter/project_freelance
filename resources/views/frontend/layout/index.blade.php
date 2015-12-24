@@ -32,7 +32,7 @@
 				</div>
 				
 				<div class="col-md-4">
-					<h4 class="space30" style="color:white;">Contact</h4>
+					<h4 class="space30" style="color:white;">Liên Hệ</h4>
 			  		<ul class="c-info">
 						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
 						</li>
