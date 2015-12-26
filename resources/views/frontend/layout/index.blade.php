@@ -34,13 +34,17 @@
 				<div class="col-md-4">
 					<h4 class="space30" style="color:white;">Liên Hệ</h4>
 			  		<ul class="c-info">
-						<li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
-						</li>
+						<!-- <li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
+						</li> -->
 						<li>
 						</li>
-						<li><i class="fa fa-phone"></i> (012) 345 5678 910</li>
-						<li><i class="fa fa-envelope-o"></i> support@dk-themes.com</li>
-						<li><i class="fa fa-skype"></i> myskypeid</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Duong (0995 230 930)</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Loc (0903 044 831)</li>
+						<li>
+							<i class="fa fa-envelope-o"></i> info@saigonindeco.com, sales@saigonindeco.com</li>
+						<li>
+							<p><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
+						</li>
 					</ul>
 					<div class="clearfix space10"></div>
 				</div>

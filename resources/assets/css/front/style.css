@@ -3949,7 +3949,7 @@ transition:.4s;
 }
 
 .fs-info h3 {
-	font-size: 17px;
+	font-size: 25px;
 	font-weight: 400;
 	letter-spacing: 2px;
 	text-transform: uppercase;
@@ -3959,7 +3959,7 @@ transition:.4s;
 
 .project-meta li {
 	margin-top: 12px;
-	font-size: 11px;
+	font-size: 14px;
 	color: #000;
 	text-transform: uppercase;
 	letter-spacing: 2px;
@@ -6400,4 +6400,7 @@ aside {
 .nav-text {
 	color: white!important;
 	
+}
+.skype-color {
+	color: #878787;
 }

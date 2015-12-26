@@ -80,7 +80,7 @@
     <div class="inner-content">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-md-7">
                     <div id="blog-slider" class="owl-carousel owl-theme">
                     @foreach($data->image as $img)
                         <div class="item">
@@ -90,10 +90,10 @@
                     @endforeach
                     </div>
                 </div>
-                <div class="col-md-3">
+                <div class="col-md-5">
                     <div class="fs-info">
                         <h3>{{$data->slug}}</h3>
-                        <p>{{$data->description}}</p>
+                        <p style="font-size:14px;">{{$data->description}}</p>
                         <div class="clearfix space20"></div>
                         <ul class="project-meta">
                             <li><i class="icon-tag2"></i>Kích thước: - {{ $data->size }} </li>
@@ -117,8 +117,8 @@
                             <img src="{{ asset('upload/img/'.$pi->image) }}" class="img-responsive" alt="Not found" style="height:177px;">
                             <div class="overlay-folio2">
                                 <div class="project-info">
-                                    <h2>Aliquam tincidunt risus.</h2>
-                                    <p>Web , Creative</p>
+                                    <h2>{{$pi->slug}}</h2>
+                                    <p>{{$pi->name}}</p>
                                 </div>
                             </div>
                         </div>

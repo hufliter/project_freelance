@@ -192,9 +192,7 @@
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center space50" id="1">
         <h2 class="uppercase">Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h2>
-        <p>Công ty phát triển công nghiệp Sài Gòn.<br/>
-        Saigon industrial development Co.,Ltd
-        </p>
+        <h4> Saigon industrial development Co.,Ltd </h4>
       </div>
       <div class="container">
       <div class="section-info ">
@@ -202,11 +200,11 @@
           @if( !empty($introduce) )
           <div class="panel-group" id="accordion">
             <div class="panel panel-default">
-              <div class="panel-heading">
+              <div class="panel-heading" style="text-align:center;">
                 <h4 class="panel-title">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" style="font-size:14pt;">
                   {{$introduce->title}}
-                  <span class="fa fa-plus"></span>
+                  <span class="fa fa-plus" style="left:460px;"></span>
                   </a>
                 </h4>
               </div>
