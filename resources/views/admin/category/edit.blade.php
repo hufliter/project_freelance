@@ -43,8 +43,8 @@
 
                 <div class="form-group">
                     {!! Form::label('Active') !!}
-                    {!! Form::checkbox('is_active', null,
-                        array('required',
+                    {!! Form::checkbox('is_active', 1,
+                        array(
                               'class'=>'form-control',
                               'placeholder'=>'Active')) !!}
                 </div>

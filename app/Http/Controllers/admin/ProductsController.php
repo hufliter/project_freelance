@@ -27,7 +27,7 @@ class ProductsController extends Controller {
     public function getCreate(Request $req){
         //load category
         $cate = new Category();
-        $cateData = $cate->getAllCate();
+        $cateData = $cate->where('is_active','=',1)->get();
         return view('admin.products.create',array('cate'=>$cateData));
     }
     public function postCreate(Request $req) {
@@ -81,7 +81,7 @@ class ProductsController extends Controller {
                         /*$products->words = $data['words'];*/
                         $products->solder = $data['solder'];
                         $products->description =  $data['description'];
-                        $products->is_popular = $data['is_popular'];
+                        $products->is_popular = empty($data['is_popular']) ? 0 : $data['is_popular'];
                         $products->is_active = $data['is_active'];
                         $products->slug = $data['slug'];
 

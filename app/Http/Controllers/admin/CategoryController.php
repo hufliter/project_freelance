@@ -126,7 +126,7 @@ class CategoryController extends Controller {
                 if( !empty($cateData) ) {
                     $cateData->name = $data['name'];
                     $cateData->parent_id = $data['parent_id'];
-                    $cateData->is_active = $data['is_active'];
+                    $cateData->is_active = empty($data['is_active']) ? 0 : $data['is_active'];
 
                     if( $cateData->save() ){
                         return Redirect::route('category.index')->withMessages('Edit Category Successful');
