@@ -38,8 +38,8 @@
 						</li> -->
 						<li>
 						</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Duong (0995 230 930)</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Loc (0903 044 831)</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Duong - 0995 230 930</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Loc - 0903 044 831</li>
 						<li>
 							<i class="fa fa-envelope-o"></i> info@saigonindeco.com, sales@saigonindeco.com</li>
 						<li>

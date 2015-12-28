@@ -11,7 +11,7 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand"><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a>
+          
         </div>
 
         <!-- SEARCH -->
@@ -38,6 +38,7 @@
             <li class="page-scroll"><a class="nav-text" href="#page-top">Trang Chủ</a></li>
             <li class="page-scroll"><a class="nav-text" href="#1">Giới Thiệu</a></li>
             <li class="page-scroll"><a class="nav-text" href="#3">Sản Phẩm</a></li>
+            <li class="page-scroll"><a href="/" ><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a></li>
             <li class="page-scroll"><a class="nav-text" href="#2">Hỗ trợ kĩ thuật</a></li>
             <li class="page-scroll"><a class="nav-text" href="#5">Tin Tức</a></li>
             <li class="page-scroll"><a class="nav-text" href="#7">Liên Hệ</a></li>
@@ -68,8 +69,8 @@
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
             <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              font-size: 13px;
+              style="color: #fff;
+              font-size: 26px;
               text-transform: uppercase;
               letter-spacing: 10px;
               "
@@ -95,8 +96,8 @@
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
             <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              font-size: 13px;
+              style="color: #fff;
+              font-size: 26px;
               text-transform: uppercase;
               letter-spacing: 10px;
               "
@@ -120,8 +121,8 @@
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
             <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              font-size: 13px;
+              style="color: #fff;
+              font-size: 26px;
               text-transform: uppercase;
               letter-spacing: 10px;
               "
@@ -145,8 +146,8 @@
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
             <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              font-size: 13px;
+              style="color: #fff;
+              font-size: 26px;
               text-transform: uppercase;
               letter-spacing: 10px;
               "
@@ -159,7 +160,7 @@
             <!-- MAIN IMAGE -->
             <img src="{{asset('img/dummy.png')}}"  alt="2" data-lazyload="{{asset('img/slider/anh-6.png')}}" data-bgposition="right top" data-kenburns="off" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
             <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="280" data-hoffset="0" data-x="center"
-              style="    color: #fff;
+              style="color: #fff;
               text-transform: uppercase;
               font-size: 40px;
               letter-spacing: 6px;
@@ -170,8 +171,8 @@
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
             <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              font-size: 13px;
+              style="color: #fff;
+              font-size: 26px;
               text-transform: uppercase;
               letter-spacing: 10px;
               "
@@ -190,7 +191,7 @@
 
   <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/pattern/pattern3.png') }} ')">
     <div class="container padding80">
-      <div class="col-md-8 col-md-offset-2 text-center space50" id="1">
+      <div class="col-md-8 col-md-offset-2 text-center" id="1">
         <h2 class="uppercase">Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h2>
         <h4> Saigon industrial development Co.,Ltd </h4>
       </div>
@@ -202,7 +203,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" style="text-align:center;">
                 <h4 class="panel-title">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" style="font-size:14pt;">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" style="font-size:14pt; text-shadow: 1px 1px 1px black;">
                   {{$introduce->title}}
                   <span class="fa fa-plus" style="left:460px;"></span>
                   </a>
@@ -273,7 +274,7 @@
       <div class="container" id="2">
       <div class="col-md-8 col-md-offset-2 text-center space50">
         <h2>Hỗ trợ kĩ thuật</h2>
-        <p>Đây là các nội dung chi tiết về các thông số kĩ thuật cũng như các cách thức sử dụng sản phẩm của chúng tôi.</p>
+        <p>Đây là các nội dung chi tiết về những kiến thức bảo quản chống ẩm hàng hóa.</p>
       </div>
       <div class="row">
         @if(!empty($technical))
@@ -283,7 +284,7 @@
             <div class="feature-box-icon">
               <a href="{{$items->url}}" target="_blank" ><i class="icon-cog3"></i></a>
             </div>
-            <div class="feature-box-info">
+            <div class="feature-box-info" style="position:absolute">
               <h4><a href="{{$items->url}}" target="_blank">{{$items->name}}</a></h4>
             </div>
           </div>
@@ -333,20 +334,20 @@
 
       <div class="col-md-6 full-contact">
             <div class="space50"></div>
-            <h3 class="no-margin">Thông Tin Liên Hệ</h3>
+            <h4 class="no-margin">Công Ty Phát Triển Công Nghiệp Sài Gòn</h4>
             <div class="space20"></div>
             <ul class="contact-info">
               <li>
-                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> An Phu Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
+                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
               </li>
-              <li>
+              <!-- <li>
                 <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonindeco.com</a></p>
+              </li> -->
+              <li>
+                <p><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
               </li>
               <li>
-                <p><strong><i class="fa fa-phone"></i> Số Điện Thoại:</strong> 0995 230 930 </p>
-              </li>
-              <li>
-                <p><strong><i class="fa fa-print"></i> Fax:</strong> +91 2345 2132</p>
+                <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
               </li>
               <li>
                 <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>

@@ -1146,7 +1146,7 @@ footer {
 
 #accordion .panel-title a span {
 	position: absolute;
-	top: 0px;
+	top: 7px;
 	left: 0px;
 	color: #B4B4B4;
 	padding: 0px 16px;
@@ -1261,7 +1261,7 @@ iframe {
 
 .full-contact {
 	background:#fff;
-    padding: 70px 100px;
+    padding: 70px 65px;
 }
 
 .full-contact input {
@@ -5476,7 +5476,7 @@ top: -9px;
 }
 
 .header-x .s-search i {
-font-size:12px;
+font-size:16px;
 position:relative;
 top:2px;
 	transition:.4s;
@@ -5961,7 +5961,7 @@ border-top: 1px solid rgba(0, 0, 0, 0.07);
 
 #header6 .sc-trigger i,
 #header6 .ss-trigger i {
-	color:#000;
+	color:#EEE;
 }
 
 #header6 .is-sticky header {
