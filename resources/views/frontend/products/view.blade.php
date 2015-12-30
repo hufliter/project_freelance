@@ -11,7 +11,6 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
-          <a href="/" class="navbar-brand"><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a>
         </div>
 
         <!-- SEARCH -->
@@ -35,14 +34,15 @@
         class="navbar-collapse collapse navbar-right"
         style="font-family: arial; font-weight: bold;">
           <ul class="nav navbar-nav">
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#page-top">Trang Chủ</a></li>
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#1">Giới Thiệu</a></li>
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#3">Sản Phẩm</a></li>
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#2">Hỗ trợ kĩ thuật</a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#page-top">Trang Chủ</a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#1">Giới Thiệu</a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#3">Sản Phẩm</a></li>
+            <li class="page-scroll"><a href="/" ><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#2">Hỗ trợ kĩ thuật</a></li>
             <!-- <li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li> -->
             <!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#5">Tin Tức</a></li>
-            <li class="page-scroll"><a href="{{ route('fe.index') }}#7">Liên Hệ</a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#5">Tin Tức</a></li>
+            <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#7">Liên Hệ</a></li>
           </ul>
         </div>
       </div>
@@ -56,7 +56,14 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-12">
-                        <h3><span>{{$data->slug}}</span>{{$data->name}}</h3>
+                        <h3>
+                        @if($data->name)
+                        <span>{{$data->name}}</span>
+                        @endif
+                        @if($data->slug)
+                        {{$data->slug}}
+                        @endif
+                        </h3>
                     </div>
                 </div>
             </div>
@@ -93,20 +100,25 @@
                 <div class="col-md-5">
                     <div class="fs-info">
                         <h3>{{$data->slug}}</h3>
-                        <p style="font-size:14px;">{{$data->description}}</p>
                         <div class="clearfix space20"></div>
                         <ul class="project-meta">
-                            <li><i class="icon-tag2"></i>Kích thước: - {{ $data->size }} </li>
-                            <li><i class="icon-tag2"></i>Trọng Lượng: - {{ $data->weight }} </li>
-                            <li><i class="icon-file2"></i><span class="project_client">Kiểu Đóng gói: - {{ $data->package }}</span></li>
-                            <li><i class="icon-file2"></i><span class="project_client">Ngôn ngữ : - {{ $data->words }}</span></li>
-                            <li><i class="icon-link3"></i>Hàn: - {{ $data->solder }}</li>
+                            <li><i class="icon-tag2"></i>Kích thước: {{ $data->size }} mm</li>
+                            <li><i class="icon-tag2"></i>Trọng Lượng: {{ $data->weight }} gram </li>
+                            <li><i class="icon-tag2"></i><span class="project_client">Kiểu Đóng gói: {{ $data->package }}</span></li>
+                            <li><i class="icon-tag2"></i><span class="project_client">Ngôn ngữ : {{ $data->words }}</span></li>
+                            <li><i class="icon-tag2"></i>Hàn: {{ $data->solder }}</li>
                         </ul>
+                        @if($data->description)
+                        <span style="padding:5px 10px; margin-bottom: 10px;font-size:14px; display:block;"><h5 style="display: inline-block;">Ứng Dụng:</h5> {{$data->description}}</span>
+                        @endif
+                        @if($data->usage)
+                        <span style="display:block;padding:5px 10px; margin-bottom: 10px;font-size:14px;"><h5 style="display: inline-block;">Mô Tả:</h5> {{$data->usage}}</span>
+                        @endif
                     </div>
                 </div>
             </div>
             <div class="clearfix space30"></div>
-            <h4 class="uppercase">Sản Phẩm Tiêu Biểu</h4>
+            <h4 class="uppercase">Sản Phẩm Cùng Chủng Loại</h4>
             <hr>
             <div id="portfolio-home" class="isotope gutter folio-boxed-4col">
                 @if(!empty($popularData))

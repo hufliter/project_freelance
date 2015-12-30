@@ -37,8 +37,9 @@ class Products extends Model
         }
     }
 
-    public function getPopularProducts(){
+    public function getPopularProductsByCateId($cate_id){
         $q = DB::table('products as p')
+            ->where('p.cate_id','=',$cate_id)
             ->where('p.is_popular','=', 1)
             ->where('p.is_active','=',1)
             ->orderBy('p.updated_at','desc')

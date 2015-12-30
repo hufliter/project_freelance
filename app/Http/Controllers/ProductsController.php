@@ -38,7 +38,7 @@ class ProductsController extends Controller
             $productData->image = json_decode($productData->image);
             if( !empty($productData) ){
                 //find product is popular
-                $popularProducts = $product->getPopularProducts();
+                $popularProducts = $product->getPopularProductsByCateId($productData->cate_id);
                 foreach($popularProducts as $items){
                     $img = json_decode($items->image);
                     $items->image = $img[0];
