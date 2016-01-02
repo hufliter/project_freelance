@@ -11,6 +11,9 @@
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
+          <a href="#" class="navbar-brand">
+            <i class="fa fa-phone nav-text" style="font-size: 14px;">&nbsp; HOTLINE: 0903 044 831</i>
+          </a>
         </div>
 
         <!-- SEARCH -->
@@ -64,6 +67,9 @@
                         {{$data->slug}}
                         @endif
                         </h3>
+                        @if($data->usage)
+                        <span style="font-size:16px;">{{$data->usage}}</span>
+                        @endif
                     </div>
                 </div>
             </div>
@@ -104,15 +110,13 @@
                         <ul class="project-meta">
                             <li><i class="icon-tag2"></i>Kích thước: {{ $data->size }} mm</li>
                             <li><i class="icon-tag2"></i>Trọng Lượng: {{ $data->weight }} gram </li>
-                            <li><i class="icon-tag2"></i><span class="project_client">Kiểu Đóng gói: {{ $data->package }}</span></li>
+                            <li><i class="icon-tag2"></i><span class="project_client">Đóng gói: {{ $data->package }}</span></li>
                             <li><i class="icon-tag2"></i><span class="project_client">Ngôn ngữ : {{ $data->words }}</span></li>
                             <li><i class="icon-tag2"></i>Hàn: {{ $data->solder }}</li>
+                            <li><i class="icon-tag2"></i>Giá: Vui lòng liên hệ số điện thoại 0903 044 831 Để biết thêm chi tiết</li>
                         </ul>
                         @if($data->description)
-                        <span style="padding:5px 10px; margin-bottom: 10px;font-size:14px; display:block;"><h5 style="display: inline-block;">Ứng Dụng:</h5> {{$data->description}}</span>
-                        @endif
-                        @if($data->usage)
-                        <span style="display:block;padding:5px 10px; margin-bottom: 10px;font-size:14px;"><h5 style="display: inline-block;">Mô Tả:</h5> {{$data->usage}}</span>
+                        <span style="padding:5px 10px; margin-bottom: 10px;font-size:14px; display:block;"><h5 style="display: inline-block; text-transform: none;">Ứng Dụng:</h5> {{$data->description}}</span>
                         @endif
                     </div>
                 </div>

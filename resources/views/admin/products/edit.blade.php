@@ -105,7 +105,12 @@
                         ) !!}
                 </div>
 
-                
+                <div class="form-group">
+                    {!! Form::label('Ngôn Ngữ') !!}
+                    {!! Form::text('words', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Ngôn Ngữ')
+                        ) !!}
+                </div>
 
                 <div class="form-group">
                     {!! Form::label('Ứng dụng') !!}

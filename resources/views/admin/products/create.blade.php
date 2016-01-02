@@ -80,6 +80,13 @@
                 </div>
 
                 <div class="form-group">
+                    {!! Form::label('Ngôn Ngữ') !!}
+                    {!! Form::text('words', null,
+                        array( 'class'=>'form-control', 'placeholder'=>'Ngôn Ngữ')
+                        ) !!}
+                </div>
+
+                <div class="form-group">
                     {!! Form::label('Thêm Mô Tả') !!}
                     <small>(Thêm các mô tả chi tiết hơn về sản phẩm)</small>
                     {!! Form::textarea('usage', null,
