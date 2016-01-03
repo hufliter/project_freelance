@@ -67,9 +67,6 @@
                         {{$data->slug}}
                         @endif
                         </h3>
-                        @if($data->usage)
-                        <span style="font-size:16px;">{{$data->usage}}</span>
-                        @endif
                     </div>
                 </div>
             </div>
@@ -106,18 +103,52 @@
                 <div class="col-md-5">
                     <div class="fs-info">
                         <h3>{{$data->slug}}</h3>
+                        @if($data->usage)
+                        <span style="font-size:16px;">{{$data->usage}}</span>
+                        @endif
                         <div class="clearfix space20"></div>
                         <ul class="project-meta">
-                            <li><i class="icon-tag2"></i>Kích thước: {{ $data->size }} mm</li>
-                            <li><i class="icon-tag2"></i>Trọng Lượng: {{ $data->weight }} gram </li>
-                            <li><i class="icon-tag2"></i><span class="project_client">Đóng gói: {{ $data->package }}</span></li>
-                            <li><i class="icon-tag2"></i><span class="project_client">Ngôn ngữ : {{ $data->words }}</span></li>
-                            <li><i class="icon-tag2"></i>Hàn: {{ $data->solder }}</li>
-                            <li><i class="icon-tag2"></i>Giá: Vui lòng liên hệ số điện thoại 0903 044 831 Để biết thêm chi tiết</li>
+                            @if($data->size)
+                            <li>
+                                <i class="icon-tag2"></i>Kích thước: {{ $data->size }} mm
+                            </li>
+                            @endif
+                            
+                            @if($data->weight)
+                            <li>
+                                <i class="icon-tag2"></i>Trọng Lượng: {{ $data->weight }} gram 
+                            </li>
+                            @endif
+                            
+                            @if($data->package)
+                            <li>
+
+                                <i class="icon-tag2"></i>Đóng gói: {{ $data->package }}
+                            </li>
+                            @endif
+                            
+                            @if($data->words)
+                            <li>
+                                <i class="icon-tag2"></i>Ngôn ngữ : {{ $data->words }}</span>
+                            </li>
+                            @endif
+
+                            @if($data->solder)
+                            <li>
+                                <i class="icon-tag2"></i>Hàn: {{ $data->solder }}
+                            </li>
+                            @endif
+
+                            <li>
+                                <i class="icon-tag2"></i>Giá: Vui lòng liên hệ số điện thoại 0903 044 831 Để biết thêm chi tiết
+                            </li>
+                            
+                            @if($data->description)
+                            <li>
+                                <i class="icon-tag2"></i>Ứng dụng: {{$data->description}}
+                            </li>
+                            @endif
                         </ul>
-                        @if($data->description)
-                        <span style="padding:5px 10px; margin-bottom: 10px;font-size:14px; display:block;"><h5 style="display: inline-block; text-transform: none;">Ứng Dụng:</h5> {{$data->description}}</span>
-                        @endif
                     </div>
                 </div>
             </div>

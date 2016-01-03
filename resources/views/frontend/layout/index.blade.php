@@ -47,10 +47,10 @@
 			                <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
 			              </li>
 			              <li>
-			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
+			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigonindeco?chat">saigonindeco</a></p>
 			              </li>
 			              <li>
-			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigonindeco?chat">saigonindeco</a></p>
+			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
 			              </li>
 					</ul>
 				</div>
@@ -58,14 +58,8 @@
 				<div class="col-md-4">
 					<h4 class="space30" style="color:white;">HOTLINE</h4>
 			  		<ul class="c-info">
-						<!-- <li><i class="fa fa-map-marker"></i> 72 Wall street Rd<br>Some county<br>Newyork 20001
-						</li> -->
-						<li>
-						</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Duong - 0995 230 930</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Loc - 0903 044 831</li>
-						<li>
-							<i class="fa fa-envelope-o"></i> info@saigonindeco.com, sales@saigonindeco.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Dương - 0995 230 930 - info@saigonindeco.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Miss.Lộc - 0903 044 831 - sales@saigonindeco.com</li>
 						<li><i class="fa fa-globe"></i>Website: saigonindeco.com</li>
 						<li>
 							<p><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>

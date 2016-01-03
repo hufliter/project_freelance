@@ -352,10 +352,10 @@
                 <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
               </li>
               <li>
-                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
+                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>
               </li>
               <li>
-                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>
+                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
               </li>
             </ul>
       </div>
