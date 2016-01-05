@@ -91,7 +91,6 @@
                     <small>(Thêm các mô tả chi tiết hơn về sản phẩm)</small>
                     {!! Form::textarea('usage', null,
                         array(
-                            'required',
                             'class'=>'form-control',
                             'placeholder'=>'Thêm Mô Tả')) !!}
                 </div>

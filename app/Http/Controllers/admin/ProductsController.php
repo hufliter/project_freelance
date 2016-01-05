@@ -38,13 +38,14 @@ class ProductsController extends Controller {
                 'slug' => 'required|min:3|max:50|unique:products',
                 'name' => 'required|min:3|max:100',
                 'cate_id' => 'required',
-                'usage' => 'required|min:3|max:5000',
                 'description' => 'required|min:3|max:5000',
             );
             $validator = Validator::make($data,$rules);
             if( $validator->fails() ){
                 return Redirect::route('products.index')->withErrors($validator);
             } else {
+                
+
                 if( $req->hasFile('file_upload') ) {
                     $files = Input::file('file_upload');
                     $file_count = count($files);
@@ -74,7 +75,11 @@ class ProductsController extends Controller {
                         $products->cate_id = $data['cate_id'];
                         $products->name = $data['name'];
                         $products->image = $encodedImgArr;
-                        $products->usage = $data['usage'];
+                        if( isset($data['usage']) ){
+                            $products->usage = $data['usage'];
+                        } else {
+                            $products->usage = '';
+                        }
                         $products->size = $data['size'];
                         $products->weight = $data['weight'];
                         $products->package = $data['package'];
@@ -93,6 +98,8 @@ class ProductsController extends Controller {
                     } else {
                         return Redirect::route('products.index')->withErrors('Something went wrong');
                     }
+                } else {
+                    return Redirect::route('products.index')->withErrors('Image is required');
                 }
             }
         }
@@ -167,6 +174,11 @@ class ProductsController extends Controller {
                 $productsData->cate_id = $data['cate_id'];
                 $productsData->name = $data['product_name'];
                 $productsData->usage = $data['usage'];
+                if( isset($data['usage']) ){
+                    $productsData->usage = $data['usage'];
+                } else {
+                    $productData->usage = '';
+                }
                 $productsData->description =  $data['product_description'];
                 $productsData->is_active = $data['product_active'];
                 $productsData->slug = $data['slug'];

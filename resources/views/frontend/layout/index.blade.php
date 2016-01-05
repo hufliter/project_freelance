@@ -37,19 +37,21 @@
 						<li>
 			                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
 			              </li>
-			              <li>
-			                <p><strong><i class="fa fa-envelope-o"></i> Email:</strong> <a href="#" style="color:#878787;">info@saigonindeco.com</a></p>
-			              </li>
+			              
 			              <li>
 			                <p><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
 			              </li>
 			              <li>
 			                <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
 			              </li>
+					
 			              <li>
 			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigonindeco?chat">saigonindeco</a></p>
 			              </li>
-			              <li>
+					<li>
+			                <p><strong><i class="fa fa-envelope-o"></i> Email:</strong> <a href="#" style="color:#878787;">info@saigonindeco.com</a></p>
+			              </li>
+					<li>
 			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
 			              </li>
 					</ul>

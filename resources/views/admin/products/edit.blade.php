@@ -54,8 +54,7 @@
                 <div class="form-group">
                     {!! Form::label('Mô tả') !!}
                     {!! Form::textarea('usage', null ,
-                        array('required',
-                                'class'=>'form-control',
+                        array('class'=>'form-control',
                                 'placeholder' => 'Mô tả sản phẩm')) !!}
                 </div>
 

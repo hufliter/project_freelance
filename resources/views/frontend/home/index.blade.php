@@ -59,24 +59,10 @@
           <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-saveperformance="on"  data-title="SaiGon Industrial Development Slide">
             <!-- MAIN IMAGE -->
             <img src="{{asset('img/dummy.png')}}"  alt="2" data-lazyload="{{asset('img/slider/anh-1.png')}}" data-bgposition="right top" data-kenburns="off" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
-            <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="280" data-hoffset="0" data-x="center"
-              style="    color: #fff;
-              text-transform: uppercase;
-              font-size: 40px;
-              letter-spacing: 6px;
-              font-family: Open Sans;
-              font-weight: 400;
-              "
-              >
+            <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="280" data-hoffset="0" data-x="center" style=" color: #fff; text-transform: uppercase; font-size: 40px; letter-spacing: 6px; font-family: Open Sans; font-weight: 400; " >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
-            <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center"
-              style="color: #fff;
-              font-size: 26px;
-              text-transform: uppercase;
-              letter-spacing: 10px;
-              "
-              >
+            <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center" style="color: #fff; font-size: 26px; text-transform: uppercase; letter-spacing: 10px; " >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
             </div>
             <div style="float:left; margin-right:20px;">
@@ -343,9 +329,6 @@
                 <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
               </li>
               <li>
-                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonindeco.com</a></p>
-              </li>
-              <li>
                 <p><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
               </li>
               <li>
@@ -354,7 +337,10 @@
               <li>
                 <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>
               </li>
-              <li>
+		<li>
+                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonindeco.com</a></p>
+              </li>
+		<li>
                 <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
               </li>
             </ul>
