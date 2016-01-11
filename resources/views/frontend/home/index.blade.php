@@ -5,19 +5,19 @@
   <header id="header-main">
     <div class="container">
       <div class="navbar yamm navbar-default">
-        <div class="navbar-header">
+        <div class="navbar-header" style="padding: 12px 10px 10px;">
           <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
           <a href="#" class="navbar-brand">
-            <i class="fa fa-phone nav-text" style="font-size: 14px;">&nbsp; HOTLINE: 0903 044 831</i>
+            <i class="fa fa-phone nav-text" style="font-size: 14px;">&nbsp; HOTLINE: 0903 367 715</i>
           </a>
         </div>
 
         <!-- SEARCH -->
-        <div class="header-x pull-right">
+        <div class="header-x pull-right" style="padding: 25px 10px 10px;">
           <div class="s-search">
             <div class="ss-trigger"><i class="icon-search2"></i></div>
             <div class="ss-content">
@@ -40,7 +40,7 @@
             <li class="page-scroll"><a class="nav-text" href="#page-top">Trang Chủ</a></li>
             <li class="page-scroll"><a class="nav-text" href="#1">Giới Thiệu</a></li>
             <li class="page-scroll"><a class="nav-text" href="#3">Sản Phẩm</a></li>
-            <li class="page-scroll"><a href="/" ><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a></li>
+            <li class="page-scroll active-item" ><a href="/" ><img style="height:40px; width:50px;" src="{{asset('img/logo.png')}}" alt="Not Found"/></a></li>
             <li class="page-scroll"><a class="nav-text" href="#2">Hỗ trợ kĩ thuật</a></li>
             <li class="page-scroll"><a class="nav-text" href="#5">Tin Tức</a></li>
             <li class="page-scroll"><a class="nav-text" href="#7">Liên Hệ</a></li>
@@ -180,8 +180,7 @@
   <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/pattern/pattern3.png') }} ')">
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center" id="1">
-        <h2 class="uppercase">Chào Mừng Bạn Đến Với Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn!</h2>
-        <h4> Saigon industrial development Co.,Ltd </h4>
+        <h2 class="uppercase">CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h2>
       </div>
       <div class="container">
       <div class="section-info ">
@@ -326,7 +325,7 @@
             <div class="space20"></div>
             <ul class="contact-info">
               <li>
-                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
+                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng, Phường 7, Quận 3, TP.HCM</p>
               </li>
               <li>
                 <p><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
@@ -335,13 +334,13 @@
                 <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
               </li>
               <li>
-                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigonindeco?chat">saigonindeco</a></p>
+                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a href="skype:saigon-id?chat">saigon-id</a></p>
               </li>
 		<li>
-                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonindeco.com</a></p>
+                <p><strong><i class="fa fa-envelope"></i> Email:</strong> <a href="#">info@saigonid.com</a> / <a href="#">sales@saigonid.com</a></p>
               </li>
 		<li>
-                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
+                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonid.com</p>
               </li>
             </ul>
       </div>

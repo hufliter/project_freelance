@@ -47,7 +47,6 @@ class AuthController extends Controller
                         $user = new User();
                         $userData = $user->getRoleByUserData($userData);
                         if( !empty($userData) ){
-                            var_dump($userData[0]->role);
                             if( $userData[0]->role == 1 ) {
                                 return Redirect::to('admin/')->withMessage('Login Successful, Welcome Admin CP');
                             } else {

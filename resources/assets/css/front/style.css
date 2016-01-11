@@ -238,8 +238,8 @@ z-index: 999999;
 #header-main .navbar-nav > li > a:focus,
 #header-main .navbar-nav > li > a {
 	color: #262626;
-	padding: 15px 10px 10px;
-	font-size: 11px;
+	padding: 25px 10px 10px;
+	font-size: 14px;
 	overflow: hidden;
 	position: relative;
 	z-index: 99999;
@@ -251,7 +251,6 @@ z-index: 999999;
 #header-main .navbar-nav > li > a:hover {
 background:transparent !important;
 }
-
 
 #header-main .dropdown-menu li a {
 	text-decoration: none;
@@ -361,6 +360,11 @@ background:transparent !important;
 	float: left;
 	margin: 0 0 -1px;
 }
+/*TP*/
+.navbar-nav .page-scroll.active-item  {
+	background: none repeat scroll 0 0 #2fcbe0;
+}
+
 
 .slider-wrap {
     position: relative !important;

@@ -35,7 +35,7 @@
 					<h4 class="space30" style="color:white;">Liên Hệ</h4>
 			  		<ul class="c-info" style="background: none; padding-bottom:0px;">
 						<li>
-			                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  phường 7, Quận 3, TP.HCM</p>
+			                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  Phường 7, Quận 3, TP.HCM</p>
 			              </li>
 			              
 			              <li>
@@ -46,13 +46,13 @@
 			              </li>
 					
 			              <li>
-			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigonindeco?chat">saigonindeco</a></p>
+			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigon-id?chat">saigon-id</a></p>
 			              </li>
 					<li>
-			                <p><strong><i class="fa fa-envelope-o"></i> Email:</strong> <a href="#" style="color:#878787;">info@saigonindeco.com</a></p>
+			                <p><strong><i class="fa fa-envelope-o"></i> Email:</strong><a href="#" style="color:#878787;">info@saigonid.com</a> / <a href="#" style="color:#878787;">sales@saigonid.com</a></p>
 			              </li>
 					<li>
-			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonindeco.com</p>
+			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonid.com</p>
 			              </li>
 					</ul>
 				</div>
@@ -60,8 +60,8 @@
 				<div class="col-md-4">
 					<h4 class="space30" style="color:white;">HOTLINE</h4>
 			  		<ul class="c-info">
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Dương - 0995 230 930 - info@saigonindeco.com</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Miss.Lộc - 0903 044 831 - sales@saigonindeco.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Vũ - 0995 230 930 - info@saigonindeco.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Lộc - 0903 367 715 - sales@saigonindeco.com</li>
 						<li><i class="fa fa-globe"></i>Website: saigonindeco.com</li>
 						<li>
 							<p><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
