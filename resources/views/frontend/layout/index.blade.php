@@ -35,24 +35,24 @@
 					<h4 class="space30" style="color:white;">Liên Hệ</h4>
 			  		<ul class="c-info" style="background: none; padding-bottom:0px;">
 						<li>
-			                <p><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  Phường 7, Quận 3, TP.HCM</p>
+			                <p style="color:#fff;"><strong><i class="fa fa-map-marker"></i> Địa Chỉ:</strong> Tầng M, An Phú Plaza, 117-119 Lý Chính Thắng,  Phường 7, Quận 3, TP.HCM</p>
 			              </li>
 			              
 			              <li>
-			                <p><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
+			                <p style="color:#fff;"><strong><i class="fa fa-phone"></i> ĐT:</strong> (0650) 3680154 - 3680153 </p>
 			              </li>
 			              <li>
-			                <p><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
+			                <p style="color:#fff;"><strong><i class="fa fa-print"></i> Fax:</strong> (0650) 3680155 </p>
 			              </li>
 					
 			              <li>
-			                <p><strong><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#878787;" href="skype:saigon-id?chat">saigon-id</a></p>
+			                <p style="color:#fff;"><strong ><i class="fa fa-skype"></i> Skype: </strong> <a style="color:#fff;" href="skype:saigon-id?chat">saigon-id</a></p>
 			              </li>
 					<li>
-			                <p><strong><i class="fa fa-envelope-o"></i> Email:</strong><a href="#" style="color:#878787;">info@saigonid.com</a> / <a href="#" style="color:#878787;">sales@saigonid.com</a></p>
+			                <p style="color:#fff;"><strong ><i class="fa fa-envelope-o"></i> Email:</strong><a style="color:#fff;" href="#"> info@saigonid.com</a> / <a href="#"  style="color:#fff;">sales@saigonid.com</a></p>
 			              </li>
 					<li>
-			                <p><strong><i class="fa fa-globe"></i> Website:</strong> saigonid.com</p>
+			                <p style="color:#fff;"><strong><i class="fa fa-globe"></i> Website:</strong> <a style="color:#fff;" href="saigonid.com" target="_blank">saigonid.com</a></p>
 			              </li>
 					</ul>
 				</div>
@@ -64,7 +64,7 @@
 						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Lộc - 0903 367 715 - sales@saigonindeco.com</li>
 						<li><i class="fa fa-globe"></i>Website: saigonindeco.com</li>
 						<li>
-							<p><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
+							<p style="color:#fff;"><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
 						</li>
 					</ul>
 					<div class="clearfix space10"></div>

@@ -5,19 +5,19 @@
   <header id="header-main">
     <div class="container">
       <div class="navbar yamm navbar-default">
-        <div class="navbar-header">
+        <div class="navbar-header" style="padding: 12px 10px 10px;">
           <button type="button" data-toggle="collapse" data-target="#navbar-collapse-1" class="navbar-toggle">
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           <span class="icon-bar"></span>
           </button>
           <a href="#" class="navbar-brand">
-            <i class="fa fa-phone nav-text" style="font-size: 14px;">&nbsp; HOTLINE: 0903 044 831</i>
+            <i class="fa fa-phone nav-text" style="font-size: 14px;">&nbsp; HOTLINE: 0903 367 715</i>
           </a>
         </div>
 
         <!-- SEARCH -->
-        <div class="header-x pull-right">
+        <div class="header-x pull-right" style="padding: 25px 10px 10px;">
           <div class="s-search">
             <div class="ss-trigger"><i class="icon-search2"></i></div>
             <div class="ss-content">
@@ -40,7 +40,7 @@
             <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#page-top">Trang Chủ</a></li>
             <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#1">Giới Thiệu</a></li>
             <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#3">Sản Phẩm</a></li>
-            <li class="page-scroll"><a href="/" ><img src="{{asset('img/logo.png')}}" width="40" style="width: 40px; height: 30px;" alt="Not Found"/></a></li>
+            <li class="page-scroll active-item"><a href="/" ><img src="{{asset('img/logo.png')}}" style="width: 50px; height: 40px;" alt="Not Found"/></a></li>
             <li class="page-scroll"><a class="nav-text" href="{{ route('fe.index') }}#2">Hỗ trợ kĩ thuật</a></li>
             <!-- <li class="page-scroll"><a href="#4">Tỉ Giá & Thời Tiết</a></li> -->
             <!-- <li class="page-scroll"><a href="#6">Kĩ Thuật</a></li> -->
@@ -60,11 +60,11 @@
                 <div class="row">
                     <div class="col-md-12">
                         <h3>
-                        @if($data->name)
-                        <span>{{$data->name}}</span>
-                        @endif
                         @if($data->slug)
-                        {{$data->slug}}
+                        <span>{{$data->slug}}</span>
+                        @endif
+                        @if($data->name)
+                        {{$data->name}}
                         @endif
                         </h3>
                     </div>
@@ -110,42 +110,42 @@
                         <ul class="project-meta">
                             @if($data->size)
                             <li>
-                                <i class="icon-tag2"></i>Kích thước: {{ $data->size }} mm
+                                <i class="icon-tag2"></i><b>Kích thước</b>: {{ $data->size }} mm
                             </li>
                             @endif
                             
                             @if($data->weight)
                             <li>
-                                <i class="icon-tag2"></i>Trọng Lượng: {{ $data->weight }} gram 
+                                <i class="icon-tag2"></i><b>Trọng Lượng:</b> {{ $data->weight }} gram 
                             </li>
                             @endif
                             
                             @if($data->package)
                             <li>
 
-                                <i class="icon-tag2"></i>Đóng gói: {{ $data->package }}
+                                <i class="icon-tag2"></i><b>Bao Bì: </b> {{ $data->package }}
                             </li>
                             @endif
                             
                             @if($data->words)
                             <li>
-                                <i class="icon-tag2"></i>Ngôn ngữ : {{ $data->words }}</span>
+                                <i class="icon-tag2"></i><b>Ngôn ngữ: </b> {{ $data->words }}</span>
                             </li>
                             @endif
 
                             @if($data->solder)
                             <li>
-                                <i class="icon-tag2"></i>Hàn: {{ $data->solder }}
+                                <i class="icon-tag2"></i><b>Hàn:</b> {{ $data->solder }}
                             </li>
                             @endif
 
                             <li>
-                                <i class="icon-tag2"></i>Giá: Vui lòng liên hệ số điện thoại 0903 044 831 Để biết thêm chi tiết
+                                <i class="icon-tag2"></i><b>Giá:</b> <a href="{{URL::to('/#7')}}" target="_blank">Vui lòng click vào đây để biết chi tiết thông tin liên hệ</a>
                             </li>
                             
                             @if($data->description)
                             <li>
-                                <i class="icon-tag2"></i>Ứng dụng: {{$data->description}}
+                                <i class="icon-tag2"></i><b>Ứng dụng:</b> {{$data->description}}
                             </li>
                             @endif
                         </ul>
@@ -153,7 +153,7 @@
                 </div>
             </div>
             <div class="clearfix space30"></div>
-            <h4 class="uppercase">Sản Phẩm Cùng Chủng Loại</h4>
+            <h4 class="uppercase">Sản Phẩm Cùng Loại</h4>
             <hr>
             <div id="portfolio-home" class="isotope gutter folio-boxed-4col">
                 @if(!empty($popularData))

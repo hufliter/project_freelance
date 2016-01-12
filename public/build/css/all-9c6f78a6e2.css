@@ -14353,10 +14353,6 @@ li {
   background: none repeat scroll 0 0 #2fcbe0;
 }
 
-.navbar-nav .page-scroll.active-item a:hover {
-  background: none repeat scroll 0 0 #00464f;
-}
-
 .slider-wrap {
   position: relative !important;
 }
@@ -15137,7 +15133,8 @@ li {
 }
 
 footer {
-  background: #292929 url(../img/footer-bg.png) no-repeat bottom right;
+  /* background: #292929 url(../img/footer-bg.png) no-repeat bottom right; */
+  background-color: #3B90ED;
   background-size: 80%;
   padding: 80px 0 90px;
   border-top: 1px solid #eee;
@@ -17160,22 +17157,34 @@ a.readmore,
 
 .filter li {
   float: left;
-  margin: 0 5px;
+  width: 11em;
+  background: #3B90ED;
 }
 
 .filter a {
   color: #000;
-  border: 1px solid #000;
+  border: 1px solid #3B90ED;
   font-family: "Montserrat","Helvetica Neue",Arial,sans-serif;
-  font-size: 10px;
-  letter-spacing: 4px;
-  text-transform: uppercase;
+  font-size: 15px;
   padding: 6px 10px;
+  display: block;
+  width: 100%;
+  text-align: center;
+  padding: 8px 8px 8px 0.8em;
+}
+
+.nav-pills>li>a {
+  border-radius: 0px!important;
+}
+
+.nav-pills>li>a:hover {
+  color: white;
+  background: black;
 }
 
 .filter a:hover {
-  color: #fff;
-  background: #000;
+  color: black;
+  background: #3B90ED;
 }
 
 #portfolio-section h3 {
@@ -17538,7 +17547,7 @@ footer p {
 .c-info li i {
   position: absolute;
   left: 0px;
-  color: #444;
+  color: #fff;
   top: 6px;
 }
 
@@ -17546,7 +17555,7 @@ footer p {
   padding-left: 25px;
   position: relative;
   font-size: 14px;
-  color: #999;
+  color: #fff;
   margin-bottom: 13px;
   line-height: 23px;
 }
@@ -18009,10 +18018,9 @@ footer p {
 }
 
 .project-meta li {
-  margin-top: 12px;
-  font-size: 14px;
+  margin-top: 10px;
+  font-size: 15px;
   color: #000;
-  letter-spacing: 2px;
   font-weight: 400;
 }
 
@@ -20443,7 +20451,7 @@ ul.tld_list .text {
 }
 
 .skype-color {
-  color: #878787;
+  color: #fff;
 }
 /*
  * jQuery FlexSlider v2.2.0
@@ -21092,7 +21100,7 @@ html[xmlns] .slides {
 
 [class^="icon-"],
 [class*=" icon-"] {
-  font-family: 'icomoon';
+  font-family: 'icomoon', Open Sans,'Helvetica Neue',Arial,sans-serif;
   speak: none;
   font-style: normal;
   font-weight: normal;

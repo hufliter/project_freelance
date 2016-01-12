@@ -59,10 +59,10 @@
           <li data-transition="fade" data-slotamount="7" data-masterspeed="2000" data-saveperformance="on"  data-title="SaiGon Industrial Development Slide">
             <!-- MAIN IMAGE -->
             <img src="{{asset('img/dummy.png')}}"  alt="2" data-lazyload="{{asset('img/slider/anh-1.png')}}" data-bgposition="right top" data-kenburns="off" data-duration="12000" data-ease="Power0.easeInOut" data-bgfit="115" data-bgfitend="100" data-bgpositionend="center bottom">
-            <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="280" data-hoffset="0" data-x="center" style=" color: #fff; text-transform: uppercase; font-size: 40px; letter-spacing: 6px; font-family: Open Sans; font-weight: 400; " >
+            <div class="tp-caption tentered_white_huge lft tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="400" data-speed="600" data-y="280" data-hoffset="0" data-x="center" style=" color: #fff; text-transform: uppercase; font-size: 40px; letter-spacing: 6px; font-family: 'Open Sans', sans-serif; font-weight: bold; " >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
-            <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center" style="color: #fff; font-size: 26px; text-transform: uppercase; letter-spacing: 10px; " >
+            <div class="tp-caption tentered_white_huge lfb tp-resizeme" data-endspeed="300" data-easing="Power4.easeOut" data-start="800" data-speed="600" data-y="350" data-hoffset="0" data-x="center" style="color: #fff; font-size: 26px; font-weight: bold ;text-transform: uppercase; letter-spacing: 10px; " >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
             </div>
             <div style="float:left; margin-right:20px;">
@@ -77,9 +77,7 @@
               text-transform: uppercase;
               font-size: 40px;
               letter-spacing: 6px;
-              font-family: Montserrat;
-              font-weight: 400;
-              "
+              font-family: 'Open Sans', sans-serif; font-weight: bold; "
               >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
             </div>
@@ -87,7 +85,7 @@
               style="color: #fff;
               font-size: 26px;
               text-transform: uppercase;
-              letter-spacing: 10px;
+              letter-spacing: 10px; font-weight: bold;
               "
               >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
@@ -102,8 +100,7 @@
               text-transform: uppercase;
               font-size: 40px;
               letter-spacing: 6px;
-              font-family: Montserrat;
-              font-weight: 400;
+              font-family: 'Open Sans', sans-serif; font-weight: bold;
               "
               >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
@@ -112,7 +109,7 @@
               style="color: #fff;
               font-size: 26px;
               text-transform: uppercase;
-              letter-spacing: 10px;
+              letter-spacing: 10px; font-weight:bold;
               "
               >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
@@ -127,8 +124,7 @@
               text-transform: uppercase;
               font-size: 40px;
               letter-spacing: 6px;
-              font-family: Montserrat;
-              font-weight: 400;
+              font-family: 'Open Sans', sans-serif; font-weight: bold;
               "
               >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
@@ -137,7 +133,7 @@
               style="color: #fff;
               font-size: 26px;
               text-transform: uppercase;
-              letter-spacing: 10px;
+              letter-spacing: 10px; font-weight:bold;
               "
               >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
@@ -152,8 +148,7 @@
               text-transform: uppercase;
               font-size: 40px;
               letter-spacing: 6px;
-              font-family: Montserrat;
-              font-weight: 400;
+              font-family: 'Open Sans', sans-serif; font-weight: bold;
               "
               >
               CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN
@@ -162,7 +157,7 @@
               style="color: #fff;
               font-size: 26px;
               text-transform: uppercase;
-              letter-spacing: 10px;
+              letter-spacing: 10px; font-weight:bold;
               "
               >
               CHẤT LƯỢNG LÀM NỀN TẢNG ĐỂ PHÁT TRIỂN
@@ -177,7 +172,7 @@
 
   <!-- INNER CONTENT -->
 
-  <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/pattern/pattern3.png') }} ')">
+  <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/bg-welcome.jpg') }} ')">
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center" id="1">
         <h2 class="uppercase">CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h2>
@@ -223,7 +218,7 @@
           <h3 class="uppercase text-center">Sản Phẩm</h3>
         </div>
              
-        <ul class="filter" data-option-key="filter">
+        <ul class="nav nav-pills filter" data-option-key="filter">
         @if( !empty($category) )
           <li><a class="selected" href="#filter" data-option-value="*">All</a></li>
           @foreach($category as $item)
@@ -314,8 +309,8 @@
     <div>
         <div class="text-center">
           <h2 class="title uppercase">Liên Hệ</h2>
-          <p>Hãy liên hệ ngay cho chúng tôi nếu bạn có nhu cầu sử dụng sản phẩm của chúng tôi<br>
-          Mọi thắc mắc của bạn sẽ được chúng tôi giải đáp nhanh chóng.</p>
+          <p>Hãy liên hệ ngay cho chúng tôi nếu quý khách có nhu cầu sử dụng sản phẩm của chúng tôi<br>
+          Mọi thắc mắc của quý khách sẽ được chúng tôi giải đáp nhanh chóng.</p>
         </div>
               <div class="space40"></div>
 
