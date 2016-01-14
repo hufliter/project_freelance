@@ -161,8 +161,7 @@ class ProductsController extends Controller {
                 'slug' => 'required|min:3|max:50',
                 'product_name' => 'required|min:3|max:50',
                 'cate_id' => 'required',
-                'usage' => 'required|min:3|max:300',
-                'product_description' => 'required|min:3|max:300',
+                'product_description' => 'required|min:3|max:5000',
             );
             $validator = Validator::make($data,$rules);
             if( $validator->fails() ){
