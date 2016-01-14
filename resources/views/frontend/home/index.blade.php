@@ -175,7 +175,7 @@
   <div class="container-fluid no-padding" style="background-image:url('{{ asset('img/bg-welcome.jpg') }} ')">
     <div class="container padding80">
       <div class="col-md-8 col-md-offset-2 text-center" id="1">
-        <h2 class="uppercase">CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h2>
+        <h2 class="uppercase" style="color:white">CÔNG TY PHÁT TRIỂN CÔNG NGHIỆP SÀI GÒN</h2>
       </div>
       <div class="container">
       <div class="section-info ">
@@ -185,7 +185,7 @@
             <div class="panel panel-default">
               <div class="panel-heading" style="text-align:center;">
                 <h4 class="panel-title">
-                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" style="font-size:14pt; text-shadow: 1px 1px 1px black;">
+                  <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne1" style="font-size:14pt; color:white ;text-shadow: 1px 1px 1px black;">
                   {{$introduce->title}}
                   <span class="fa fa-plus" style="left:460px;"></span>
                   </a>
@@ -220,10 +220,10 @@
              
         <ul class="nav nav-pills filter" data-option-key="filter">
         @if( !empty($category) )
-          <li><a class="selected" href="#filter" data-option-value="*">All</a></li>
+          <li><a class="selected" href="#filter" style="color:white;" data-option-value="*">All</a></li>
           @foreach($category as $item)
             @if( !empty($item->is_active == 1) ) 
-              <li><a href="#filter" data-option-value=".{{$item->filter_cate_name}}">{{$item->name}}</a></li>
+              <li><a href="#filter" style="color:white;" data-option-value=".{{$item->filter_cate_name}}">{{$item->name}}</a></li>
             @endif
           @endforeach
         @endif

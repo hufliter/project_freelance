@@ -21,7 +21,7 @@ class SiteController extends Controller
         $introData = $intro->findAllIntroduce();
 
         $cate = new Category();
-        $cateData = $cate->all();
+        $cateData = $cate->orderBy('id','desc')->get();
         if( !empty( $cateData ) ){
             foreach ($cateData as $i) {
                 $cateLowerCase = strtolower($i->name);
