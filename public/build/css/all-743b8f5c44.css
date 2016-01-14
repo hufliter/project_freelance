@@ -17128,12 +17128,14 @@ a.readmore,
   left: 0px;
   opacity: 1;
   transform: rotate(0deg);
+  color: red;
 }
 
 .project-item:hover .overlay-folio {
   opacity: 1;
   transition: .5s;
   visibility: visible;
+  color: red;
 }
 
 .project-info {
@@ -17611,12 +17613,12 @@ footer p {
 }
 
 .f-social a {
-  border: 1px solid #444;
+  border: 1px solid #fff;
   width: 25px;
   height: 25px;
   border-radius: 50%;
   display: inline-block;
-  color: #777;
+  color: #fff;
   line-height: 23px;
   text-align: center;
   margin-right: 3px;
@@ -17855,23 +17857,25 @@ footer p {
 }
 
 .overlay-folio2 {
-  background: rgba(255,255,255,0.8);
+  /* background: rgba(255,255,255,0.8); */
   position: absolute;
-  top: 0;
+  /* top: 0; */
   width: 100%;
   height: 100%;
   left: 0;
   right: 0;
-  opacity: 0;
-  visibility: hidden;
-  transition: .4s;
+  bottom: 0;
+  /*opacity: 0;*/
+  /* visibility: hidden;
+	transition: .4s; */
 }
 
 #portfolio-home.folio-boxed-2col .project-info,
 #portfolio-home.folio-boxed-3col .project-info,
 #portfolio-home.folio-boxed-4col .project-info {
-  position: absolute;
-  bottom: -50%;
+  /* position: absolute; */
+  position: relative;
+  bottom: -65%;
   left: 0;
   display: table;
   margin: 0 auto;
@@ -17886,13 +17890,15 @@ footer p {
 #portfolio-home.folio-boxed-4col .project-item img {
   transform: scale(1);
   transition: .4s;
+  color: red;
 }
 
 #portfolio-home.folio-boxed-2col .project-info h2,
 #portfolio-home.folio-boxed-3col .project-info h2,
 #portfolio-home.folio-boxed-4col .project-info h2 {
-  font-size: 15px;
-  color: #000;
+  font-size: 19px;
+  font-weight: bold;
+  color: #fff;
   letter-spacing: 1px;
   transition: .4s;
 }
@@ -17900,7 +17906,7 @@ footer p {
 #portfolio-home.folio-boxed-2col .project-info h2:hover,
 #portfolio-home.folio-boxed-3col .project-info h2:hover,
 #portfolio-home.folio-boxed-4col .project-info h2:hover {
-  color: #8dc73f;
+  color: red;
   transition: .4s;
 }
 
@@ -17909,6 +17915,7 @@ footer p {
 #portfolio-home.folio-boxed-4col .project-item:hover img {
   transform: scale(1.1);
   transition: .4s;
+  color: red;
 }
 
 #portfolio-home.folio-boxed-2col .project-item:hover .overlay-folio2,
@@ -17917,13 +17924,15 @@ footer p {
   opacity: 1;
   visibility: visible;
   transition: .4s;
+  color: red;
 }
 
 #portfolio-home.folio-boxed-2col .project-item:hover .project-info,
 #portfolio-home.folio-boxed-3col .project-item:hover .project-info,
 #portfolio-home.folio-boxed-4col .project-item:hover .project-info {
-  bottom: 0%;
+  bottom: -65%;
   transition: .4s;
+  color: red;
 }
 
 #portfolio-home.gutter .project-item {

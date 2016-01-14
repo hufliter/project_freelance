@@ -239,9 +239,9 @@
                 <img src="{{asset('upload/img/'.$items->image)}}" class="img-responsive" alt="Not Found" style="height: 290px;">
                 <div class="overlay-folio2">
                   <div class="project-info">
-                    <h2>{{$items->slug}}</h2>
+                    <h2 >{{$items->slug}}</h2>
                     <!-- Admin should update add name product -->
-                    <p>{{$items->product_name}}</p>
+                    <p style="color:#fff;">{{$items->product_name}}</p>
                   </div>
                 </div>
               </div>
@@ -252,6 +252,8 @@
         </div>
       </section>
     </div>
+
+    <div class="clearfix"></div>
     <div class="padding80 border-top">
       <div class="container" id="2">
       <div class="col-md-8 col-md-offset-2 text-center space50">
@@ -264,10 +266,11 @@
         <div class="col-md-4">
           <div class="feature-box">
             <div class="feature-box-icon">
-              <a href="{{$items->url}}" target="_blank" ><i class="icon-cog3"></i></a>
+              <a href="{{$items->url}}" target="_blank"><i class="icon-cog3"></i></a>
             </div>
-            <div class="feature-box-info" style="position:absolute">
+            <div class="feature-box-info">
               <h4><a href="{{$items->url}}" target="_blank">{{$items->name}}</a></h4>
+              <p>&nbsp;</p>
             </div>
           </div>
         </div>

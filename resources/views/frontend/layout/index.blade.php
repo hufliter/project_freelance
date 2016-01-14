@@ -27,7 +27,7 @@
 			<div class="row">
 				<div class="col-md-4">
 			    	<img src="{{asset('img/logo.png')}}" class="img-responsive space20" alt="Not Found" style="float: left; margin: auto; padding: 0;" />
-					<h4 style="color:white; font-weight: bold; text-align: center;">Công Ty TNHH Phát Triển Công Nghiệp Sài Gòn</h4>
+					<h4 style="color:white; font-weight: bold; text-align: center;">Công Ty Phát Triển Công Nghiệp Sài Gòn</h4>
 					<h4 style="color:white; font-weight: bold; text-align: center;">Saigon Industrial Development Co,LTD</h4>
 				</div>
 				
@@ -78,7 +78,7 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-md-8">
-					<p>&copy; Copyright 2015. TP. <a href="#" target="_blank"> TPGabriel</a></p>
+					<p style="color:#fff;">&copy; Copyright 2015. TPGabriel</p>
 				</div>
 				<div class="col-md-4">
 					<div class="f-social pull-right">
