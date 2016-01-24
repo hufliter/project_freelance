@@ -140,7 +140,7 @@
                             @endif
 
                             <li>
-                                <i class="icon-tag2"></i><b>Giá:</b> <a href="{{URL::to('/#7')}}" target="_blank">Vui lòng click vào đây để biết chi tiết thông tin liên hệ</a>
+                                <i class="icon-tag2"></i><b>Giá:</b> <a style="color:red" href="{{URL::to('/#7')}}" target="_blank">Vui lòng click vào đây để biết chi tiết thông tin liên hệ</a>
                             </li>
                             
                             @if($data->description)

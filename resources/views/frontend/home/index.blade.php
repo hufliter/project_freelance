@@ -241,7 +241,7 @@
                   <div class="project-info">
                     <h2 >{{$items->slug}}</h2>
                     <!-- Admin should update add name product -->
-                    <p style="color:#fff;">{{$items->product_name}}</p>
+                    <p>{{$items->product_name}}</p>
                   </div>
                 </div>
               </div>

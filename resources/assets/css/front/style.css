@@ -3853,7 +3853,7 @@ transition:.4s;
 #portfolio-home.folio-boxed-4col .project-info h2 {
 	font-size: 19px;
 	font-weight: bold;
-	color: #fff;
+	color: #878787;
 	letter-spacing: 1px;
 	transition:.4s;
 }
@@ -3861,7 +3861,7 @@ transition:.4s;
 #portfolio-home.folio-boxed-2col .project-info h2:hover ,
 #portfolio-home.folio-boxed-3col .project-info h2:hover ,
 #portfolio-home.folio-boxed-4col .project-info h2:hover {
-	color: red;
+	color: #F60000;
 	transition:.4s;
 }
 
