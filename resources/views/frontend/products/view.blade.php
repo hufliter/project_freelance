@@ -162,12 +162,12 @@
                     <a href="{{route('fe.viewProduct',['id'=>$pi->id])}}">
                         <div class="project-gal">
                             <img src="{{ asset('upload/img/'.$pi->image) }}" class="img-responsive" alt="Not found" style="height:177px;">
-                            <div class="overlay-folio2">
+                            <!-- <div class="overlay-folio2">
                                 <div class="project-info">
                                     <h2>{{$pi->slug}}</h2>
                                     <p>{{$pi->name}}</p>
                                 </div>
-                            </div>
+                            </div> -->
                         </div>
                     </a>
                 </div>
