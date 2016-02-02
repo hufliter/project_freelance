@@ -237,13 +237,12 @@
               <div class="project-gal">
               <!-- Should add natural image with dimension 700x450 -->
                 <img src="{{asset('upload/img/'.$items->image)}}" class="img-responsive" alt="Not Found" style="height: 290px;">
-                <div class="overlay-folio2">
+                <!-- <div class="overlay-folio2">
                   <div class="project-info">
                     <h2 >{{$items->slug}}</h2>
-                    <!-- Admin should update add name product -->
                     <p>{{$items->product_name}}</p>
                   </div>
-                </div>
+                </div> -->
               </div>
             </a>
           </div>
@@ -312,8 +311,8 @@
     <div>
         <div class="text-center">
           <h2 class="title uppercase">Liên Hệ</h2>
-          <p>Hãy liên hệ ngay cho chúng tôi nếu quý khách có nhu cầu sử dụng sản phẩm của chúng tôi<br>
-          Mọi thắc mắc của quý khách sẽ được chúng tôi giải đáp nhanh chóng.</p>
+          <p>Hãy liên hệ ngay cho chúng tôi nếu <b>Quý Khách</b> có nhu cầu sử dụng sản phẩm của chúng tôi<br>
+          Mọi thắc mắc của <b>Quý Khách</b> sẽ được chúng tôi giải đáp nhanh chóng.</p>
         </div>
               <div class="space40"></div>
 

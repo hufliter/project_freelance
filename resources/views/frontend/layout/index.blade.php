@@ -60,8 +60,8 @@
 				<div class="col-md-4">
 					<h4 class="space30" style="color:white;">HOTLINE</h4>
 			  		<ul class="c-info">
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Kĩ Thuật: Mr.Vũ - 0995 230 930 - info@saigonindeco.com</li>
-						<li><i class="fa fa-phone"></i> Hỗ Trợ Bán Hàng: Ms.Lộc - 0903 367 715 - sales@saigonindeco.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ trợ kỹ kĩ thuật: info@saigonid.com</li>
+						<li><i class="fa fa-phone"></i> Hỗ trợ bán hàng: sales@saigonid.com</li>
 						<li><i class="fa fa-globe"></i>Website: saigonindeco.com</li>
 						<li>
 							<p style="color:#fff;"><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
