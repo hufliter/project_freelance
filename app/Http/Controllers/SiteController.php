@@ -84,7 +84,7 @@ class SiteController extends Controller
                 $imgNews = str_replace('</br>', '', $imgNews);
                 $imgArr = explode('" ></a>', $imgNews);
                 $temp['img'] = $imgArr[0];
-                $temp['content'] = $imgArr[1];
+                $temp['content'] = $imgArr[0];
                 $temp['link'] = $linksArr[0];
                 array_push($realDesc, $temp);
             }

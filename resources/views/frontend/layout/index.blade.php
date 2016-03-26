@@ -62,9 +62,9 @@
 			  		<ul class="c-info">
 						<li><i class="fa fa-phone"></i> Hỗ trợ kỹ kĩ thuật: info@saigonid.com</li>
 						<li><i class="fa fa-phone"></i> Hỗ trợ bán hàng: sales@saigonid.com</li>
-						<li><i class="fa fa-globe"></i>Website: saigonindeco.com</li>
+						<li><i class="fa fa-globe"></i>Website: saigonid.com</li>
 						<li>
-							<p style="color:#fff;"><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigonindeco</a></p>
+							<p style="color:#fff;"><strong><i class="fa fa-skype"></i> Skype: </strong> <a class="skype-color" href="skype:saigonindeco?chat">saigon-id</a></p>
 						</li>
 					</ul>
 					<div class="clearfix space10"></div>
